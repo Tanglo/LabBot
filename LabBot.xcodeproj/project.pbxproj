@@ -7,14 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */; };
+		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55AE27218F7C65700FDD48E /* DRHInstructionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
+		E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300418F7A32800F012B7 /* DRHExperiment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300518F7A32800F012B7 /* DRHExperiment.m */; };
+		E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300618F7A32800F012B7 /* DRHExperimentController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300718F7A32800F012B7 /* DRHExperimentController.m */; };
+		E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300818F7A32800F012B7 /* DRHExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300918F7A32800F012B7 /* DRHExperimentDocument.m */; };
+		E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300C18F7A32800F012B7 /* DRHExperimenterWindowController.m */; };
+		E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */; };
+		E579301F18F7A32800F012B7 /* DRHInitExperimentWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */; };
+		E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = E579301018F7A32800F012B7 /* DRHStillCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E579301118F7A32800F012B7 /* DRHStillCamera.m */; };
+		E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */; };
+		E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */; };
 		E5C8977018F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
 		E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8977818F52A4300335057 /* InfoPlist.strings */; };
-		E5C8977E18F52A4300335057 /* LabBot.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8977D18F52A4300335057 /* LabBot.m */; };
 		E5C8978518F52A4300335057 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8978418F52A4300335057 /* XCTest.framework */; };
 		E5C8978618F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
 		E5C8978918F52A4300335057 /* LabBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5C8978F18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8978D18F52A4300335057 /* InfoPlist.strings */; };
 		E5C8979118F52A4300335057 /* LabBotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8979018F52A4300335057 /* LabBotTests.m */; };
+		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
+		E5D4F0B319063A440091B4AE /* To do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D4F0B219063A440091B4AE /* To do.rtf */; };
+		E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6562418FE4A0000727834 /* DRHLandmarkData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +52,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E5C897BC18F52A6A00335057 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/Frameworks";
+			dstSubfolderSpec = 0;
+			files = (
+				E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E540991918FE407A001CBB30 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
+		E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHMeasureExperimentDocument.h; sourceTree = "<group>"; };
+		E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHMeasureExperimentDocument.m; sourceTree = "<group>"; };
+		E55AE27218F7C65700FDD48E /* DRHInstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInstructionView.h; sourceTree = "<group>"; };
+		E55AE27318F7C65700FDD48E /* DRHInstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInstructionView.m; sourceTree = "<group>"; };
+		E579300418F7A32800F012B7 /* DRHExperiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperiment.h; sourceTree = "<group>"; };
+		E579300518F7A32800F012B7 /* DRHExperiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperiment.m; sourceTree = "<group>"; };
+		E579300618F7A32800F012B7 /* DRHExperimentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentController.h; sourceTree = "<group>"; };
+		E579300718F7A32800F012B7 /* DRHExperimentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentController.m; sourceTree = "<group>"; };
+		E579300818F7A32800F012B7 /* DRHExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentDocument.h; sourceTree = "<group>"; };
+		E579300918F7A32800F012B7 /* DRHExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentDocument.m; sourceTree = "<group>"; };
+		E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimenterWindowController.h; sourceTree = "<group>"; };
+		E579300C18F7A32800F012B7 /* DRHExperimenterWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimenterWindowController.m; sourceTree = "<group>"; };
+		E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRHInitExperimentWindow.xib; sourceTree = "<group>"; };
+		E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInitExperimentWindowController.h; sourceTree = "<group>"; };
+		E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInitExperimentWindowController.m; sourceTree = "<group>"; };
+		E579301018F7A32800F012B7 /* DRHStillCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHStillCamera.h; sourceTree = "<group>"; };
+		E579301118F7A32800F012B7 /* DRHStillCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHStillCamera.m; sourceTree = "<group>"; };
+		E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHSubjectWindowController.h; sourceTree = "<group>"; };
+		E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHSubjectWindowController.m; sourceTree = "<group>"; };
+		E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialMatrix.h; sourceTree = "<group>"; };
+		E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialMatrix.m; sourceTree = "<group>"; };
 		E5C8976C18F52A4300335057 /* LabBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8976F18F52A4300335057 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E5C8977218F52A4300335057 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,13 +96,14 @@
 		E5C8977718F52A4300335057 /* LabBot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBot-Info.plist"; sourceTree = "<group>"; };
 		E5C8977918F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8977B18F52A4300335057 /* LabBot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LabBot-Prefix.pch"; sourceTree = "<group>"; };
-		E5C8977C18F52A4300335057 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
-		E5C8977D18F52A4300335057 /* LabBot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBot.m; sourceTree = "<group>"; };
 		E5C8978318F52A4300335057 /* LabBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8978418F52A4300335057 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E5C8978C18F52A4300335057 /* LabBotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBotTests-Info.plist"; sourceTree = "<group>"; };
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
+		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "To do.rtf"; sourceTree = "<group>"; };
+		E5E6562418FE4A0000727834 /* DRHLandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLandmarkData.h; sourceTree = "<group>"; };
+		E5E6562518FE4A0000727834 /* DRHLandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLandmarkData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +131,31 @@
 		E5C8976218F52A4300335057 = {
 			isa = PBXGroup;
 			children = (
+				E5D4F0B219063A440091B4AE /* To do.rtf */,
+				E540991918FE407A001CBB30 /* LabBot.h */,
+				E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */,
+				E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */,
+				E5E6562418FE4A0000727834 /* DRHLandmarkData.h */,
+				E5E6562518FE4A0000727834 /* DRHLandmarkData.m */,
+				E579300418F7A32800F012B7 /* DRHExperiment.h */,
+				E579300518F7A32800F012B7 /* DRHExperiment.m */,
+				E579300618F7A32800F012B7 /* DRHExperimentController.h */,
+				E579300718F7A32800F012B7 /* DRHExperimentController.m */,
+				E579300818F7A32800F012B7 /* DRHExperimentDocument.h */,
+				E579300918F7A32800F012B7 /* DRHExperimentDocument.m */,
+				E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */,
+				E579300C18F7A32800F012B7 /* DRHExperimenterWindowController.m */,
+				E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */,
+				E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */,
+				E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */,
+				E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */,
+				E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */,
+				E579301018F7A32800F012B7 /* DRHStillCamera.h */,
+				E579301118F7A32800F012B7 /* DRHStillCamera.m */,
+				E55AE27218F7C65700FDD48E /* DRHInstructionView.h */,
+				E55AE27318F7C65700FDD48E /* DRHInstructionView.m */,
+				E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */,
+				E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */,
 				E5C8977518F52A4300335057 /* LabBot */,
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
@@ -109,8 +195,6 @@
 		E5C8977518F52A4300335057 /* LabBot */ = {
 			isa = PBXGroup;
 			children = (
-				E5C8977C18F52A4300335057 /* LabBot.h */,
-				E5C8977D18F52A4300335057 /* LabBot.m */,
 				E5C8977618F52A4300335057 /* Supporting Files */,
 			);
 			path = LabBot;
@@ -151,6 +235,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E540991E18FE416E001CBB30 /* LabBot.h in Headers */,
+				E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */,
+				E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */,
+				E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */,
+				E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */,
+				E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */,
+				E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */,
+				E579301F18F7A32800F012B7 /* DRHInitExperimentWindowController.h in Headers */,
+				E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */,
+				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
+				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
+				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +261,7 @@
 				E5C8976818F52A4300335057 /* Frameworks */,
 				E5C8976918F52A4300335057 /* Headers */,
 				E5C8976A18F52A4300335057 /* Resources */,
+				E5C897BC18F52A6A00335057 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -230,6 +327,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5D4F0B319063A440091B4AE /* To do.rtf in Resources */,
+				E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */,
 				E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +348,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C8977E18F52A4300335057 /* LabBot.m in Sources */,
+				E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */,
+				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
+				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
+				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
+				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
+				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
+				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
+				E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */,
+				E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */,
+				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,
+				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +474,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
@@ -380,8 +489,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 2;
+				DYLIB_CURRENT_VERSION = 2;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
@@ -450,6 +559,7 @@
 				E5C8979618F52A4300335057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C8979718F52A4300335057 /* Build configuration list for PBXNativeTarget "LabBotTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +568,7 @@
 				E5C8979918F52A4300335057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
