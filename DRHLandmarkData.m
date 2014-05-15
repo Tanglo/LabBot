@@ -48,6 +48,10 @@
     return [[trialMatrix objectForKey:DRHTrialMatrixFactorsKey] objectAtIndex:currentTrial];
 }
 
+-(NSArray *)trialArrayForIndex:(NSInteger)index{
+    return [[trialMatrix objectForKey:DRHTrialMatrixFactorsKey] objectAtIndex:index];
+}
+
 -(NSArray *)variableNamesArray{
     return [trialMatrix objectForKey:DRHTrialMatrixFactorNamesKey];
 }

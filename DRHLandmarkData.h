@@ -24,6 +24,7 @@
 -(NSInteger)numberOfTrials;
 -(NSInteger)currentTrial;
 -(NSArray *)currentTrialArray;
+-(NSArray *)trialArrayForIndex:(NSInteger)index;
 -(NSArray *)variableNamesArray;
 -(NSArray *)imageData;
 -(NSArray *)actualPositionImages;
