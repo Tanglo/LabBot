@@ -18,6 +18,7 @@
 #import "DRHInitExperimentWindowController.h"
 #import "DRHSubjectWindowController.h"
 #import "DRHStillCamera.h"
+#import "DRHBlankImage.h"
 #import "DRHInstructionView.h"
 #import "DRHMeasureExperimentDocument.h"
 
