@@ -46,6 +46,9 @@
         [cameraSession stopRunning];
     }
     device = [availableDevices objectAtIndex:index];
+    if ([device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
+        [device setFocusMode:AVCaptureFocusModeAutoFocus];
+    }
 //    NSLog(@"%@ is the selected camera",[device localizedName]);
 }
 
