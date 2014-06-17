@@ -46,9 +46,6 @@
         [cameraSession stopRunning];
     }
     device = [availableDevices objectAtIndex:index];
-    if ([device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
-        [device setFocusMode:AVCaptureFocusModeAutoFocus];
-    }
 //    NSLog(@"%@ is the selected camera",[device localizedName]);
 }
 
@@ -60,6 +57,9 @@
         [theAlert runModal];
         return NO;
     }
+    if ([device isFocusModeSupported:AVCaptureFocusModeAutoFocus])
+        [device setFocusMode:AVCaptureFocusModeAutoFocus];
+    
     AVCaptureDeviceInput *cameraInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&anError];
     if (!cameraInput) {
         NSLog(@"Camera input: %@",cameraInput);
