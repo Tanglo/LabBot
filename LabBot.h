@@ -21,6 +21,7 @@
 #import "DRHBlankImage.h"
 #import "DRHInstructionView.h"
 #import "DRHMeasureExperimentDocument.h"
+#import "DRHRulerView.h"
 
 
 #endif

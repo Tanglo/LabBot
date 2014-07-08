@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E534BAF9196BBD2800BB9C8A /* DRHRulerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E534BAF7196BBD2800BB9C8A /* DRHRulerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E534BAFA196BBD2800BB9C8A /* DRHRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E534BAF8196BBD2800BB9C8A /* DRHRulerView.m */; };
 		E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */; };
 		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E534BAF7196BBD2800BB9C8A /* DRHRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHRulerView.h; sourceTree = "<group>"; };
+		E534BAF8196BBD2800BB9C8A /* DRHRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHRulerView.m; sourceTree = "<group>"; };
 		E540991918FE407A001CBB30 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
 		E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHMeasureExperimentDocument.h; sourceTree = "<group>"; };
 		E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHMeasureExperimentDocument.m; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				E55AE27318F7C65700FDD48E /* DRHInstructionView.m */,
 				E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */,
 				E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */,
+				E534BAF7196BBD2800BB9C8A /* DRHRulerView.h */,
+				E534BAF8196BBD2800BB9C8A /* DRHRulerView.m */,
 				E5C8977518F52A4300335057 /* LabBot */,
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
@@ -254,6 +260,7 @@
 				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
 				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
+				E534BAF9196BBD2800BB9C8A /* DRHRulerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
 				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
+				E534BAFA196BBD2800BB9C8A /* DRHRulerView.m in Sources */,
 				E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */,
 				E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */,
 				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,
