@@ -7,27 +7,29 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "DRHChartView.h"
 
-@interface DRHRulerView : NSView {
-    CGFloat lowerLimit;
-    CGFloat upperLimit;
-    CGFloat increment;
+@interface DRHRulerChartView : DRHChartView {
+    NSArray *labels;
+    
+    CGFloat labelPadding;
+    BOOL centreLabels;
+    CGFloat rulerWidth;
+    NSPoint rulerStartPosition; //x is centered
     CGFloat tickSpacing;    //in mm
-    NSRect drawRect;
-    CGFloat tickWidth;
-    CGFloat fontSize;
-    BOOL integerLabels;
+    BOOL centreRuler;
     
     CGFloat monitorCalibration; //scaling factor applied to tick distances to make exact.  monitorCalibration = real mm distance / NSView mm distance;
 }
-@property CGFloat lowerLimit;
-@property CGFloat upperLimit;
-@property CGFloat increment;
+@property NSArray *labels;
+
+@property CGFloat labelPadding;
+@property BOOL centreLabels;
+@property CGFloat rulerWidth;
+@property NSPoint rulerStartPosition;
 @property CGFloat tickSpacing;
-@property NSRect drawRect;
-@property CGFloat tickWidth;
-@property CGFloat fontSize;
-@property BOOL integerLabels;
+@property BOOL centreRuler;
+
 @property CGFloat monitorCalibration;
 
 @end

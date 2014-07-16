@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E534BAF9196BBD2800BB9C8A /* DRHRulerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E534BAF7196BBD2800BB9C8A /* DRHRulerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E534BAFA196BBD2800BB9C8A /* DRHRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E534BAF8196BBD2800BB9C8A /* DRHRulerView.m */; };
+		E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */; };
+		E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B5197657E10001BBE9 /* DRHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B6197657E10001BBE9 /* DRHChartView.m */; };
+		E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */; };
 		E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */; };
 		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,8 +74,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E534BAF7196BBD2800BB9C8A /* DRHRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHRulerView.h; sourceTree = "<group>"; };
-		E534BAF8196BBD2800BB9C8A /* DRHRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHRulerView.m; sourceTree = "<group>"; };
+		E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHVerticalSpacingChartView.h; sourceTree = "<group>"; };
+		E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHVerticalSpacingChartView.m; sourceTree = "<group>"; };
+		E524F2B5197657E10001BBE9 /* DRHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHChartView.h; sourceTree = "<group>"; };
+		E524F2B6197657E10001BBE9 /* DRHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHChartView.m; sourceTree = "<group>"; };
+		E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHRulerChartView.h; sourceTree = "<group>"; };
+		E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHRulerChartView.m; sourceTree = "<group>"; };
 		E540991918FE407A001CBB30 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
 		E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHMeasureExperimentDocument.h; sourceTree = "<group>"; };
 		E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHMeasureExperimentDocument.m; sourceTree = "<group>"; };
@@ -166,8 +174,12 @@
 				E55AE27318F7C65700FDD48E /* DRHInstructionView.m */,
 				E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */,
 				E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */,
-				E534BAF7196BBD2800BB9C8A /* DRHRulerView.h */,
-				E534BAF8196BBD2800BB9C8A /* DRHRulerView.m */,
+				E524F2B5197657E10001BBE9 /* DRHChartView.h */,
+				E524F2B6197657E10001BBE9 /* DRHChartView.m */,
+				E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */,
+				E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */,
+				E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */,
+				E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */,
 				E5C8977518F52A4300335057 /* LabBot */,
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
@@ -260,7 +272,9 @@
 				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
 				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
-				E534BAF9196BBD2800BB9C8A /* DRHRulerView.h in Headers */,
+				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
+				E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */,
+				E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */,
+				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
 				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
@@ -370,7 +385,8 @@
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
 				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
-				E534BAFA196BBD2800BB9C8A /* DRHRulerView.m in Sources */,
+				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
+				E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */,
 				E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */,
 				E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */,
 				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,

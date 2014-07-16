@@ -21,7 +21,9 @@
 #import "DRHBlankImage.h"
 #import "DRHInstructionView.h"
 #import "DRHMeasureExperimentDocument.h"
-#import "DRHRulerView.h"
+#import "DRHChartView.h"
+#import "DRHRulerChartView.h"
+#import "DRHVerticalSpacingChartView.h"
 
 
 #endif
