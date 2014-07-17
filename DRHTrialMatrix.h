@@ -8,19 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-//extern NSString * const DRHTrialMatrixVariableNamesKey;// = @"Variable names";
-//extern NSString * const DRHTrialMatrixDataKey;// = @"Trial matrix data";
 extern NSString * const DRHTrialMatrixFactorsKey;
 extern NSString * const DRHTrialMatrixFactorNamesKey;
 
 @interface DRHTrialMatrix : NSObject
 
-
++(NSArray *)arrayOfNanWithLength:(NSInteger)length;
++(NSArray *)linearArrayOfIntegersFrom:(NSInteger)start To:(NSInteger)end WithIncrement:(NSInteger)increment AndRepetitions:(NSInteger)repetitions;
++(NSArray *)linearArrayOfDoublesFrom:(CGFloat)start To:(CGFloat)end WithIncrement:(CGFloat)increment AndRepetitions:(NSInteger)repetitions;
 +(NSArray *)shuffleArray:(NSArray *)array;
-//+(NSDictionary *)randomisedTrialMatrixWithVariables:(NSDictionary *)matrixVariables;
-//+(NSDictionary *)randomisedTrialMatrixWithFileAtURL:(NSURL *)URL;
+
 +(NSDictionary *)randomisedTrialMatrixWithVariables:(NSDictionary *)matrixVariables AndRepetitions:(NSInteger)repetitions;
-//+(NSDictionary *)randomisedTrialMatrixWithFileAtURL:(NSURL *)URL AndRepetitions:(NSInteger)repetitions;
 +(NSDictionary *)randomisedTrialMatrixWithFactors:(NSDictionary *)factors AndRepetitions:(NSInteger)repetitions;
 
 @end

@@ -8,13 +8,41 @@
 
 #import "DRHTrialMatrix.h"
 
-//NSString * const DRHTrialMatrixVariableNamesKey = @"Variable names";
-//NSString * const DRHTrialMatrixDataKey = @"Trial matrix data";
 NSString * const DRHTrialMatrixFactorsKey = @"trialMatrixFactors";
 NSString * const DRHTrialMatrixFactorNamesKey = @"trialMatrixFactorNames";
 
 
 @implementation DRHTrialMatrix
+
++(NSArray *)arrayOfNanWithLength:(NSInteger)length{
+    NSMutableArray *newArray = [NSMutableArray array];
+    for (NSInteger i=0; i<length; i++) {
+        [newArray addObject:[NSDecimalNumber notANumber]];
+    }
+    return [NSArray arrayWithArray:newArray];
+}
+
++(NSArray *)linearArrayOfIntegersFrom:(NSInteger)start To:(NSInteger)end WithIncrement:(NSInteger)increment AndRepetitions:(NSInteger)repetitions{
+    NSMutableArray *newArray = [NSMutableArray array];
+    for (NSInteger i=start; i<=end; i+=increment) {
+        for (NSInteger j=0; j<repetitions; j++) {
+            [newArray addObject:[NSDecimalNumber numberWithInteger:i]];
+        }
+    }
+    return [NSArray arrayWithArray:newArray];
+}
+
++(NSArray *)linearArrayOfDoublesFrom:(CGFloat)start To:(CGFloat)end WithIncrement:(CGFloat)increment AndRepetitions:(NSInteger)repetitions{
+    NSMutableArray *newArray = [NSMutableArray array];
+    CGFloat currentDouble = start;
+    do {
+        for (NSInteger j=0; j<repetitions; j++) {
+            [newArray addObject:[NSDecimalNumber numberWithDouble:currentDouble]];
+        }
+        currentDouble += increment;
+    } while (currentDouble < end);
+    return [NSArray arrayWithArray:newArray];
+}
 
 +(NSArray *)shuffleArray:(NSArray *)array{
     
@@ -118,21 +146,7 @@ NSString * const DRHTrialMatrixFactorNamesKey = @"trialMatrixFactorNames";
         [trialMatrix addObject:rowArray];
     }
     
-/*    for (NSArray *currentFactor in fullFactors) {
-        for (NSInteger i=0 ; i<totalNumOfTrials ; i++) {
-            NSLog(@"%ld: %@",i,[currentFactor objectAtIndex:i]);
-        }
-    }*/
     NSDictionary *randomisedTrialMatrix = [NSDictionary dictionaryWithObjectsAndKeys:factorNames,DRHTrialMatrixFactorNamesKey,[DRHTrialMatrix shuffleArray:trialMatrix],DRHTrialMatrixFactorsKey, nil];
-    
-//    NSLog(@"The trial matrix is %ld rows by %ld columns",[trialMatrix count],[[trialMatrix objectAtIndex:0] count]);
-/*    for (NSArray *rowArray in [randomisedTrialMatrix objectForKey:DRHTrialMatrixFactorsKey]) {
-        NSString *rowString = @"";
-        for (NSInteger i=0 ; i<[rowArray count] ; i++) {
-            rowString = [rowString stringByAppendingString:[NSString stringWithFormat:@"%@\t",[rowArray objectAtIndex:i]]];
-        }
-        NSLog(@"%@",rowString);
-    }*/
     
     return randomisedTrialMatrix;
 }
