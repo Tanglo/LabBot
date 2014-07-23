@@ -7,6 +7,7 @@
 //
 
 #import "DRHTrialMatrix.h"
+#import <LabBot/DRHTrialArray.h>
 
 NSString * const DRHTrialMatrixFactorsKey = @"trialMatrixFactors";
 NSString * const DRHTrialMatrixFactorNamesKey = @"trialMatrixFactorNames";
@@ -14,6 +15,71 @@ NSString * const DRHTrialMatrixFactorNamesKey = @"trialMatrixFactorNames";
 
 @implementation DRHTrialMatrix
 
+@synthesize nameArray;
+
+-(id)init{
+    if (self = [super init]) {
+        nameArray = nil;
+        dataArray = nil;
+    }
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super init]) {
+        nameArray = [aDecoder decodeObjectForKey:@"nameArray"];
+        if (!nameArray) {
+            nameArray = nil;
+        }
+        dataArray = [aDecoder decodeObjectForKey:@"dataArray"];
+        if (!dataArray) {
+            dataArray = nil;
+        }
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:nameArray forKey:@"nameArray"];
+    [aCoder encodeObject:dataArray forKey:@"dataArray"];
+}
+
+
+-(DRHTrialMatrix *)initWithRowArrays:(NSArray *)rowArrays{
+    if (self = [super init]) {
+        nameArray = nil;
+        dataArray = rowArrays;
+    }
+    return self;
+}
+
++(DRHTrialMatrix *)trialMatrixWithTrialArrays:(NSArray *)trialArrays{
+    NSInteger numberOfColumns = [trialArrays count];
+    NSInteger numberOfRows = [[trialArrays objectAtIndex:0] count];
+    NSMutableArray *newTrialRows = [NSMutableArray array];
+    for (NSInteger i=0; i<numberOfRows; i++) {
+        NSMutableArray *newRowArray = [NSMutableArray array];
+        for (NSInteger j=0; j<numberOfColumns; j++) {
+            [newRowArray addObject:[[trialArrays objectAtIndex:j] trialAtIndex:i]];
+        }
+        [newTrialRows addObject:newRowArray];
+    }
+    DRHTrialMatrix *newTrialMatrix = [[DRHTrialMatrix alloc] initWithRowArrays:newTrialRows];
+    NSMutableArray *newNameArray = [NSMutableArray array];
+    for (NSInteger i=0; i<numberOfColumns; i++) {
+        [newNameArray addObject:[[trialArrays objectAtIndex:i] trialsArrayName]];
+    }
+    [newTrialMatrix setNameArray:[NSArray arrayWithArray:newNameArray]];
+    return newTrialMatrix;
+}
+
+-(NSArray *)trials{
+    return dataArray;
+}
+
+
+
+//Old.  Might be deprecated.
 +(NSArray *)arrayOfNanWithLength:(NSInteger)length{
     NSMutableArray *newArray = [NSMutableArray array];
     for (NSInteger i=0; i<length; i++) {
@@ -41,6 +107,14 @@ NSString * const DRHTrialMatrixFactorNamesKey = @"trialMatrixFactorNames";
         }
         currentDouble += increment;
     } while (currentDouble < end);
+    return [NSArray arrayWithArray:newArray];
+}
+
++(NSArray *)arrayByRepeatingArray:(NSArray *)array WithRepetitions:(NSInteger)repetitions{
+    NSMutableArray *newArray = [NSMutableArray array];
+    for (NSInteger i=0; i<repetitions; i++) {
+        [newArray addObjectsFromArray:array];
+    }
     return [NSArray arrayWithArray:newArray];
 }
 

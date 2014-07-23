@@ -9,6 +9,7 @@
 #ifndef LabBot_Header_h
 #define LabBot_Header_h
 
+#import "DRHTrialArray.h"
 #import "DRHTrialMatrix.h"
 #import "DRHLandmarkData.h"
 #import "DRHExperiment.h"

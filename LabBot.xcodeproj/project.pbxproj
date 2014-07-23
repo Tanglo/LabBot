@@ -46,6 +46,8 @@
 		E5C8979118F52A4300335057 /* LabBotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8979018F52A4300335057 /* LabBotTests.m */; };
 		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5D4F0B319063A440091B4AE /* To do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D4F0B219063A440091B4AE /* To do.rtf */; };
+		E5DDCCC3197F7F8E00F06528 /* DRHTrialArray.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */; };
 		E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6562418FE4A0000727834 /* DRHLandmarkData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
 		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "To do.rtf"; sourceTree = "<group>"; };
+		E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialArray.h; sourceTree = "<group>"; };
+		E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialArray.m; sourceTree = "<group>"; };
 		E5E6562418FE4A0000727834 /* DRHLandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLandmarkData.h; sourceTree = "<group>"; };
 		E5E6562518FE4A0000727834 /* DRHLandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLandmarkData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +153,8 @@
 			children = (
 				E5D4F0B219063A440091B4AE /* To do.rtf */,
 				E540991918FE407A001CBB30 /* LabBot.h */,
+				E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */,
+				E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */,
 				E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */,
 				E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */,
 				E5E6562418FE4A0000727834 /* DRHLandmarkData.h */,
@@ -260,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E540991E18FE416E001CBB30 /* LabBot.h in Headers */,
+				E5DDCCC3197F7F8E00F06528 /* DRHTrialArray.h in Headers */,
 				E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */,
 				E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */,
 				E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */,
@@ -379,6 +386,7 @@
 				E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */,
 				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
 				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
+				E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
 				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
