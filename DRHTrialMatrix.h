@@ -20,18 +20,21 @@ extern NSString * const DRHTrialMatrixFactorNamesKey;
 -(DRHTrialMatrix *)initWithRowArrays:(NSArray *)rowArrays;
 +(DRHTrialMatrix *)trialMatrixWithTrialArrays:(NSArray *)trialArrays;
 -(NSArray *)trials;
+-(NSInteger)count;
+-(NSArray *)trialRowAtIndex:(NSInteger)index;
+-(void)shuffleTrials;
 
 
 
 
 //Old.  Might be deprecated.
-+(NSArray *)arrayOfNanWithLength:(NSInteger)length;
-+(NSArray *)linearArrayOfIntegersFrom:(NSInteger)start To:(NSInteger)end WithIncrement:(NSInteger)increment AndRepetitions:(NSInteger)repetitions;
-+(NSArray *)linearArrayOfDoublesFrom:(CGFloat)start To:(CGFloat)end WithIncrement:(CGFloat)increment AndRepetitions:(NSInteger)repetitions;
-+(NSArray *)arrayByRepeatingArray:(NSArray *)array WithRepetitions:(NSInteger)repetitions;
-+(NSArray *)shuffleArray:(NSArray *)array;
++(NSArray *)arrayOfNanWithLength:(NSInteger)length __attribute__((deprecated));
++(NSArray *)linearArrayOfIntegersFrom:(NSInteger)start To:(NSInteger)end WithIncrement:(NSInteger)increment AndRepetitions:(NSInteger)repetitions __attribute__((deprecated));
++(NSArray *)linearArrayOfDoublesFrom:(CGFloat)start To:(CGFloat)end WithIncrement:(CGFloat)increment AndRepetitions:(NSInteger)repetitions __attribute__((deprecated));
++(NSArray *)arrayByRepeatingArray:(NSArray *)array WithRepetitions:(NSInteger)repetitions __attribute__((deprecated));
++(NSArray *)shuffleArray:(NSArray *)array __attribute__((deprecated));
 
-+(NSDictionary *)randomisedTrialMatrixWithVariables:(NSDictionary *)matrixVariables AndRepetitions:(NSInteger)repetitions;
-+(NSDictionary *)randomisedTrialMatrixWithFactors:(NSDictionary *)factors AndRepetitions:(NSInteger)repetitions;
++(NSDictionary *)randomisedTrialMatrixWithVariables:(NSDictionary *)matrixVariables AndRepetitions:(NSInteger)repetitions __attribute__((deprecated));
++(NSDictionary *)randomisedTrialMatrixWithFactors:(NSDictionary *)factors AndRepetitions:(NSInteger)repetitions __attribute__((deprecated));
 
 @end

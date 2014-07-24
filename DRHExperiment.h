@@ -8,17 +8,25 @@
 
 #import <Foundation/Foundation.h>
 
+@class DRHTrialMatrix;
+
 @interface DRHExperiment : NSObject <NSCoding>{
     NSString *experimentName;
-    NSString *experimentFilenameStem;
     NSString *experimentSubject;
+    NSString *experimentSession;
     NSDate *experimentDate;
-//    id experimentData;
+    NSString *experimentFilenameStem;
+    
+    DRHTrialMatrix *trials;
+    NSMutableArray *data;
 }
 @property NSString *experimentName;
-@property NSString *experimentFilenameStem;
 @property NSString *experimentSubject;
+@property NSString *experimentSession;
 @property NSDate *experimentDate;
-//@property id experimentData;
+@property NSString *experimentFilenameStem;
+
+-(DRHTrialMatrix *)trials;
+-(NSMutableArray *)data;
 
 @end

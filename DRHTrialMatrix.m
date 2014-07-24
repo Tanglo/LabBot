@@ -77,6 +77,25 @@ NSString * const DRHTrialMatrixFactorNamesKey = @"trialMatrixFactorNames";
     return dataArray;
 }
 
+-(NSInteger)count{
+    return [dataArray count];
+}
+
+-(NSArray *)trialRowAtIndex:(NSInteger)index{
+    return [dataArray objectAtIndex:index];
+}
+
+-(void)shuffleTrials{
+    NSMutableArray *temp = [[NSMutableArray alloc] initWithArray:dataArray];
+    
+    for(NSUInteger i = [dataArray count]; i > 1; i--) {
+        NSUInteger j = arc4random_uniform((uint32)i);
+        [temp exchangeObjectAtIndex:i-1 withObjectAtIndex:j];
+    }
+    dataArray = temp;
+}
+
+
 
 
 //Old.  Might be deprecated.

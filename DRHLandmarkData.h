@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+__attribute__((deprecated))
 @interface DRHLandmarkData : NSObject <NSCoding> {
     NSDictionary *trialMatrix;
 //    NSInteger numberOfTrials;
