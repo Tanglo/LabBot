@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E514A4991980E7F100D7F490 /* DRHAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */; };
 		E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */; };
 		E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B5197657E10001BBE9 /* DRHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHAudioPlayer.h; sourceTree = "<group>"; };
+		E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHAudioPlayer.m; sourceTree = "<group>"; };
 		E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHVerticalSpacingChartView.h; sourceTree = "<group>"; };
 		E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHVerticalSpacingChartView.m; sourceTree = "<group>"; };
 		E524F2B5197657E10001BBE9 /* DRHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHChartView.h; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */,
 				E579301018F7A32800F012B7 /* DRHStillCamera.h */,
 				E579301118F7A32800F012B7 /* DRHStillCamera.m */,
+				E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */,
+				E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */,
 				E5776B881925E41700F1A064 /* DRHBlankImage.h */,
 				E5776B891925E41700F1A064 /* DRHBlankImage.m */,
 				E55AE27218F7C65700FDD48E /* DRHInstructionView.h */,
@@ -277,6 +283,7 @@
 				E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */,
 				E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */,
 				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
+				E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
 				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
@@ -384,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */,
+				E514A4991980E7F100D7F490 /* DRHAudioPlayer.m in Sources */,
 				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
 				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
 				E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */,
