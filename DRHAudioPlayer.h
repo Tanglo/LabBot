@@ -15,6 +15,7 @@
 }
 
 -(DRHAudioPlayer *)initWithURL:(NSURL *)URL;
++(DRHAudioPlayer *)audioPlayerWithURL:(NSURL *)URL;
 -(BOOL)isReadyToPlay;
 -(void)play;
 

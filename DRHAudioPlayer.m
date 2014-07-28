@@ -35,6 +35,10 @@
     return self;
 }
 
++(DRHAudioPlayer *)audioPlayerWithURL:(NSURL *)URL{
+    return [[DRHAudioPlayer alloc] initWithURL:URL];
+}
+
 -(BOOL)isReadyToPlay{
     return isReadyToPlay;
 }
