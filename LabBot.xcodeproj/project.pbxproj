@@ -22,6 +22,12 @@
 		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
 		E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5776B881925E41700F1A064 /* DRHBlankImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5776B891925E41700F1A064 /* DRHBlankImage.m */; };
+		E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A5C41998554100D6B190 /* DRHDataMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A5C51998554100D6B190 /* DRHDataMatrix.m */; };
+		E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A60B199867D200D6B190 /* DRHDataColumn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A60C199867D200D6B190 /* DRHDataColumn.m */; };
+		E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A6141998753D00D6B190 /* DRHExperimentData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A6151998753D00D6B190 /* DRHExperimentData.m */; };
 		E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300418F7A32800F012B7 /* DRHExperiment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300518F7A32800F012B7 /* DRHExperiment.m */; };
 		E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300618F7A32800F012B7 /* DRHExperimentController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +99,12 @@
 		E55AE27318F7C65700FDD48E /* DRHInstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInstructionView.m; sourceTree = "<group>"; };
 		E5776B881925E41700F1A064 /* DRHBlankImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHBlankImage.h; sourceTree = "<group>"; };
 		E5776B891925E41700F1A064 /* DRHBlankImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHBlankImage.m; sourceTree = "<group>"; };
+		E578A5C41998554100D6B190 /* DRHDataMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataMatrix.h; sourceTree = "<group>"; };
+		E578A5C51998554100D6B190 /* DRHDataMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataMatrix.m; sourceTree = "<group>"; };
+		E578A60B199867D200D6B190 /* DRHDataColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataColumn.h; sourceTree = "<group>"; };
+		E578A60C199867D200D6B190 /* DRHDataColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataColumn.m; sourceTree = "<group>"; };
+		E578A6141998753D00D6B190 /* DRHExperimentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentData.h; sourceTree = "<group>"; };
+		E578A6151998753D00D6B190 /* DRHExperimentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentData.m; sourceTree = "<group>"; };
 		E579300418F7A32800F012B7 /* DRHExperiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperiment.h; sourceTree = "<group>"; };
 		E579300518F7A32800F012B7 /* DRHExperiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperiment.m; sourceTree = "<group>"; };
 		E579300618F7A32800F012B7 /* DRHExperimentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentController.h; sourceTree = "<group>"; };
@@ -159,12 +171,18 @@
 				E540991918FE407A001CBB30 /* LabBot.h */,
 				E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */,
 				E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */,
+				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
+				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
 				E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */,
 				E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */,
+				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
+				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
 				E5E6562418FE4A0000727834 /* DRHLandmarkData.h */,
 				E5E6562518FE4A0000727834 /* DRHLandmarkData.m */,
 				E579300418F7A32800F012B7 /* DRHExperiment.h */,
 				E579300518F7A32800F012B7 /* DRHExperiment.m */,
+				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
+				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
 				E579300618F7A32800F012B7 /* DRHExperimentController.h */,
 				E579300718F7A32800F012B7 /* DRHExperimentController.m */,
 				E579300818F7A32800F012B7 /* DRHExperimentDocument.h */,
@@ -273,9 +291,12 @@
 			files = (
 				E540991E18FE416E001CBB30 /* LabBot.h in Headers */,
 				E5DDCCC3197F7F8E00F06528 /* DRHTrialArray.h in Headers */,
+				E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */,
 				E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */,
+				E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */,
 				E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */,
 				E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */,
+				E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */,
 				E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */,
 				E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */,
 				E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */,
@@ -397,8 +418,10 @@
 				E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
+				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
 				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
+				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
 				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
@@ -407,6 +430,7 @@
 				E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */,
 				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
+				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,8 +546,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 3;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
@@ -537,8 +561,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DYLIB_COMPATIBILITY_VERSION = 2;
-				DYLIB_CURRENT_VERSION = 2;
+				DYLIB_COMPATIBILITY_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 3;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";

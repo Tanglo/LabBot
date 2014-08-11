@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+__attribute__((deprecated))
 @interface DRHTrialArray : NSObject <NSCoding>{
     NSString *trialsArrayName;
     NSArray *trialData;

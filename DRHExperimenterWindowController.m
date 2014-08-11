@@ -59,6 +59,10 @@
     return experimentSubjectField;
 }
 
+-(NSTextField *)experimentSessionField{
+    return experimentSessionField;
+}
+
 -(NSTextField *)experimentFilenameStemField{
     return experimentFilenameStemField;
 }

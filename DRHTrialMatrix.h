@@ -11,6 +11,7 @@
 extern NSString * const DRHTrialMatrixFactorsKey;
 extern NSString * const DRHTrialMatrixFactorNamesKey;
 
+__attribute__((deprecated))
 @interface DRHTrialMatrix : NSObject <NSCoding>{
     NSArray *nameArray;
     NSArray *dataArray;

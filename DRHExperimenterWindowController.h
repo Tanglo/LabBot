@@ -11,11 +11,13 @@
 @interface DRHExperimenterWindowController : NSWindowController {
     IBOutlet NSTextField *experimentNameField;
     IBOutlet NSTextField *experimentSubjectField;
+    IBOutlet NSTextField *experimentSessionField;
     IBOutlet NSTextField *experimentFilenameStemField;
     IBOutlet NSDatePicker *experimentDatePicker;
 }
 -(NSTextField *)experimentNameField;
 -(NSTextField *)experimentSubjectField;
+-(NSTextField *)experimentSessionField;
 -(NSTextField *)experimentFilenameStemField;
 -(NSDatePicker *)experimentDatePicker;
 

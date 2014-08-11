@@ -10,6 +10,7 @@
 
 @class DRHTrialMatrix;
 
+__attribute__((deprecated))
 @interface DRHExperiment : NSObject <NSCoding>{
     NSString *experimentName;
     NSString *experimentSubject;
