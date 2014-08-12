@@ -14,16 +14,13 @@
     self = [super init];
     if (self) {
         NSArray *devices = [AVCaptureDevice devices];
- //       NSLog(@"%ld devices are available",[devices count]);
         NSMutableIndexSet *cameraIndexes = [NSMutableIndexSet indexSet];
         for (AVCaptureDevice *currentDevice in devices) {
             if ([currentDevice hasMediaType:AVMediaTypeVideo]) {
- //               NSLog(@"A video camera is found");
                 [cameraIndexes addIndex:[devices indexOfObject:currentDevice]];
             }
         }
         availableDevices = [devices objectsAtIndexes:cameraIndexes];
-  //      NSLog(@"%ld cameras are available",[availableDevices count]);
         device = nil;
         stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
         [stillImageOutput setOutputSettings:@{ AVVideoCodecKey : AVVideoCodecJPEG}];
@@ -33,7 +30,6 @@
 }
 
 -(NSArray *)availableDevices{
-//    NSLog(@"There are %ld cameras here",[availableDevices count]);
     return availableDevices;
 }
 
@@ -46,7 +42,6 @@
         [cameraSession stopRunning];
     }
     device = [availableDevices objectAtIndex:index];
-//    NSLog(@"%@ is the selected camera",[device localizedName]);
 }
 
 -(BOOL)startCameraSession{

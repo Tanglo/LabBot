@@ -59,7 +59,7 @@ NSInteger const DRHLabBotAlignmentBottom = 2;
     NSDictionary *attr = [NSDictionary dictionaryWithObject:[NSFont fontWithName:@"Times new roman" size:fontSize] forKey:NSFontAttributeName];
     NSRect drawRect = [self frame];
     //if bars won't take up the whole screen (or more) centre them in the screen
-    CGFloat maxBarHeight = 0.0;   //= [[barLengths lastObject] doubleValue] + labelHeight + 3*barPadding;
+    CGFloat maxBarHeight = 0.0;
     for (NSNumber *currentLength in barLengths){
         if ([currentLength doubleValue] > maxBarHeight) {
             maxBarHeight = [currentLength doubleValue];

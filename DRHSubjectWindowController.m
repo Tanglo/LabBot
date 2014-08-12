@@ -19,7 +19,6 @@
     self = [super initWithWindowNibName:@"DRHSubjectWindow" owner:self];
     if (self) {
         // Add your subclass-specific initialization here.
-        //        NSLog(@"A new DRHLibrariumWindowController has been init");
     }
     return self;
 }

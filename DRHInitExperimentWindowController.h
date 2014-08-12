@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
+__attribute__((deprecated))
 @interface DRHInitExperimentWindowController : NSWindowController
 
 -(IBAction)startExperiment:(id)sender;

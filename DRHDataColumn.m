@@ -59,7 +59,6 @@
 
 +(DRHDataColumn *)dataColumnWithName:(NSString *)name AndArray:(NSArray *)array{
     DRHDataColumn *newArray = [[self alloc] initWithName:name AndArray:array];
-//    [newArray setColumnName:name];
     return newArray;
 }
 

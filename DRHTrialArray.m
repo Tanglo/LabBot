@@ -59,10 +59,6 @@
     return [trialData objectAtIndex:index];
 }
 
-/*+(DRHTrialArray *)trialArrayWithName:(NSString *)name{
-    return [[self alloc] initWithName:name];
-}*/
-
 +(DRHTrialArray *)trialArrayWithName:(NSString *)name AndArray:(NSArray *)array{
     DRHTrialArray *newArray = [[self alloc] initWithName:name AndArray:array];
     [newArray setTrialsArrayName:name];

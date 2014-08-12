@@ -20,9 +20,7 @@
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
-//        experiment = [[DRHExperiment alloc] init];
-//        isNew = YES;
+        
     }
     return self;
 }
@@ -51,8 +49,6 @@
     NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
     @throw exception;
     return nil;
- 
-//    return [NSKeyedArchiver archivedDataWithRootObject:experiment];
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError
@@ -63,30 +59,9 @@
     NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
     @throw exception;
     return YES;
-
-    
-//    isNew = NO;
-/*    DRHExperiment *newExperiment;
-    @try {
-        newExperiment = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    }
-    @catch (NSException *exception) {
-        if (outError) {
-            NSDictionary *d = [NSDictionary dictionaryWithObject:@"The data is corrupted" forKey:NSLocalizedFailureReasonErrorKey];
-            *outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:d];
-        }
-        return NO;
-    }
-    experiment = newExperiment;
-    return YES;
- */
 }
 
 #pragma mark Getters
-/*-(DRHExperiment *)experiment{
-    return experiment;
-}*/
-
 -(id)newExperimenterWindowController{
     NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
     @throw exception;

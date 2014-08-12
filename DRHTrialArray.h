@@ -19,7 +19,6 @@ __attribute__((deprecated))
 -(NSArray *)trials;
 -(NSInteger)count;
 -(id)trialAtIndex:(NSInteger)index;
-//+(DRHTrialArray *)trialArrayWithName:(NSString *)name;
 +(DRHTrialArray *)trialArrayWithName:(NSString *)name AndArray:(NSArray *)array;
 +(DRHTrialArray *)trialArrayWithName:(NSString *)name OfNanWithLength:(NSInteger)length;
 +(DRHTrialArray *)linearTrialArrayWithName:(NSString *)name OfIntegersFrom:(NSInteger)start To:(NSInteger)end WithIncrement:(NSInteger)increment AndRepetitions:(NSInteger)repetitions;

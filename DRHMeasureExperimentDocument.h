@@ -10,6 +10,7 @@
 
 @class DRHExperiment;
 
+__attribute__((deprecated))
 @interface DRHMeasureExperimentDocument : NSDocument{
     DRHExperiment *experiment;
 }

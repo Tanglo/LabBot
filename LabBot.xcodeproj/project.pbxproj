@@ -164,23 +164,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E55D2F631999940E006EF3D4 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */,
+				E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */,
+				E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */,
+				E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */,
+				E5E6562418FE4A0000727834 /* DRHLandmarkData.h */,
+				E5E6562518FE4A0000727834 /* DRHLandmarkData.m */,
+				E579300418F7A32800F012B7 /* DRHExperiment.h */,
+				E579300518F7A32800F012B7 /* DRHExperiment.m */,
+				E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */,
+				E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */,
+				E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */,
+				E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */,
+				E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */,
+			);
+			name = Deprecated;
+			sourceTree = "<group>";
+		};
 		E5C8976218F52A4300335057 = {
 			isa = PBXGroup;
 			children = (
 				E5D4F0B219063A440091B4AE /* To do.rtf */,
 				E540991918FE407A001CBB30 /* LabBot.h */,
-				E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */,
-				E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */,
 				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
 				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
-				E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */,
-				E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */,
 				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
 				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
-				E5E6562418FE4A0000727834 /* DRHLandmarkData.h */,
-				E5E6562518FE4A0000727834 /* DRHLandmarkData.m */,
-				E579300418F7A32800F012B7 /* DRHExperiment.h */,
-				E579300518F7A32800F012B7 /* DRHExperiment.m */,
 				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
 				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
 				E579300618F7A32800F012B7 /* DRHExperimentController.h */,
@@ -189,9 +201,6 @@
 				E579300918F7A32800F012B7 /* DRHExperimentDocument.m */,
 				E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */,
 				E579300C18F7A32800F012B7 /* DRHExperimenterWindowController.m */,
-				E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */,
-				E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */,
-				E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */,
 				E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */,
 				E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */,
 				E579301018F7A32800F012B7 /* DRHStillCamera.h */,
@@ -202,14 +211,13 @@
 				E5776B891925E41700F1A064 /* DRHBlankImage.m */,
 				E55AE27218F7C65700FDD48E /* DRHInstructionView.h */,
 				E55AE27318F7C65700FDD48E /* DRHInstructionView.m */,
-				E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */,
-				E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */,
 				E524F2B5197657E10001BBE9 /* DRHChartView.h */,
 				E524F2B6197657E10001BBE9 /* DRHChartView.m */,
 				E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */,
 				E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */,
 				E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */,
 				E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */,
+				E55D2F631999940E006EF3D4 /* Deprecated */,
 				E5C8977518F52A4300335057 /* LabBot */,
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
