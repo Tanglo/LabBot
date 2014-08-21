@@ -29,6 +29,7 @@
 #import "DRHChartView.h"
 #import "DRHRulerChartView.h"
 #import "DRHVerticalSpacingChartView.h"
+#import "DRHFileDate.h"
 
 
 #endif
