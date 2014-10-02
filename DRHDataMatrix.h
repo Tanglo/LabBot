@@ -27,7 +27,7 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 @property NSArray *data;
 
 /*!
- * @discussion Initialises the receiving `DRHDataMatrix` with the specified array of row arrays.
+ * Initialises the receiving `DRHDataMatrix` with the specified array of row arrays.
  * @param rowArrays An array of subarrays.  Each subarray represents an @a observation in the experiment and so should be the same length and consist of the same objects is the same order.
  * @return The receiver containing row arrays specified by `rowArrays`.  The `names` array of the receiver is `nil`.
  */
@@ -39,33 +39,33 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 +(DRHDataMatrix *)dataMatrixWithColumnArrays:(NSArray *)dataArrays __attribute__((deprecated));
 
 /*!
- * @discussion Creates a new dataMatrix initialised using the specified array of `DRHDataColumns'.
+ * Creates a new dataMatrix initialised using the specified array of `DRHDataColumns'.
  * @param dataArrays An array of `DRHDataColumn` objects.  Currently all dataColumns must be the same length and have names.
  * @return A new `DRHDataMatrix` object initialised with the array `DRHDataColumns` provided in `dataArrays`.
  */
 +(DRHDataMatrix *)dataMatrixWithDataColumnArray:(NSArray *)dataArrays;
 
 /*!
- * @discussion Returns the number of rows currently in the dataMatrix.
+ * Returns the number of rows currently in the dataMatrix.
  * @return The number of rows currently in the dataMatrix.
  */
 -(NSInteger)rowCount;
 
 /*!
- * @discussion Returns the number of columns currently in the dataMatrix.
+ * Returns the number of columns currently in the dataMatrix.
  * @return The number of columns currently in the dataMatrix.
  */
 -(NSInteger)columnCount;
 
 /*!
- * @discussion Returns the entire row array located at the sepcified index.
+ * Returns the entire row array located at the sepcified index.
  * @param index An row index within the bounds of the dataMatrix.
  * @return The entire row array located at `index`.
  */
 -(NSArray *)dataRowAtIndex:(NSInteger)index;
 
 /*!
- * @discussion Returns a row array containing the objects located at the specified index from a subset of columns specified by an index set.
+ * Returns a row array containing the objects located at the specified index from a subset of columns specified by an index set.
  * @param index An row index within the bounds of the dataMatrix.
  * @param columnIndexes An index set within the bounds of the dataMatrix that sepcifies the columns to include in the row array.
  * @return A row array containing the objects located at `index` in the columns specified by `columnIndexes`.
@@ -73,7 +73,7 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 -(NSArray *)dataRowAtIndex:(NSInteger)index ForColumnsWithIndexes:(NSIndexSet *)columnIndexes;
 
 /*!
- * @discussion Returns a row array containing the objects located at the specified index from a subset of columns specified an array of names.
+ * Returns a row array containing the objects located at the specified index from a subset of columns specified an array of names.
  * @param index An row index within the bounds of the dataMatrix.
  * @param nameArray An array of `NSString` objects specifying the names of the columns to include in the row array.
  * @return A row array containing the objects located at `index` in the columns specified by `nameArray`.
@@ -81,14 +81,14 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 -(NSArray *)dataRowAtIndex:(NSInteger)index ForColumnsWithNames:(NSArray *)nameArray;
 
 /*!
- * @discussion Returns the index of the column with the specified name.
+ * Returns the index of the column with the specified name.
  * @param columnName A string object.
  * @return If a column with the specified name is found in the dataMatrix, its index is returned. Otherwise `NSNotFound` is returned.
  */
 -(NSInteger)indexOfDataColumnWithName:(NSString *)columnName;
 
 /*!
- * @discussion Returns the indexes of the columns with the specified names.
+ * Returns the indexes of the columns with the specified names.
  * @param nameArray An array of string objects.
  * @return An index set containing the indexes of the columns with the names specified by `nameArray'.  If a specified name is not found that name is ignored.
  */
