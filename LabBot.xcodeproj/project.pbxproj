@@ -45,6 +45,7 @@
 		E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E579301118F7A32800F012B7 /* DRHStillCamera.m */; };
 		E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */; };
+		E58A65E919DD309B00948D42 /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = E58A65E819DD309B00948D42 /* Documentation */; };
 		E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */; };
 		E5C8977018F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
@@ -109,6 +110,7 @@
 		E579301118F7A32800F012B7 /* DRHStillCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHStillCamera.m; sourceTree = "<group>"; };
 		E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHSubjectWindowController.h; sourceTree = "<group>"; };
 		E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHSubjectWindowController.m; sourceTree = "<group>"; };
+		E58A65E819DD309B00948D42 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialMatrix.h; sourceTree = "<group>"; };
 		E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialMatrix.m; sourceTree = "<group>"; };
 		E5C8976C18F52A4300335057 /* LabBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +204,7 @@
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
 				E5C8976D18F52A4300335057 /* Products */,
+				E58A65E819DD309B00948D42 /* Documentation */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,6 +361,7 @@
 				E5D4F0B319063A440091B4AE /* To do.rtf in Resources */,
 				E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */,
 				E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */,
+				E58A65E919DD309B00948D42 /* Documentation in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
