@@ -3,7 +3,9 @@
 //  LabBot
 //
 //  Created by Lee Walsh on 11/08/2014.
-//  Copyright (c) 2014 Dead Rubber Hand. All rights reserved.
+//  Copyright (c) 2014 Lee David Walsh. All rights reserved.
+//  This sofware is licensed under the The MIT License (MIT)
+//  See: https://github.com/Tanglo/LabBot/blob/master/LICENSE.md
 //
 
 #import "DRHDataMatrix.h"
@@ -164,6 +166,21 @@ NSString * const DRHDataMatrixFactorNamesKey = @"trialMatrixFactorNames";
 }
 
 -(DRHDataMatrix *)dataMatrixByInsertingColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index{
+    if ([_data count] == [dataColumn count]) {
+        NSMutableArray *dataColumnArray = [NSMutableArray array];
+        for (NSInteger i=0; i<index; i++) {
+            [dataColumnArray addObject:[self dataColumnAtIndex:i]];
+        }
+        [dataColumnArray addObject:dataColumn];
+        for (NSInteger i=index; i<[self columnCount]; i++) {
+            [dataColumnArray addObject:[self dataColumnAtIndex:i]];
+        }
+        return [DRHDataMatrix dataMatrixWithDataColumnArray:dataColumnArray];
+    }
+    return nil;
+}
+
+-(DRHDataMatrix *)dataMatrixByInsertingDataColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index{
     if ([_data count] == [dataColumn count]) {
         NSMutableArray *dataColumnArray = [NSMutableArray array];
         for (NSInteger i=0; i<index; i++) {

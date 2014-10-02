@@ -22,6 +22,7 @@
 		E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E541FC7819A5BA3600FD9252 /* DRHFileDate.m */; };
 		E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55AE27218F7C65700FDD48E /* DRHInstructionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
+		E5746D1C19DD2E8800F72CDD /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = E5746D1B19DD2E8800F72CDD /* Documentation */; };
 		E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5776B881925E41700F1A064 /* DRHBlankImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5776B891925E41700F1A064 /* DRHBlankImage.m */; };
 		E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A5C41998554100D6B190 /* DRHDataMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,11 +50,6 @@
 		E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */; };
 		E5C8977018F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
 		E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8977818F52A4300335057 /* InfoPlist.strings */; };
-		E5C8978518F52A4300335057 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8978418F52A4300335057 /* XCTest.framework */; };
-		E5C8978618F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
-		E5C8978918F52A4300335057 /* LabBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
-		E5C8978F18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8978D18F52A4300335057 /* InfoPlist.strings */; };
-		E5C8979118F52A4300335057 /* LabBotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8979018F52A4300335057 /* LabBotTests.m */; };
 		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5D4F0B319063A440091B4AE /* To do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D4F0B219063A440091B4AE /* To do.rtf */; };
 		E5DDCCC3197F7F8E00F06528 /* DRHTrialArray.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,16 +57,6 @@
 		E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6562418FE4A0000727834 /* DRHLandmarkData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E5C8978718F52A4300335057 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E5C8976318F52A4300335057 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E5C8976B18F52A4300335057;
-			remoteInfo = LabBot;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E5C897BC18F52A6A00335057 /* CopyFiles */ = {
@@ -101,6 +87,7 @@
 		E541FC7819A5BA3600FD9252 /* DRHFileDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHFileDate.m; sourceTree = "<group>"; };
 		E55AE27218F7C65700FDD48E /* DRHInstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInstructionView.h; sourceTree = "<group>"; };
 		E55AE27318F7C65700FDD48E /* DRHInstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInstructionView.m; sourceTree = "<group>"; };
+		E5746D1B19DD2E8800F72CDD /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		E5776B881925E41700F1A064 /* DRHBlankImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHBlankImage.h; sourceTree = "<group>"; };
 		E5776B891925E41700F1A064 /* DRHBlankImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHBlankImage.m; sourceTree = "<group>"; };
 		E578A5C41998554100D6B190 /* DRHDataMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataMatrix.h; sourceTree = "<group>"; };
@@ -134,7 +121,6 @@
 		E5C8977718F52A4300335057 /* LabBot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBot-Info.plist"; sourceTree = "<group>"; };
 		E5C8977918F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8977B18F52A4300335057 /* LabBot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LabBot-Prefix.pch"; sourceTree = "<group>"; };
-		E5C8978318F52A4300335057 /* LabBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LabBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8978418F52A4300335057 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E5C8978C18F52A4300335057 /* LabBotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBotTests-Info.plist"; sourceTree = "<group>"; };
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -152,16 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5C8977018F52A4300335057 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E5C8978018F52A4300335057 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5C8978918F52A4300335057 /* LabBot.framework in Frameworks */,
-				E5C8978618F52A4300335057 /* Cocoa.framework in Frameworks */,
-				E5C8978518F52A4300335057 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +204,7 @@
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
 				E5C8976D18F52A4300335057 /* Products */,
+				E5746D1B19DD2E8800F72CDD /* Documentation */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				E5C8976C18F52A4300335057 /* LabBot.framework */,
-				E5C8978318F52A4300335057 /* LabBotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,6 +316,7 @@
 				E5C8976918F52A4300335057 /* Headers */,
 				E5C8976A18F52A4300335057 /* Resources */,
 				E5C897BC18F52A6A00335057 /* CopyFiles */,
+				E5746D1A19DD277900F72CDD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -350,24 +327,6 @@
 			productReference = E5C8976C18F52A4300335057 /* LabBot.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E5C8978218F52A4300335057 /* LabBotTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E5C8979718F52A4300335057 /* Build configuration list for PBXNativeTarget "LabBotTests" */;
-			buildPhases = (
-				E5C8977F18F52A4300335057 /* Sources */,
-				E5C8978018F52A4300335057 /* Frameworks */,
-				E5C8978118F52A4300335057 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E5C8978818F52A4300335057 /* PBXTargetDependency */,
-			);
-			name = LabBotTests;
-			productName = LabBotTests;
-			productReference = E5C8978318F52A4300335057 /* LabBotTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -376,11 +335,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Dead Rubber Hand";
-				TargetAttributes = {
-					E5C8978218F52A4300335057 = {
-						TestTargetID = E5C8976B18F52A4300335057;
-					};
-				};
 			};
 			buildConfigurationList = E5C8976618F52A4300335057 /* Build configuration list for PBXProject "LabBot" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -395,7 +349,6 @@
 			projectRoot = "";
 			targets = (
 				E5C8976B18F52A4300335057 /* LabBot */,
-				E5C8978218F52A4300335057 /* LabBotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,18 +361,27 @@
 				E5D4F0B319063A440091B4AE /* To do.rtf in Resources */,
 				E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */,
 				E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E5C8978118F52A4300335057 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5C8978F18F52A4300335057 /* InfoPlist.strings in Resources */,
+				E5746D1C19DD2E8800F72CDD /* Documentation in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E5746D1A19DD277900F72CDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "doxygen Doxyfile";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E5C8976718F52A4300335057 /* Sources */ = {
@@ -450,23 +412,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E5C8977F18F52A4300335057 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5C8979118F52A4300335057 /* LabBotTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E5C8978818F52A4300335057 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E5C8976B18F52A4300335057 /* LabBot */;
-			targetProxy = E5C8978718F52A4300335057 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E5C8977818F52A4300335057 /* InfoPlist.strings */ = {
@@ -564,12 +510,13 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 0.2;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -580,53 +527,14 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = 3;
+				DYLIB_CURRENT_VERSION = 0.2;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
-		E5C8979818F52A4300335057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LabBot.framework/Versions/A/LabBot";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "LabBotTests/LabBotTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		E5C8979918F52A4300335057 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LabBot.framework/Versions/A/LabBot";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
-				INFOPLIST_FILE = "LabBotTests/LabBotTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -647,15 +555,6 @@
 			buildConfigurations = (
 				E5C8979518F52A4300335057 /* Debug */,
 				E5C8979618F52A4300335057 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E5C8979718F52A4300335057 /* Build configuration list for PBXNativeTarget "LabBotTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E5C8979818F52A4300335057 /* Debug */,
-				E5C8979918F52A4300335057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
