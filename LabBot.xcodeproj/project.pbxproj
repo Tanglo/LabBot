@@ -22,7 +22,6 @@
 		E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E541FC7819A5BA3600FD9252 /* DRHFileDate.m */; };
 		E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55AE27218F7C65700FDD48E /* DRHInstructionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
-		E5746D1C19DD2E8800F72CDD /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = E5746D1B19DD2E8800F72CDD /* Documentation */; };
 		E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5776B881925E41700F1A064 /* DRHBlankImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5776B891925E41700F1A064 /* DRHBlankImage.m */; };
 		E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A5C41998554100D6B190 /* DRHDataMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,7 +86,6 @@
 		E541FC7819A5BA3600FD9252 /* DRHFileDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHFileDate.m; sourceTree = "<group>"; };
 		E55AE27218F7C65700FDD48E /* DRHInstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInstructionView.h; sourceTree = "<group>"; };
 		E55AE27318F7C65700FDD48E /* DRHInstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInstructionView.m; sourceTree = "<group>"; };
-		E5746D1B19DD2E8800F72CDD /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		E5776B881925E41700F1A064 /* DRHBlankImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHBlankImage.h; sourceTree = "<group>"; };
 		E5776B891925E41700F1A064 /* DRHBlankImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHBlankImage.m; sourceTree = "<group>"; };
 		E578A5C41998554100D6B190 /* DRHDataMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataMatrix.h; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
 				E5C8976D18F52A4300335057 /* Products */,
-				E5746D1B19DD2E8800F72CDD /* Documentation */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,7 +358,6 @@
 				E5D4F0B319063A440091B4AE /* To do.rtf in Resources */,
 				E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */,
 				E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */,
-				E5746D1C19DD2E8800F72CDD /* Documentation in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
