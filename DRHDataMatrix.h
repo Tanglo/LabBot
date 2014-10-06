@@ -94,9 +94,21 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
  */
 -(NSIndexSet *)indexesOfDataColumnsWithNames:(NSArray *)nameArray;
 
-
+/*!
+ * Creates and returns dataColumns containing the objects in the column at the specified index.
+ * @param index A column index within the bounds of the receiver.
+ * @return A @c DRHDataColumn containng the objects currently in the column specified by @c index and with the same name.
+ */
 -(DRHDataColumn *)dataColumnAtIndex:(NSInteger)index;
+
+/*!
+ * Creates and returns dataColumns containg the objects in the column with the sepcified name.
+ * @param name The name of a column in the receiver.
+ * @return A @c DRHDataColumn containng the objects currently in the column specified by @c name and with that same name.  If a column with the specifieid name is not found @c NSNotFound is returned.
+ */
 -(DRHDataColumn *)dataColumnWithName:(NSString *)name;
+
+
 -(DRHDataMatrix *)dataMatrixByAddingDataColumn:(DRHDataColumn *)dataColumn;
 -(DRHDataMatrix *)dataMatrixByInsertingColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index __attribute__((deprecated));
 -(DRHDataMatrix *)dataMatrixByInsertingDataColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index;
