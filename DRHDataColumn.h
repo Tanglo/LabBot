@@ -12,8 +12,7 @@
 
 
 /*!
- @class DRHDataColumn
- @brief A @c DRHDataColumn object holds one column of data objects for an experiment.
+ @brief A object to store one experimental variable.
  
  A @c DRHDataColumn object has a name and an array of objects.  It is intended to be used as a column representing one variable in an experimental design.  One could use this class to hold a independant variable that is used to control an experiment or create an empty dataColumn to store data objects as they are collected. Note that the `DRHDataMatrix` class has methods that append or insert `DRHDataColumn` objects and to create `DRHDataColumn` objects from it's own columns.
  */

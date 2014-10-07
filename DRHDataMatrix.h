@@ -17,13 +17,12 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 
 
 /*!
- @brief A @c DRHDataMatrix object holds a set of named columns of objects for an experiment.
+ @brief An object to store a table of experimental variables.
  
  A @c DRHDataMatrix object is an n by m matrix of variables.  Each variable is represeted as a column and then each row represets an observation, that is one value from each variable that is locked together.  An instance of the @c DRHDataMatrix class is intended to be used to hold all the data associated with an experiment in a single indexable object.  Treating rows as @a observations is intended to facilitate this use.  Because each column is identified by name the order of the columns can be arbitary and individual columns can be extracted by name.  This means this facilitates the writing of more general and reusable anaylsis or collation software, particularly if numbers or text data is simply being converted to UTF-8 or ASCII fo importation into an analysis package.
  
  Several methods exist to interact with the @c DRHDataColumn class.  For example @c DRHDataColumn objects can be added or inserted into an exisiting @c DRHDataMatrix object, or can be generated from a column of and exisiting @c DRHDataMatrix.
  */
-
 @interface DRHDataMatrix : NSObject <NSCoding>
 
 /*!

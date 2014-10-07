@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['lineardatacolumnwithname_3aofdoublesfrom_3ato_3awithincrement_3aandrepetitions_3a',['linearDataColumnWithName:OfDoublesFrom:To:WithIncrement:AndRepetitions:',['../interface_d_r_h_data_column.html#aec81b4c66cfc9d09870172d4eb22e93f',1,'DRHDataColumn']]],
-  ['lineardatacolumnwithname_3aofintegersfrom_3ato_3awithincrement_3aandrepetitions_3a',['linearDataColumnWithName:OfIntegersFrom:To:WithIncrement:AndRepetitions:',['../interface_d_r_h_data_column.html#a40066d9abe16fa322a5729c7ec3c1f71',1,'DRHDataColumn']]],
-  ['license',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]],
-  ['labbot',['LabBot',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['indexesofdatacolumnswithnames_3a',['indexesOfDataColumnsWithNames:',['../interface_d_r_h_data_matrix.html#a3cdfef3245dbc52e48a580babaabe294',1,'DRHDataMatrix']]],
+  ['indexofdatacolumnwithname_3a',['indexOfDataColumnWithName:',['../interface_d_r_h_data_matrix.html#a4a51fbc5bcbe7356e65a50bcafd80d7f',1,'DRHDataMatrix']]],
+  ['initwithname_3aandarray_3a',['initWithName:AndArray:',['../interface_d_r_h_data_column.html#a9abc9897ab33c2bec214a3cc06864a32',1,'DRHDataColumn']]],
+  ['initwithrowarrays_3a',['initWithRowArrays:',['../interface_d_r_h_data_matrix.html#abbb29ba9cfbcaaf336f69e5a777420f8',1,'DRHDataMatrix']]]
 ];

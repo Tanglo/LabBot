@@ -88,32 +88,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  LandmarkContraction</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Lee Walsh on 8/04/2014.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Dead Rubber Hand. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Cocoa/Cocoa.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Lee David Walsh. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  This sofware is licensed under the The MIT License (MIT)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//  See: https://github.com/Tanglo/LabBot/blob/master/LICENSE.md</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_document.html">   14</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_experiment_document.html">DRHExperimentDocument</a> : NSDocument {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a> *experimenterWindowController;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a> *subjectWindowController;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">@property</span> <a class="code" href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a> *experimenterWindowController;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">@property</span> <a class="code" href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a> *subjectWindowController;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#pragma mark Getters</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;-(id)newExperimenterWindowController;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;Cocoa/Cocoa.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">@class</span> <a class="code" href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_document.html">   24</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_experiment_document.html">DRHExperimentDocument</a> : NSDocument {</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_document.html#a1cc05e8aad71c51cf0561ce8b756d4bf">   26</a></span>&#160;    <a class="code" href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a> *<a class="code" href="interface_d_r_h_experiment_document.html#a1cc05e8aad71c51cf0561ce8b756d4bf">experimenterWindowController</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_document.html#aefed126371014e23b7755d8c5a4b723f">   29</a></span>&#160;    <a class="code" href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a> *<a class="code" href="interface_d_r_h_experiment_document.html#aefed126371014e23b7755d8c5a4b723f">subjectWindowController</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">@property</span> <a class="code" href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a> *experimenterWindowController;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">@property</span> <a class="code" href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a> *subjectWindowController;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#pragma mark Getters</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;-(id)newExperimenterWindowController;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_d_r_h_experimenter_window_controller_html"><div class="ttname"><a href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a></div><div class="ttdef"><b>Definition:</b> DRHExperimenterWindowController.h:11</div></div>
+<div class="ttc" id="interface_d_r_h_experiment_document_html_a1cc05e8aad71c51cf0561ce8b756d4bf"><div class="ttname"><a href="interface_d_r_h_experiment_document.html#a1cc05e8aad71c51cf0561ce8b756d4bf">DRHExperimentDocument::experimenterWindowController</a></div><div class="ttdeci">DRHExperimenterWindowController * experimenterWindowController</div><div class="ttdoc">The controller for the main window of the experiment application. </div><div class="ttdef"><b>Definition:</b> DRHExperimentDocument.h:26</div></div>
+<div class="ttc" id="interface_d_r_h_experiment_document_html_aefed126371014e23b7755d8c5a4b723f"><div class="ttname"><a href="interface_d_r_h_experiment_document.html#aefed126371014e23b7755d8c5a4b723f">DRHExperimentDocument::subjectWindowController</a></div><div class="ttdeci">DRHSubjectWindowController * subjectWindowController</div><div class="ttdoc">A window controller to control the window that the experimental subject sees. </div><div class="ttdef"><b>Definition:</b> DRHExperimentDocument.h:29</div></div>
 <div class="ttc" id="interface_d_r_h_subject_window_controller_html"><div class="ttname"><a href="interface_d_r_h_subject_window_controller.html">DRHSubjectWindowController</a></div><div class="ttdef"><b>Definition:</b> DRHSubjectWindowController.h:11</div></div>
-<div class="ttc" id="interface_d_r_h_experiment_document_html"><div class="ttname"><a href="interface_d_r_h_experiment_document.html">DRHExperimentDocument</a></div><div class="ttdef"><b>Definition:</b> DRHExperimentDocument.h:14</div></div>
+<div class="ttc" id="interface_d_r_h_experiment_document_html"><div class="ttname"><a href="interface_d_r_h_experiment_document.html">DRHExperimentDocument</a></div><div class="ttdoc">A document object to handle the saving and opening of experiment data files. </div><div class="ttdef"><b>Definition:</b> DRHExperimentDocument.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 7 2014 13:27:00 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 7 2014 18:09:41 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

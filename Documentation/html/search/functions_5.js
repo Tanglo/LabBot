@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['shuffleddatacolumnwithname_3aand_3a',['shuffledDataColumnWithName:And:',['../interface_d_r_h_data_column.html#a5f7c0d5abac7e13b263f78c6dcb4fda0',1,'DRHDataColumn']]],
-  ['shufflerows',['shuffleRows',['../interface_d_r_h_data_matrix.html#aa34efe0370c0709897e85ca111943fe6',1,'DRHDataMatrix']]]
+  ['rowatindex_3a',['rowAtIndex:',['../interface_d_r_h_data_column.html#adce8e8f58c9c9c5542162bafe3bb9a63',1,'DRHDataColumn']]],
+  ['rowcount',['rowCount',['../interface_d_r_h_data_matrix.html#ac3b0792dc4107cd724d07656a20fa67c',1,'DRHDataMatrix']]]
 ];

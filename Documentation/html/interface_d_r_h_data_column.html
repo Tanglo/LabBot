@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> object holds one column of data objects for an experiment.  
+<p>A object to store one experimental variable.  
  <a href="interface_d_r_h_data_column.html#details">More...</a></p>
 
 <p><code>#import &lt;<a class="el" href="_d_r_h_data_column_8h_source.html">DRHDataColumn.h</a>&gt;</code></p>
@@ -139,16 +139,16 @@ Class Methods</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a1194ef84bd2b01dc8621b010d935e7ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1194ef84bd2b01dc8621b010d935e7ae"></a>
 NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_data_column.html#a1194ef84bd2b01dc8621b010d935e7ae">columnName</a></td></tr>
-<tr class="memdesc:a1194ef84bd2b01dc8621b010d935e7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of this <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a>. <br /></td></tr>
+<tr class="memdesc:a1194ef84bd2b01dc8621b010d935e7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of this <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a>. <br /></td></tr>
 <tr class="separator:a1194ef84bd2b01dc8621b010d935e7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae101002424eab69be49e69b1a1a0f671"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae101002424eab69be49e69b1a1a0f671"></a>
 NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_data_column.html#ae101002424eab69be49e69b1a1a0f671">columnData</a></td></tr>
-<tr class="memdesc:ae101002424eab69be49e69b1a1a0f671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the data content of this <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a>. <br /></td></tr>
+<tr class="memdesc:ae101002424eab69be49e69b1a1a0f671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the data content of this <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a>. <br /></td></tr>
 <tr class="separator:ae101002424eab69be49e69b1a1a0f671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> object holds one column of data objects for an experiment. </p>
-<p>A <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> object has a name and an array of objects. It is intended to be used as a column representing one variable in an experimental design. One could use this class to hold a independant variable that is used to control an experiment or create an empty dataColumn to store data objects as they are collected. Note that the <code><a class="el" href="interface_d_r_h_data_matrix.html" title="A DRHDataMatrix object holds a set of named columns of objects for an experiment. ...">DRHDataMatrix</a></code> class has methods that append or insert <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> objects and to create <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> objects from it's own columns. </p>
+<div class="textblock"><p>A object to store one experimental variable. </p>
+<p>A <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> object has a name and an array of objects. It is intended to be used as a column representing one variable in an experimental design. One could use this class to hold a independant variable that is used to control an experiment or create an empty dataColumn to store data objects as they are collected. Note that the <code><a class="el" href="interface_d_r_h_data_matrix.html" title="An object to store a table of experimental variables. ">DRHDataMatrix</a></code> class has methods that append or insert <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> objects and to create <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> objects from it's own columns. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
 <a class="anchor" id="ae8b8976a4dc0d55f1a94343ce02ef4d8"></a>
 <div class="memitem">
@@ -201,7 +201,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> the same as the receiver but cropped down to be <code>length</code> long. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> the same as the receiver but cropped down to be <code>length</code> long. </dd></dl>
 
 </div>
 </div>
@@ -235,7 +235,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> the same as the receiver but filled up with <code>object</code> to be <code>length</code> long. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> the same as the receiver but filled up with <code>object</code> to be <code>length</code> long. </dd></dl>
 
 </div>
 </div>
@@ -262,14 +262,14 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> and initialises it with the specified name and array. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a new <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> and initialises it with the specified name and array. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>A name. </td></tr>
     <tr><td class="paramname">array</td><td>An array. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> with the name specified by and containgin the objects in array </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> with the name specified by and containgin the objects in array </dd></dl>
 
 </div>
 </div>
@@ -302,10 +302,10 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified name. The objects in the new dataColumn are set by repeating the sepcified array the specified number of times. So the following code: </p><div class="fragment"><div class="line">NSArray *factorArray = @[<span class="stringliteral">@&quot;rest&quot;</span>, <span class="stringliteral">@&quot;push&quot;</span>, <span class="stringliteral">@&quot;pull&quot;</span>];</div>
+<p>Creates a new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified name. The objects in the new dataColumn are set by repeating the sepcified array the specified number of times. So the following code: </p><div class="fragment"><div class="line">NSArray *factorArray = @[<span class="stringliteral">@&quot;rest&quot;</span>, <span class="stringliteral">@&quot;push&quot;</span>, <span class="stringliteral">@&quot;pull&quot;</span>];</div>
 <div class="line">aDataColumn = [<a class="code" href="interface_d_r_h_data_column.html">DRHDataColumn</a> linearDataColumnWithName:<span class="stringliteral">@&quot;factorColumn&quot;</span> ByRepeatingArray:factorArray WithRepetitions:3]; </div>
 </div><!-- fragment --><p> will create a new dataColumn containing the objects: </p><div class="fragment"><div class="line">[<span class="stringliteral">@&quot;rest&quot;</span>, <span class="stringliteral">@&quot;push&quot;</span>, <span class="stringliteral">@&quot;pull&quot;</span>, <span class="stringliteral">@&quot;rest&quot;</span>, <span class="stringliteral">@&quot;push&quot;</span>, <span class="stringliteral">@&quot;pull&quot;</span>, <span class="stringliteral">@&quot;rest&quot;</span>, <span class="stringliteral">@&quot;push&quot;</span>, <span class="stringliteral">@&quot;pull&quot;</span>] </div>
-</div><!-- fragment --><p> This method is intended for creating independant variables for a <code><a class="el" href="interface_d_r_h_data_matrix.html" title="A DRHDataMatrix object holds a set of named columns of objects for an experiment. ...">DRHDataMatrix</a></code> object. Note that the length of this dataColumn is determined by the combinations of parameters. </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><p> This method is intended for creating independant variables for a <code><a class="el" href="interface_d_r_h_data_matrix.html" title="An object to store a table of experimental variables. ">DRHDataMatrix</a></code> object. Note that the length of this dataColumn is determined by the combinations of parameters. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>A name. </td></tr>
     <tr><td class="paramname">array</td><td>The array to repeat. </td></tr>
@@ -313,7 +313,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified name and containing an array of objects produced by concatenating <code>array</code> a <code>repetitions</code> number of times. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified name and containing an array of objects produced by concatenating <code>array</code> a <code>repetitions</code> number of times. </dd></dl>
 
 </div>
 </div>
@@ -340,7 +340,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> with the specified name and length. Each object of the new dataColumn is set to:</p><div class="fragment"><div class="line">[NSDecimalNumber notANumber] </div>
+<p>Creates a new <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> with the specified name and length. Each object of the new dataColumn is set to:</p><div class="fragment"><div class="line">[NSDecimalNumber notANumber] </div>
 </div><!-- fragment --><p>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>A name. </td></tr>
@@ -348,7 +348,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> with the name specified by name and containing length number of NaN <code>NSDecimalNumber</code> objects. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> with the name specified by name and containing length number of NaN <code>NSDecimalNumber</code> objects. </dd></dl>
 
 </div>
 </div>
@@ -375,14 +375,14 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initialises a <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> object with the specified name and data array. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Initialises a <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> object with the specified name and data array. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>An NSString specifying the name of the <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> </td></tr>
+    <tr><td class="paramname">name</td><td>An NSString specifying the name of the <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> </td></tr>
     <tr><td class="paramname">array</td><td>An array of objects to initialise the dataColumn with. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a> with name set to name and content from array. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a> with name set to name and content from array. </dd></dl>
 
 </div>
 </div>
@@ -427,9 +427,9 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified name. The objects in the new dataColumn are <code>NSNumbers</code> set to be doubles that linearly increasing from the specificed start to the sepcified end in the specified increments. The values can be repeated by specifying repetitions to be greater than one. For example: </p><div class="fragment"><div class="line">aDataColumn = [<a class="code" href="interface_d_r_h_data_column.html">DRHDataColumn</a> linearDataColumnWithName:<span class="stringliteral">@&quot;newDatColumn&quot;</span> OfDoublesFrom:1.0 To:3.0 WithIncrement:0.5 AndRepetitions:2] </div>
+<p>Creates a new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified name. The objects in the new dataColumn are <code>NSNumbers</code> set to be doubles that linearly increasing from the specificed start to the sepcified end in the specified increments. The values can be repeated by specifying repetitions to be greater than one. For example: </p><div class="fragment"><div class="line">aDataColumn = [<a class="code" href="interface_d_r_h_data_column.html">DRHDataColumn</a> linearDataColumnWithName:<span class="stringliteral">@&quot;newDatColumn&quot;</span> OfDoublesFrom:1.0 To:3.0 WithIncrement:0.5 AndRepetitions:2] </div>
 </div><!-- fragment --><p> will create a new dataColumn containing the objects: </p><div class="fragment"><div class="line">[1.0, 1.0, 1.5, 1.5, 2.0, 2.0, 2.5, 2.5, 3.0, 3.0] </div>
-</div><!-- fragment --><p> This method is intended for creating independant variables for a <code><a class="el" href="interface_d_r_h_data_matrix.html" title="A DRHDataMatrix object holds a set of named columns of objects for an experiment. ...">DRHDataMatrix</a></code> object. Note that the length of this dataColumn is determined by the combinations of parameters. </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><p> This method is intended for creating independant variables for a <code><a class="el" href="interface_d_r_h_data_matrix.html" title="An object to store a table of experimental variables. ">DRHDataMatrix</a></code> object. Note that the length of this dataColumn is determined by the combinations of parameters. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>A name. </td></tr>
     <tr><td class="paramname">start</td><td>The starting double value. </td></tr>
@@ -439,7 +439,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified name and containing double <code>NSNumbers</code> specificed by start, end, increment and repetitions. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified name and containing double <code>NSNumbers</code> specificed by start, end, increment and repetitions. </dd></dl>
 
 </div>
 </div>
@@ -484,9 +484,9 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified name. The objects in the new dataColumn are <code>NSNumbers</code> set to be integers that linearly increasing from the specificed start to the sepcified end in the specified increments. The values can be repeated by specifying repetitions to be greater than one. For example: </p><div class="fragment"><div class="line">aDataColumn = [<a class="code" href="interface_d_r_h_data_column.html">DRHDataColumn</a> linearDataColumnWithName:<span class="stringliteral">@&quot;newDatColumn&quot;</span> OfIntegersFrom:1 To:5 WithIncrement:2 AndRepetitions:2] </div>
+<p>Creates a new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified name. The objects in the new dataColumn are <code>NSNumbers</code> set to be integers that linearly increasing from the specificed start to the sepcified end in the specified increments. The values can be repeated by specifying repetitions to be greater than one. For example: </p><div class="fragment"><div class="line">aDataColumn = [<a class="code" href="interface_d_r_h_data_column.html">DRHDataColumn</a> linearDataColumnWithName:<span class="stringliteral">@&quot;newDatColumn&quot;</span> OfIntegersFrom:1 To:5 WithIncrement:2 AndRepetitions:2] </div>
 </div><!-- fragment --><p> will create a new dataColumn containing the objects: </p><div class="fragment"><div class="line">[1, 1, 3, 3, 5, 5] </div>
-</div><!-- fragment --><p> This method is intended for creating independant variables for a <code><a class="el" href="interface_d_r_h_data_matrix.html" title="A DRHDataMatrix object holds a set of named columns of objects for an experiment. ...">DRHDataMatrix</a></code> object. Note that the length of this dataColumn is determined by the combinations of parameters. </p><dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><p> This method is intended for creating independant variables for a <code><a class="el" href="interface_d_r_h_data_matrix.html" title="An object to store a table of experimental variables. ">DRHDataMatrix</a></code> object. Note that the length of this dataColumn is determined by the combinations of parameters. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>A name. </td></tr>
     <tr><td class="paramname">start</td><td>The starting integer value. </td></tr>
@@ -496,7 +496,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified name and containing integer <code>NSNumbers</code> specificed by start, end, increment and repetitions. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified name and containing integer <code>NSNumbers</code> specificed by start, end, increment and repetitions. </dd></dl>
 
 </div>
 </div>
@@ -553,7 +553,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A DRHDataColumn object holds one column of data objects for an experiment. ">DRHDataColumn</a></code> with the specified <code>name</code> and containing the objects in <code>array</code> in a shuffled order. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new <code><a class="el" href="interface_d_r_h_data_column.html" title="A object to store one experimental variable. ">DRHDataColumn</a></code> with the specified <code>name</code> and containing the objects in <code>array</code> in a shuffled order. </dd></dl>
 
 </div>
 </div>
@@ -564,7 +564,7 @@ NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 7 2014 13:27:00 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 7 2014 18:09:41 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
