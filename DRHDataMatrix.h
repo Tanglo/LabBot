@@ -15,12 +15,22 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 
 @class DRHDataColumn;
 
+
+/*!
+ @brief A @c DRHDataMatrix object holds a set of named columns of objects for an experiment.
+ 
+ A @c DRHDataMatrix object is an n by m matrix of variables.  Each variable is represeted as a column and then each row represets an observation, that is one value from each variable that is locked together.  An instance of the @c DRHDataMatrix class is intended to be used to hold all the data associated with an experiment in a single indexable object.  Treating rows as @a observations is intended to facilitate this use.  Because each column is identified by name the order of the columns can be arbitary and individual columns can be extracted by name.  This means this facilitates the writing of more general and reusable anaylsis or collation software, particularly if numbers or text data is simply being converted to UTF-8 or ASCII fo importation into an analysis package.
+ 
+ Several methods exist to interact with the @c DRHDataColumn class.  For example @c DRHDataColumn objects can be added or inserted into an exisiting @c DRHDataMatrix object, or can be generated from a column of and exisiting @c DRHDataMatrix.
+ */
+
 @interface DRHDataMatrix : NSObject <NSCoding>
 
 /*!
  * @brief An array of the names of of the columns contained.
  */
 @property NSArray *names;
+
 /*!
  * @brief An array of the columns contained.
  */
@@ -104,15 +114,40 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
 /*!
  * Creates and returns dataColumns containg the objects in the column with the sepcified name.
  * @param name The name of a column in the receiver.
- * @return A @c DRHDataColumn containng the objects currently in the column specified by @c name and with that same name.  If a column with the specifieid name is not found @c NSNotFound is returned.
+ * @return A @c DRHDataColumn containng the objects currently in the column specified by @c name and with that same name.  If a column with the specifieid name is not found @c nil is returned.
  */
 -(DRHDataColumn *)dataColumnWithName:(NSString *)name;
 
-
+/*!
+ * Creates a new dataMatrix by adding the provided dataColumn to the receiver.  The data column being added should be the same length as the receiver which can be acheived using the @c dataColumnByFillingWithObject:ToLength: or @c dataColumnByCropingToLength:length instance methods from the @c DRHDataColumn class.
+ * @param dataColumn A dataColumn object.
+ * @return A @c DRHDataMatrix created by adding the provided @c dataColumn to the end of the receiver.
+ */
 -(DRHDataMatrix *)dataMatrixByAddingDataColumn:(DRHDataColumn *)dataColumn;
+
+/*!
+ * @deprecated Do not use this method it is here for short term backwards compatibility but is deprecated and will be removed in a future version of LabBot. Use @c dataMatrixByInsertingDataColumn:AtIndex instead; its function is identical.
+ */
 -(DRHDataMatrix *)dataMatrixByInsertingColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index __attribute__((deprecated));
+
+/*!
+ * Creates a new dataMatrix by inserting the provided dataColumn into the receiver at the specified index.  The data column being added should be the same length as the receiver which can be acheived using the @c dataColumnByFillingWithObject:ToLength: or @c dataColumnByCropingToLength:length instance methods from the @c DRHDataColumn class.
+ * @param dataColumn A dataColumn object.
+ * @param index A column index witin the bounds of the receiver.
+ * @return A @c DRHDataMatrix created by inserting the provided @c dataColumn into the receiver at @c index.
+ */
 -(DRHDataMatrix *)dataMatrixByInsertingDataColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index;
+
+/*!
+ * Creates a new dataMatrix by removing the first column that has the specified name.
+ * @param columnName The name of a column in the receiver.
+ * @return A @c DRHDataMatrix created by removing the first data column found that has a name equal to @c name.  If the receiver does not contain a column with the specified name the receiver is returned.
+ */
 -(DRHDataMatrix *)dataMatrixByRemovingColumnWithName:(NSString *)columnName;
+
+/*!
+ * Shuffles the rows of the receiver.  Importantly this method maintains each row as an @a observation.  So the contents of a given dataMatrix row do not change but are moved as one in the shuffle.
+ */
 -(void)shuffleRows;
 
 @end
