@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rowatindex_3a',['rowAtIndex:',['../interface_d_r_h_data_column.html#adce8e8f58c9c9c5542162bafe3bb9a63',1,'DRHDataColumn']]],
-  ['rowcount',['rowCount',['../interface_d_r_h_data_matrix.html#ac3b0792dc4107cd724d07656a20fa67c',1,'DRHDataMatrix']]]
+  ['lineardatacolumnwithname_3aofdoublesfrom_3ato_3awithincrement_3aandrepetitions_3a',['linearDataColumnWithName:OfDoublesFrom:To:WithIncrement:AndRepetitions:',['../interface_d_r_h_data_column.html#aec81b4c66cfc9d09870172d4eb22e93f',1,'DRHDataColumn']]],
+  ['lineardatacolumnwithname_3aofintegersfrom_3ato_3awithincrement_3aandrepetitions_3a',['linearDataColumnWithName:OfIntegersFrom:To:WithIncrement:AndRepetitions:',['../interface_d_r_h_data_column.html#a40066d9abe16fa322a5729c7ec3c1f71',1,'DRHDataColumn']]]
 ];

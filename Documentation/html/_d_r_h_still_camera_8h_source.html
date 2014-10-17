@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -94,25 +94,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;AVFoundation/AVFoundation.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="interface_d_r_h_still_camera.html">   12</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_still_camera.html">DRHStillCamera</a> : NSObject {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    NSArray *availableDevices;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    AVCaptureDevice *device;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    AVCaptureSession *cameraSession;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    AVCaptureStillImageOutput *stillImageOutput;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;-(NSArray *)availableDevices;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;-(AVCaptureStillImageOutput *)stillImageOutput;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;-(void)selectDeviceAtIndex:(NSInteger)index;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;-(BOOL)startCameraSession;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;-(void)stopCameraSession;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;-(BOOL)isRunning;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_d_r_h_still_camera_html"><div class="ttname"><a href="interface_d_r_h_still_camera.html">DRHStillCamera</a></div><div class="ttdef"><b>Definition:</b> DRHStillCamera.h:12</div></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="interface_d_r_h_still_camera.html">   57</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_still_camera.html">DRHStillCamera</a> : NSObject {</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="interface_d_r_h_still_camera.html#a74ea795de447fea443051300d7154f20">   59</a></span>&#160;    NSArray *<a class="code" href="interface_d_r_h_still_camera.html#a74ea795de447fea443051300d7154f20">availableDevices</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="interface_d_r_h_still_camera.html#a6ad10c97406f22a556db70531a0223e9">   62</a></span>&#160;    AVCaptureDevice *<a class="code" href="interface_d_r_h_still_camera.html#a6ad10c97406f22a556db70531a0223e9">device</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="interface_d_r_h_still_camera.html#a590946f36075ecf049451294b45b7128">   65</a></span>&#160;    AVCaptureSession *<a class="code" href="interface_d_r_h_still_camera.html#a590946f36075ecf049451294b45b7128">cameraSession</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="interface_d_r_h_still_camera.html#ae56eddfe8e6ec52b31506d9960657b2a">   68</a></span>&#160;    AVCaptureStillImageOutput *<a class="code" href="interface_d_r_h_still_camera.html#ae56eddfe8e6ec52b31506d9960657b2a">stillImageOutput</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;-(NSArray *)availableDevices;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;-(AVCaptureStillImageOutput *)stillImageOutput;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;-(void)selectDeviceAtIndex:(NSInteger)index;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;-(BOOL)startCameraSession;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;-(void)stopCameraSession;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;-(BOOL)isRunning;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_d_r_h_still_camera_html_a590946f36075ecf049451294b45b7128"><div class="ttname"><a href="interface_d_r_h_still_camera.html#a590946f36075ecf049451294b45b7128">DRHStillCamera::cameraSession</a></div><div class="ttdeci">AVCaptureSession * cameraSession</div><div class="ttdoc">The AVCaptureSession used to run the selected camera device. </div><div class="ttdef"><b>Definition:</b> DRHStillCamera.h:65</div></div>
+<div class="ttc" id="interface_d_r_h_still_camera_html"><div class="ttname"><a href="interface_d_r_h_still_camera.html">DRHStillCamera</a></div><div class="ttdoc">A class for selecting, setting up, starting and stopping a usb camera to take still images...</div><div class="ttdef"><b>Definition:</b> DRHStillCamera.h:57</div></div>
+<div class="ttc" id="interface_d_r_h_still_camera_html_a6ad10c97406f22a556db70531a0223e9"><div class="ttname"><a href="interface_d_r_h_still_camera.html#a6ad10c97406f22a556db70531a0223e9">DRHStillCamera::device</a></div><div class="ttdeci">AVCaptureDevice * device</div><div class="ttdoc">The currently selected AVCaptureDevice from the array of availableDevices. </div><div class="ttdef"><b>Definition:</b> DRHStillCamera.h:62</div></div>
+<div class="ttc" id="interface_d_r_h_still_camera_html_ae56eddfe8e6ec52b31506d9960657b2a"><div class="ttname"><a href="interface_d_r_h_still_camera.html#ae56eddfe8e6ec52b31506d9960657b2a">DRHStillCamera::stillImageOutput</a></div><div class="ttdeci">AVCaptureStillImageOutput * stillImageOutput</div><div class="ttdoc">The AVCaptureOutput used to run the selected camera device as a still cammera. </div><div class="ttdef"><b>Definition:</b> DRHStillCamera.h:68</div></div>
+<div class="ttc" id="interface_d_r_h_still_camera_html_a74ea795de447fea443051300d7154f20"><div class="ttname"><a href="interface_d_r_h_still_camera.html#a74ea795de447fea443051300d7154f20">DRHStillCamera::availableDevices</a></div><div class="ttdeci">NSArray * availableDevices</div><div class="ttdoc">An array of AVCaptureDevice objects that are capable of caputre the media type AVMediaTypeVideo. </div><div class="ttdef"><b>Definition:</b> DRHStillCamera.h:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 7 2014 18:09:41 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 17 2014 17:55:55 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

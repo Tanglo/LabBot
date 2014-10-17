@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DRHExperimenterWindowController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for controlling the main window of an experiment.  
+ <a href="interface_d_r_h_experimenter_window_controller.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_d_r_h_experimenter_window_controller_8h_source.html">DRHExperimenterWindowController.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DRHExperimenterWindowController:</div>
 <div class="dyncontent">
@@ -101,40 +106,124 @@ Inheritance diagram for DRHExperimenterWindowController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:ab85ff601e12fa01cd6abfa2891e43937"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab85ff601e12fa01cd6abfa2891e43937"></a>
-(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <b>experimentNameField</b></td></tr>
+<tr class="memitem:ab85ff601e12fa01cd6abfa2891e43937"><td class="memItemLeft" align="right" valign="top">(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#ab85ff601e12fa01cd6abfa2891e43937">experimentNameField</a></td></tr>
 <tr class="separator:ab85ff601e12fa01cd6abfa2891e43937"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85c8417f1424735d6b1a0ce0c48bb051"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85c8417f1424735d6b1a0ce0c48bb051"></a>
-(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <b>experimentSubjectField</b></td></tr>
+<tr class="memitem:a85c8417f1424735d6b1a0ce0c48bb051"><td class="memItemLeft" align="right" valign="top">(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#a85c8417f1424735d6b1a0ce0c48bb051">experimentSubjectField</a></td></tr>
 <tr class="separator:a85c8417f1424735d6b1a0ce0c48bb051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0541ea8a0b50ce20b99eac3bea13bb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0541ea8a0b50ce20b99eac3bea13bb1"></a>
-(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <b>experimentSessionField</b></td></tr>
+<tr class="memitem:ad0541ea8a0b50ce20b99eac3bea13bb1"><td class="memItemLeft" align="right" valign="top">(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#ad0541ea8a0b50ce20b99eac3bea13bb1">experimentSessionField</a></td></tr>
 <tr class="separator:ad0541ea8a0b50ce20b99eac3bea13bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d5d21136079e2742b37f6cc39a3a1f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d5d21136079e2742b37f6cc39a3a1f1"></a>
-(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <b>experimentFilenameStemField</b></td></tr>
+<tr class="memitem:a0d5d21136079e2742b37f6cc39a3a1f1"><td class="memItemLeft" align="right" valign="top">(NSTextField *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#a0d5d21136079e2742b37f6cc39a3a1f1">experimentFilenameStemField</a></td></tr>
 <tr class="separator:a0d5d21136079e2742b37f6cc39a3a1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaa80d6d21e8c0476d0a4c157441d542"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afaa80d6d21e8c0476d0a4c157441d542"></a>
-(NSDatePicker *)&#160;</td><td class="memItemRight" valign="bottom">- <b>experimentDatePicker</b></td></tr>
+<tr class="memitem:afaa80d6d21e8c0476d0a4c157441d542"><td class="memItemLeft" align="right" valign="top">(NSDatePicker *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#afaa80d6d21e8c0476d0a4c157441d542">experimentDatePicker</a></td></tr>
 <tr class="separator:afaa80d6d21e8c0476d0a4c157441d542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a0e41f7611ee633cd759c20366426882d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e41f7611ee633cd759c20366426882d"></a>
-IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><b>experimentNameField</b></td></tr>
+IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_experimenter_window_controller.html#a0e41f7611ee633cd759c20366426882d">experimentNameField</a></td></tr>
+<tr class="memdesc:a0e41f7611ee633cd759c20366426882d"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code>IBOutlet</code> to the <code>NSTextField</code> instance that edits the experiment name. <br /></td></tr>
 <tr class="separator:a0e41f7611ee633cd759c20366426882d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c0b13c41680992844ccfe834124d72c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7c0b13c41680992844ccfe834124d72c"></a>
-IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><b>experimentSubjectField</b></td></tr>
+IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_experimenter_window_controller.html#a7c0b13c41680992844ccfe834124d72c">experimentSubjectField</a></td></tr>
+<tr class="memdesc:a7c0b13c41680992844ccfe834124d72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code>IBOutlet</code> to the <code>NSTextField</code> instance that edits the experimental subject's identifier. <br /></td></tr>
 <tr class="separator:a7c0b13c41680992844ccfe834124d72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70132bfd6638b322e81bc9e34c64c285"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70132bfd6638b322e81bc9e34c64c285"></a>
-IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><b>experimentSessionField</b></td></tr>
+IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_experimenter_window_controller.html#a70132bfd6638b322e81bc9e34c64c285">experimentSessionField</a></td></tr>
+<tr class="memdesc:a70132bfd6638b322e81bc9e34c64c285"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code>IBOutlet</code> to the <code>NSTextField</code> instance that edits the name of the experimental session. <br /></td></tr>
 <tr class="separator:a70132bfd6638b322e81bc9e34c64c285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70e1c281eaa8ee9c109dd95ed054e6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab70e1c281eaa8ee9c109dd95ed054e6e"></a>
-IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><b>experimentFilenameStemField</b></td></tr>
+IBOutlet NSTextField *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_experimenter_window_controller.html#ab70e1c281eaa8ee9c109dd95ed054e6e">experimentFilenameStemField</a></td></tr>
+<tr class="memdesc:ab70e1c281eaa8ee9c109dd95ed054e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code>IBOutlet</code> to the <code>NSTextField</code> instance that edits the filename stem used for creating new data files. <br /></td></tr>
 <tr class="separator:ab70e1c281eaa8ee9c109dd95ed054e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ae54a64f6f98739909288a2106dbaee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ae54a64f6f98739909288a2106dbaee"></a>
-IBOutlet NSDatePicker *&#160;</td><td class="memItemRight" valign="bottom"><b>experimentDatePicker</b></td></tr>
+IBOutlet NSDatePicker *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_experimenter_window_controller.html#a4ae54a64f6f98739909288a2106dbaee">experimentDatePicker</a></td></tr>
+<tr class="memdesc:a4ae54a64f6f98739909288a2106dbaee"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <code>IBOutlet</code> to the <code>NSTextField</code> instance that edits the experiment date. <br /></td></tr>
 <tr class="separator:a4ae54a64f6f98739909288a2106dbaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class for controlling the main window of an experiment. </p>
+<p>A <code><a class="el" href="interface_d_r_h_experimenter_window_controller.html" title="A class for controlling the main window of an experiment. ">DRHExperimenterWindowController</a></code> is intended to be used to control the main window of an experiment. The class is intended to the viewController class in an MVC setup that uses <code><a class="el" href="interface_d_r_h_experiment_data.html" title="An root level object to store basic experimental data and tables of experimental variables. ">DRHExperimentData</a></code> and so it includes <code>IBOutlet</code> instances that match the instance variables of the <code><a class="el" href="interface_d_r_h_experiment_data.html" title="An root level object to store basic experimental data and tables of experimental variables. ">DRHExperimentData</a></code> class. It is compulsory to use this class if you use the <code><a class="el" href="interface_d_r_h_experiment_document.html" title="A document object to handle the saving and opening of experiment data files. ">DRHExperimentDocument</a></code> class. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="afaa80d6d21e8c0476d0a4c157441d542"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSDatePicker *) experimentDatePicker </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A getter method for the <code>NSTextField</code> that edits experiment date. </p><dl class="section return"><dt>Returns</dt><dd>The <code>NSTextField</code> from the receiver's window that is currently linked to <code>experimentSessionField</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d5d21136079e2742b37f6cc39a3a1f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSTextField *) experimentFilenameStemField </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A getter method for the <code>NSTextField</code> that edits the filename stem used for creating new data files. </p><dl class="section return"><dt>Returns</dt><dd>The <code>NSTextField</code> from the receiver's window that is currently linked to <code>experimentFilenameStemField</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab85ff601e12fa01cd6abfa2891e43937"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSTextField *) experimentNameField </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A getter method for the <code>NSTextField</code> that edits the experiment name. </p><dl class="section return"><dt>Returns</dt><dd>The <code>NSTextField</code> from the receiver's window that is currently linked to <code>experimentNameField</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad0541ea8a0b50ce20b99eac3bea13bb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSTextField *) experimentSessionField </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A getter method for the <code>NSTextField</code> that edits the name of the experimental session. </p><dl class="section return"><dt>Returns</dt><dd>The <code>NSTextField</code> from the receiver's window that is currently linked to <code>experimentSessionField</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a85c8417f1424735d6b1a0ce0c48bb051"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSTextField *) experimentSubjectField </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A getter method for the <code>NSTextField</code> that edits the experimental subject's. </p><dl class="section return"><dt>Returns</dt><dd>The <code>NSTextField</code> from the receiver's window that is currently linked to <code>experimentSubjectField</code>. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_d_r_h_experimenter_window_controller_8h_source.html">DRHExperimenterWindowController.h</a></li>
 <li>DRHExperimenterWindowController.m</li>
@@ -142,7 +231,7 @@ IBOutlet NSDatePicker *&#160;</td><td class="memItemRight" valign="bottom"><b>ex
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 7 2014 18:09:41 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 17 2014 17:55:55 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
