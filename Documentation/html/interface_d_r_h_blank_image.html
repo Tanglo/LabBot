@@ -89,6 +89,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DRHBlankImage Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for generating easily repeatable blank images.  
+ <a href="interface_d_r_h_blank_image.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_d_r_h_blank_image_8h_source.html">DRHBlankImage.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DRHBlankImage:</div>
 <div class="dyncontent">
@@ -100,10 +105,36 @@ Inheritance diagram for DRHBlankImage:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:a2b4e8252d44fa883bcffe799cfc49dcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b4e8252d44fa883bcffe799cfc49dcd"></a>
-(NSImage *)&#160;</td><td class="memItemRight" valign="bottom">+ <b>blankImageOfSize:</b></td></tr>
+<tr class="memitem:a2b4e8252d44fa883bcffe799cfc49dcd"><td class="memItemLeft" align="right" valign="top">(NSImage *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_d_r_h_blank_image.html#a2b4e8252d44fa883bcffe799cfc49dcd">blankImageOfSize:</a></td></tr>
 <tr class="separator:a2b4e8252d44fa883bcffe799cfc49dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class for generating easily repeatable blank images. </p>
+<p>This is a simple utility class used to generate a quickly reproducable and easily recognisable blank image. It is used in experiments that use still images as data to represtent a zero, missing or NotANumber value. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a2b4e8252d44fa883bcffe799cfc49dcd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (NSImage *) blankImageOfSize: </td>
+          <td></td>
+          <td class="paramtype">(NSSize)&#160;</td>
+          <td class="paramname"><em>imageSize</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a new NSImage of the specified size containing only a black background and the words "blank image" written in white. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imageSize</td><td>An <code>NSSize</code> structure containing the width and height of the new blank image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An new blank <code>NSImage</code> object </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_d_r_h_blank_image_8h_source.html">DRHBlankImage.h</a></li>
 <li>DRHBlankImage.m</li>
@@ -111,7 +142,7 @@ Class Methods</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 17 2014 17:55:55 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 25 2014 11:44:57 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

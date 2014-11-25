@@ -91,6 +91,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DRHAudioPlayer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class for loading and audio files and managing its playback.  
+ <a href="interface_d_r_h_audio_player.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_d_r_h_audio_player_8h_source.html">DRHAudioPlayer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DRHAudioPlayer:</div>
 <div class="dyncontent">
@@ -102,31 +107,111 @@ Inheritance diagram for DRHAudioPlayer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:a1c1c6e531718752b8d190c763f82f8fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c1c6e531718752b8d190c763f82f8fd"></a>
-(<a class="el" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <b>initWithURL:</b></td></tr>
+<tr class="memitem:a1c1c6e531718752b8d190c763f82f8fd"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_audio_player.html#a1c1c6e531718752b8d190c763f82f8fd">initWithURL:</a></td></tr>
 <tr class="separator:a1c1c6e531718752b8d190c763f82f8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93fa14735be1c8d78016d649a2b15db1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93fa14735be1c8d78016d649a2b15db1"></a>
-(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <b>isReadyToPlay</b></td></tr>
+<tr class="memitem:a93fa14735be1c8d78016d649a2b15db1"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_audio_player.html#a93fa14735be1c8d78016d649a2b15db1">isReadyToPlay</a></td></tr>
 <tr class="separator:a93fa14735be1c8d78016d649a2b15db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac21fc4af0162c85d89c76a6f7865ec2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac21fc4af0162c85d89c76a6f7865ec2a"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>play</b></td></tr>
+<tr class="memitem:ac21fc4af0162c85d89c76a6f7865ec2a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_audio_player.html#ac21fc4af0162c85d89c76a6f7865ec2a">play</a></td></tr>
 <tr class="separator:ac21fc4af0162c85d89c76a6f7865ec2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:a50f723f4634f3197bf7d6feea4f343bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50f723f4634f3197bf7d6feea4f343bb"></a>
-(<a class="el" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <b>audioPlayerWithURL:</b></td></tr>
+<tr class="memitem:a50f723f4634f3197bf7d6feea4f343bb"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_d_r_h_audio_player.html#a50f723f4634f3197bf7d6feea4f343bb">audioPlayerWithURL:</a></td></tr>
 <tr class="separator:a50f723f4634f3197bf7d6feea4f343bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a57e0891b5d608c7848796ca1b5b6a890"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57e0891b5d608c7848796ca1b5b6a890"></a>
-AVPlayer *&#160;</td><td class="memItemRight" valign="bottom"><b>audioPlayer</b></td></tr>
+AVPlayer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_audio_player.html#a57e0891b5d608c7848796ca1b5b6a890">audioPlayer</a></td></tr>
+<tr class="memdesc:a57e0891b5d608c7848796ca1b5b6a890"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <code>AVPlayer</code> object that will be used to play the audio file. <br /></td></tr>
 <tr class="separator:a57e0891b5d608c7848796ca1b5b6a890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd32e697b3ec53b3b5697d936399f780"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd32e697b3ec53b3b5697d936399f780"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>isReadyToPlay</b></td></tr>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_audio_player.html#acd32e697b3ec53b3b5697d936399f780">isReadyToPlay</a></td></tr>
+<tr class="memdesc:acd32e697b3ec53b3b5697d936399f780"><td class="mdescLeft">&#160;</td><td class="mdescRight">An instance variable that tracks if this object is setup and ready to play. <br /></td></tr>
 <tr class="separator:acd32e697b3ec53b3b5697d936399f780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class for loading and audio files and managing its playback. </p>
+<p>This class simplifies the loading and playing of audio files. This task is identical in most projects and so in most cases it can be reduced to send a couple of messages to this class. This class is based on the AVFoundation framework. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a50f723f4634f3197bf7d6feea4f343bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *) audioPlayerWithURL: </td>
+          <td></td>
+          <td class="paramtype">(NSURL *)&#160;</td>
+          <td class="paramname"><em>URL</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new <code><a class="el" href="interface_d_r_h_audio_player.html" title="A class for loading and audio files and managing its playback. ">DRHAudioPlayer</a></code> object and initialises it including loading the audio file from the specified URL and getting the receiver ready to play. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">URL</td><td>A URL that specifies a valid audio file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An initialised <code><a class="el" href="interface_d_r_h_audio_player.html" title="A class for loading and audio files and managing its playback. ">DRHAudioPlayer</a></code> object. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c1c6e531718752b8d190c763f82f8fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *) initWithURL: </td>
+          <td></td>
+          <td class="paramtype">(NSURL *)&#160;</td>
+          <td class="paramname"><em>URL</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialises the receiver including loading the audio file from the specified URL and getting the receiver ready to play. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">URL</td><td>A URL that specifies a valid audio file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An initialised <code><a class="el" href="interface_d_r_h_audio_player.html" title="A class for loading and audio files and managing its playback. ">DRHAudioPlayer</a></code> object. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a93fa14735be1c8d78016d649a2b15db1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) isReadyToPlay </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks if the receiver is initialised and ready to play. </p><dl class="section return"><dt>Returns</dt><dd><code>YES</code> if the receiver is ready to play, else <code>NO</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac21fc4af0162c85d89c76a6f7865ec2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) play </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Begins playback of the receiver. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_d_r_h_audio_player_8h_source.html">DRHAudioPlayer.h</a></li>
 <li>DRHAudioPlayer.m</li>
@@ -134,7 +219,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>isReadyToPlay</b></td
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 17 2014 17:55:55 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 25 2014 11:44:57 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
