@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data',['data',['../interface_d_r_h_data_matrix.html#a88ac1386302a4f699c4deb5057a7c40f',1,'DRHDataMatrix']]]
+  ['barpadding',['barPadding',['../interface_d_r_h_vertical_spacing_chart_view.html#aec5333f4148666ea96a94fbca0854e45',1,'DRHVerticalSpacingChartView']]]
 ];

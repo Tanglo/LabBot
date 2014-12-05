@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -89,6 +90,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DRHRulerChartView Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to display an experimental ruler with specified size and labels.  
+ <a href="interface_d_r_h_ruler_chart_view.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_d_r_h_ruler_chart_view_8h_source.html">DRHRulerChartView.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DRHRulerChartView:</div>
 <div class="dyncontent">
@@ -102,28 +108,36 @@ Inheritance diagram for DRHRulerChartView:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ae98e7a4f2db7e4300ff454f5c306417a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae98e7a4f2db7e4300ff454f5c306417a"></a>
-NSArray *&#160;</td><td class="memItemRight" valign="bottom"><b>labels</b></td></tr>
+NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#ae98e7a4f2db7e4300ff454f5c306417a">labels</a></td></tr>
+<tr class="memdesc:ae98e7a4f2db7e4300ff454f5c306417a"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of <code>NSString</code> objects that specify the tick labels. <br /></td></tr>
 <tr class="separator:ae98e7a4f2db7e4300ff454f5c306417a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4416e553a090fe67ee02c2a160a5326b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4416e553a090fe67ee02c2a160a5326b"></a>
-CGFloat&#160;</td><td class="memItemRight" valign="bottom"><b>labelPadding</b></td></tr>
+CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#a4416e553a090fe67ee02c2a160a5326b">labelPadding</a></td></tr>
+<tr class="memdesc:a4416e553a090fe67ee02c2a160a5326b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ammount of spacing between the ticks and labels in points. Default is <code>10.0</code>. <br /></td></tr>
 <tr class="separator:a4416e553a090fe67ee02c2a160a5326b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add0c9086874ce2e618805f0701c45dd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add0c9086874ce2e618805f0701c45dd2"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>centreLabels</b></td></tr>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#add0c9086874ce2e618805f0701c45dd2">centreLabels</a></td></tr>
+<tr class="memdesc:add0c9086874ce2e618805f0701c45dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should labels be vertically centred on their tick. Default is <code>NO</code>. <br /></td></tr>
 <tr class="separator:add0c9086874ce2e618805f0701c45dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53003b1e47981792d1eb5a6f36d5cd1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53003b1e47981792d1eb5a6f36d5cd1b"></a>
-CGFloat&#160;</td><td class="memItemRight" valign="bottom"><b>rulerWidth</b></td></tr>
+CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#a53003b1e47981792d1eb5a6f36d5cd1b">rulerWidth</a></td></tr>
+<tr class="memdesc:a53003b1e47981792d1eb5a6f36d5cd1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The width of the ruler in points. The default is <code>200.0</code>. <br /></td></tr>
 <tr class="separator:a53003b1e47981792d1eb5a6f36d5cd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d64429d071fdbaf8de3a0b204d4e56b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d64429d071fdbaf8de3a0b204d4e56b"></a>
-NSPoint&#160;</td><td class="memItemRight" valign="bottom"><b>rulerStartPosition</b></td></tr>
+NSPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#a5d64429d071fdbaf8de3a0b204d4e56b">rulerStartPosition</a></td></tr>
+<tr class="memdesc:a5d64429d071fdbaf8de3a0b204d4e56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the position of the bottom left corner of the ruler in points. The default is <code></code>(frame.size.width/2.0, 2.0). <br /></td></tr>
 <tr class="separator:a5d64429d071fdbaf8de3a0b204d4e56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa22bb12da37b531d6c1072e7a3da99da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa22bb12da37b531d6c1072e7a3da99da"></a>
-CGFloat&#160;</td><td class="memItemRight" valign="bottom"><b>tickSpacing</b></td></tr>
+CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#aa22bb12da37b531d6c1072e7a3da99da">tickSpacing</a></td></tr>
+<tr class="memdesc:aa22bb12da37b531d6c1072e7a3da99da"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance between the ruler ticks in millimetres. The default is <code>10.0</code> mm. <br /></td></tr>
 <tr class="separator:aa22bb12da37b531d6c1072e7a3da99da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77de88de70593f567253cf7c8d02ab5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77de88de70593f567253cf7c8d02ab5a"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>centreRuler</b></td></tr>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#a77de88de70593f567253cf7c8d02ab5a">centreRuler</a></td></tr>
+<tr class="memdesc:a77de88de70593f567253cf7c8d02ab5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies if the ruler should be horizontally centred within the view. Setting this to <code>YES</code> means that the value of <code>rulerStartPosition.x</code> is ignored. Default is <code>YES</code>. <br /></td></tr>
 <tr class="separator:a77de88de70593f567253cf7c8d02ab5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b0551d83c53d0a3c2c159b48986b216"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b0551d83c53d0a3c2c159b48986b216"></a>
-CGFloat&#160;</td><td class="memItemRight" valign="bottom"><b>monitorCalibration</b></td></tr>
+CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_ruler_chart_view.html#a3b0551d83c53d0a3c2c159b48986b216">monitorCalibration</a></td></tr>
+<tr class="memdesc:a3b0551d83c53d0a3c2c159b48986b216"><td class="mdescLeft">&#160;</td><td class="mdescRight">The scaling factor used to callibrate distances to mm on the monitor. If your tick distances are not correct alter this value. Default is <code>10.0/7</code>.0 which represetns 10.0 mm divided by the distance that appears when I tell an <code><a class="el" href="interface_d_r_h_ruler_chart_view.html" title="A class to display an experimental ruler with specified size and labels. ">DRHRulerChartView</a></code> to display 10 mm spacing when <code>monitorCalibration</code> is set to 1.0 (i.e. uncalibrated). <br /></td></tr>
 <tr class="separator:a3b0551d83c53d0a3c2c159b48986b216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_interface_d_r_h_chart_view"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_d_r_h_chart_view')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_d_r_h_chart_view.html">DRHChartView</a></td></tr>
 <tr class="memitem:a75c710f44bea81ae253905088587afbe inherit properties_interface_d_r_h_chart_view"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75c710f44bea81ae253905088587afbe"></a>
@@ -135,13 +149,16 @@ CGFloat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i
 <tr class="memdesc:af39a4fd0bb693208384f30a9eb64f7ea inherit properties_interface_d_r_h_chart_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thickness of the lines used to draw the chart graphics. <br /></td></tr>
 <tr class="separator:af39a4fd0bb693208384f30a9eb64f7ea inherit properties_interface_d_r_h_chart_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class to display an experimental ruler with specified size and labels. </p>
+<p>A <code><a class="el" href="interface_d_r_h_ruler_chart_view.html" title="A class to display an experimental ruler with specified size and labels. ">DRHRulerChartView</a></code> is a NSView class to facilitate displaying expeirmental rulers, which often need to have variable sizes and different, often random, starting points for each trail. The labels are specified as an array so that they can be easily generated externally. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_d_r_h_ruler_chart_view_8h_source.html">DRHRulerChartView.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 25 2014 11:44:57 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 5 2014 14:50:25 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +92,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DRHFileDate Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to hold a date and it's display format.  
+ <a href="interface_d_r_h_file_date.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_d_r_h_file_date_8h_source.html">DRHFileDate.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for DRHFileDate:</div>
 <div class="dyncontent">
@@ -102,31 +108,117 @@ Inheritance diagram for DRHFileDate:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:a380e35a2bf989331383f33ad5570d2f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a380e35a2bf989331383f33ad5570d2f5"></a>
-(<a class="el" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <b>initWithDate:</b></td></tr>
+<tr class="memitem:a380e35a2bf989331383f33ad5570d2f5"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_file_date.html#a380e35a2bf989331383f33ad5570d2f5">initWithDate:</a></td></tr>
 <tr class="separator:a380e35a2bf989331383f33ad5570d2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10436c103ffa39dfdf84fb03cc163763"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10436c103ffa39dfdf84fb03cc163763"></a>
-(void)&#160;</td><td class="memItemRight" valign="bottom">- <b>setDate:</b></td></tr>
+<tr class="memitem:a10436c103ffa39dfdf84fb03cc163763"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_file_date.html#a10436c103ffa39dfdf84fb03cc163763">setDate:</a></td></tr>
 <tr class="separator:a10436c103ffa39dfdf84fb03cc163763"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d5d4226017f4e8b5668ff82b75e2767"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d5d4226017f4e8b5668ff82b75e2767"></a>
-(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <b>dateString</b></td></tr>
+<tr class="memitem:a5d5d4226017f4e8b5668ff82b75e2767"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_file_date.html#a5d5d4226017f4e8b5668ff82b75e2767">dateString</a></td></tr>
 <tr class="separator:a5d5d4226017f4e8b5668ff82b75e2767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
-<tr class="memitem:a9eb2296660f26700a8e3b97c375745a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eb2296660f26700a8e3b97c375745a1"></a>
-(<a class="el" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <b>fileDateWithDate:</b></td></tr>
+<tr class="memitem:a9eb2296660f26700a8e3b97c375745a1"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="interface_d_r_h_file_date.html#a9eb2296660f26700a8e3b97c375745a1">fileDateWithDate:</a></td></tr>
 <tr class="separator:a9eb2296660f26700a8e3b97c375745a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab1a9e6949038ca4ada72d7e829ecbd1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1a9e6949038ca4ada72d7e829ecbd1a"></a>
-NSDate *&#160;</td><td class="memItemRight" valign="bottom"><b>date</b></td></tr>
+NSDate *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">date</a></td></tr>
+<tr class="memdesc:ab1a9e6949038ca4ada72d7e829ecbd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The date. <br /></td></tr>
 <tr class="separator:ab1a9e6949038ca4ada72d7e829ecbd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc3738accd96188583f0c5636d96338"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc3738accd96188583f0c5636d96338"></a>
-NSDateFormatter *&#160;</td><td class="memItemRight" valign="bottom"><b>dateFormatter</b></td></tr>
+NSDateFormatter *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">dateFormatter</a></td></tr>
+<tr class="memdesc:abdc3738accd96188583f0c5636d96338"><td class="mdescLeft">&#160;</td><td class="mdescRight">The format that should be used to display or draw this date. <br /></td></tr>
 <tr class="separator:abdc3738accd96188583f0c5636d96338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to hold a date and it's display format. </p>
+<p>This class simply pairs an <code>NSDate</code> with an <code>NSDateFormatter</code> which can be useful for dates that need to be displayed or drawn in customised formats. </p>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a5d5d4226017f4e8b5668ff82b75e2767"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) dateString </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the receivers date as a string in the receivers specified format. </p><dl class="section return"><dt>Returns</dt><dd>An <code>NSString</code> object of the recevier's <code>date</code> in the format specified by the receiver's <code>dateFormatter</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9eb2296660f26700a8e3b97c375745a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (<a class="el" href="interface_d_r_h_file_date.html">DRHFileDate</a> *) fileDateWithDate: </td>
+          <td></td>
+          <td class="paramtype">(NSDate *)&#160;</td>
+          <td class="paramname"><em>newDate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a new <code><a class="el" href="interface_d_r_h_file_date.html" title="Used to hold a date and it&#39;s display format. ">DRHFileDate</a></code> and initialises it with the specified date object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newDate</td><td>The date object used to initialise the newly created object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A newly created <code><a class="el" href="interface_d_r_h_file_date.html" title="Used to hold a date and it&#39;s display format. ">DRHFileDate</a></code> object initialised with the specified date object. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a380e35a2bf989331383f33ad5570d2f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interface_d_r_h_file_date.html">DRHFileDate</a> *) initWithDate: </td>
+          <td></td>
+          <td class="paramtype">(NSDate *)&#160;</td>
+          <td class="paramname"><em>newDate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialises the receiver with the specified date object. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newDate</td><td>The date object used to initialise the receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The receiver initialised with the specified date object. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a10436c103ffa39dfdf84fb03cc163763"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setDate: </td>
+          <td></td>
+          <td class="paramtype">(NSDate *)&#160;</td>
+          <td class="paramname"><em>newDate</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets the date object of the receiver. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newDate</td><td>The date object used to set the receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_d_r_h_file_date_8h_source.html">DRHFileDate.h</a></li>
 <li>DRHFileDate.m</li>
@@ -134,7 +226,7 @@ NSDateFormatter *&#160;</td><td class="memItemRight" valign="bottom"><b>dateForm
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 25 2014 11:44:57 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 5 2014 14:50:25 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['experimentdatamatrix',['experimentDataMatrix',['../interface_d_r_h_experiment_data.html#a46c1459da1b739470c173b5a93f01ac2',1,'DRHExperimentData']]],
-  ['experimentdate',['experimentDate',['../interface_d_r_h_experiment_data.html#adfa04768c6b33e96fad643c41f4d9f99',1,'DRHExperimentData']]],
-  ['experimenterwindowcontroller',['experimenterWindowController',['../interface_d_r_h_experiment_document.html#a1cc05e8aad71c51cf0561ce8b756d4bf',1,'DRHExperimentDocument']]],
-  ['experimentfilenamestem',['experimentFilenameStem',['../interface_d_r_h_experiment_data.html#a74d1ee8dbee1c5764d805ed72fb2e00b',1,'DRHExperimentData']]],
-  ['experimentname',['experimentName',['../interface_d_r_h_experiment_data.html#ad95b61a58cf8b6649f023a0e487200dd',1,'DRHExperimentData']]],
-  ['experimentsession',['experimentSession',['../interface_d_r_h_experiment_data.html#a20b4acfd2f1a82342028840a134b3a4c',1,'DRHExperimentData']]],
-  ['experimentsubject',['experimentSubject',['../interface_d_r_h_experiment_data.html#acf412bcf45b7581f66d9f11d132ef3c7',1,'DRHExperimentData']]]
+  ['capwidth',['capWidth',['../interface_d_r_h_vertical_spacing_chart_view.html#afde226b3ba7d6463f144d50ad88ff8cf',1,'DRHVerticalSpacingChartView']]],
+  ['centrelabels',['centreLabels',['../interface_d_r_h_ruler_chart_view.html#add0c9086874ce2e618805f0701c45dd2',1,'DRHRulerChartView']]],
+  ['centreruler',['centreRuler',['../interface_d_r_h_ruler_chart_view.html#a77de88de70593f567253cf7c8d02ab5a',1,'DRHRulerChartView']]],
+  ['columndata',['columnData',['../interface_d_r_h_data_column.html#ae101002424eab69be49e69b1a1a0f671',1,'DRHDataColumn']]],
+  ['columnname',['columnName',['../interface_d_r_h_data_column.html#a1194ef84bd2b01dc8621b010d935e7ae',1,'DRHDataColumn']]]
 ];

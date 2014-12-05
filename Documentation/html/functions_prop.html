@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -80,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -91,6 +92,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="contents">
 &#160;<ul>
+<li>alignment
+: <a class="el" href="interface_d_r_h_vertical_spacing_chart_view.html#a4839c8980ff57dcff9cd1830630c0da7">DRHVerticalSpacingChartView</a>
+</li>
+<li>barPadding
+: <a class="el" href="interface_d_r_h_vertical_spacing_chart_view.html#aec5333f4148666ea96a94fbca0854e45">DRHVerticalSpacingChartView</a>
+</li>
+<li>capWidth
+: <a class="el" href="interface_d_r_h_vertical_spacing_chart_view.html#afde226b3ba7d6463f144d50ad88ff8cf">DRHVerticalSpacingChartView</a>
+</li>
+<li>centreLabels
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#add0c9086874ce2e618805f0701c45dd2">DRHRulerChartView</a>
+</li>
+<li>centreRuler
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#a77de88de70593f567253cf7c8d02ab5a">DRHRulerChartView</a>
+</li>
 <li>columnData
 : <a class="el" href="interface_d_r_h_data_column.html#ae101002424eab69be49e69b1a1a0f671">DRHDataColumn</a>
 </li>
@@ -124,20 +140,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>fontSize
 : <a class="el" href="interface_d_r_h_chart_view.html#a75c710f44bea81ae253905088587afbe">DRHChartView</a>
 </li>
+<li>labelPadding
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#a4416e553a090fe67ee02c2a160a5326b">DRHRulerChartView</a>
+</li>
+<li>labels
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#ae98e7a4f2db7e4300ff454f5c306417a">DRHRulerChartView</a>
+, <a class="el" href="interface_d_r_h_vertical_spacing_chart_view.html#a9073b5623c41befef02f928e81dd6088">DRHVerticalSpacingChartView</a>
+</li>
 <li>lineWidth
 : <a class="el" href="interface_d_r_h_chart_view.html#af39a4fd0bb693208384f30a9eb64f7ea">DRHChartView</a>
+</li>
+<li>monitorCalibration
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#a3b0551d83c53d0a3c2c159b48986b216">DRHRulerChartView</a>
+, <a class="el" href="interface_d_r_h_vertical_spacing_chart_view.html#a3ac6a92deef5a1df8975b47b1959d8e0">DRHVerticalSpacingChartView</a>
 </li>
 <li>names
 : <a class="el" href="interface_d_r_h_data_matrix.html#a74748c0e3b2eb6f086271c9eb34d3476">DRHDataMatrix</a>
 </li>
+<li>rulerStartPosition
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#a5d64429d071fdbaf8de3a0b204d4e56b">DRHRulerChartView</a>
+</li>
+<li>rulerWidth
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#a53003b1e47981792d1eb5a6f36d5cd1b">DRHRulerChartView</a>
+</li>
 <li>subjectWindowController
 : <a class="el" href="interface_d_r_h_experiment_document.html#aefed126371014e23b7755d8c5a4b723f">DRHExperimentDocument</a>
+</li>
+<li>tickSpacing
+: <a class="el" href="interface_d_r_h_ruler_chart_view.html#aa22bb12da37b531d6c1072e7a3da99da">DRHRulerChartView</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 25 2014 11:44:57 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 5 2014 14:50:25 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

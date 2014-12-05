@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ @brief This class is deprecated.  Use @c DRHDataColumn instead.
+ 
+ @deprecated This class has been deprecated and will be removed in a later version.  New software should use @c DRHDataColumn instead.
+ */
 __attribute__((deprecated))
 @interface DRHTrialArray : NSObject <NSCoding>{
     NSString *trialsArrayName;
