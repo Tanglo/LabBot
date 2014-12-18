@@ -13,6 +13,12 @@
 		E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */; };
 		E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B5197657E10001BBE9 /* DRHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B6197657E10001BBE9 /* DRHChartView.m */; };
+		E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E5311A429B5700F43B81 /* DRHLabJack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E5321A429B5700F43B81 /* DRHLabJack.m */; };
+		E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E5351A429B7000F43B81 /* DRHLabjackU6.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E5361A429B7000F43B81 /* DRHLabjackU6.m */; };
+		E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E5391A429C8600F43B81 /* DRHDaqDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */; };
 		E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */; };
 		E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -78,6 +84,12 @@
 		E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHVerticalSpacingChartView.m; sourceTree = "<group>"; };
 		E524F2B5197657E10001BBE9 /* DRHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHChartView.h; sourceTree = "<group>"; };
 		E524F2B6197657E10001BBE9 /* DRHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHChartView.m; sourceTree = "<group>"; };
+		E525E5311A429B5700F43B81 /* DRHLabJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLabJack.h; sourceTree = "<group>"; };
+		E525E5321A429B5700F43B81 /* DRHLabJack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLabJack.m; sourceTree = "<group>"; };
+		E525E5351A429B7000F43B81 /* DRHLabjackU6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLabjackU6.h; sourceTree = "<group>"; };
+		E525E5361A429B7000F43B81 /* DRHLabjackU6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLabjackU6.m; sourceTree = "<group>"; };
+		E525E5391A429C8600F43B81 /* DRHDaqDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDaqDevice.h; sourceTree = "<group>"; };
+		E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDaqDevice.m; sourceTree = "<group>"; };
 		E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHRulerChartView.h; sourceTree = "<group>"; };
 		E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHRulerChartView.m; sourceTree = "<group>"; };
 		E540991918FE407A001CBB30 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
@@ -199,6 +211,12 @@
 				E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */,
 				E541FC7719A5BA3600FD9252 /* DRHFileDate.h */,
 				E541FC7819A5BA3600FD9252 /* DRHFileDate.m */,
+				E525E5391A429C8600F43B81 /* DRHDaqDevice.h */,
+				E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */,
+				E525E5311A429B5700F43B81 /* DRHLabJack.h */,
+				E525E5321A429B5700F43B81 /* DRHLabJack.m */,
+				E525E5351A429B7000F43B81 /* DRHLabjackU6.h */,
+				E525E5361A429B7000F43B81 /* DRHLabjackU6.m */,
 				E55D2F631999940E006EF3D4 /* Deprecated */,
 				E5C8977518F52A4300335057 /* LabBot */,
 				E5C8978A18F52A4300335057 /* LabBotTests */,
@@ -298,6 +316,9 @@
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
 				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
+				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
+				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
+				E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */,
 				E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */,
 				E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */,
 				E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */,
@@ -314,9 +335,9 @@
 				E5C8976718F52A4300335057 /* Sources */,
 				E5C8976818F52A4300335057 /* Frameworks */,
 				E5C8976918F52A4300335057 /* Headers */,
+				E5746D1A19DD277900F72CDD /* ShellScript */,
 				E5C8976A18F52A4300335057 /* Resources */,
 				E5C897BC18F52A6A00335057 /* CopyFiles */,
-				E5746D1A19DD277900F72CDD /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -396,10 +417,12 @@
 				E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
+				E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */,
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
 				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
 				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
+				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
 				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
@@ -407,6 +430,7 @@
 				E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */,
 				E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */,
 				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,
+				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
 			);
@@ -468,6 +492,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lusb-1.0",
+					"-llabjackusb",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -500,6 +528,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-lusb-1.0",
+					"-llabjackusb",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -515,6 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = framework;
@@ -532,6 +565,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				WRAPPER_EXTENSION = framework;
