@@ -62,6 +62,9 @@
 		E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */; };
 		E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6562418FE4A0000727834 /* DRHLandmarkData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
+		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
+		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */ = {isa = PBXBuildFile; fileRef = E5FA88B51A479A6D0067A0C0 /* Doxyfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -142,6 +145,9 @@
 		E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialArray.m; sourceTree = "<group>"; };
 		E5E6562418FE4A0000727834 /* DRHLandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLandmarkData.h; sourceTree = "<group>"; };
 		E5E6562518FE4A0000727834 /* DRHLandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLandmarkData.m; sourceTree = "<group>"; };
+		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
+		E5FA88B11A4797D40067A0C0 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
+		E5FA88B51A479A6D0067A0C0 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D4F0B219063A440091B4AE /* To do.rtf */,
+				E5FA88B51A479A6D0067A0C0 /* Doxyfile */,
 				E540991918FE407A001CBB30 /* LabBot.h */,
 				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
 				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
@@ -215,6 +222,8 @@
 				E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */,
 				E525E5311A429B5700F43B81 /* DRHLabJack.h */,
 				E525E5321A429B5700F43B81 /* DRHLabJack.m */,
+				E5FA88B11A4797D40067A0C0 /* u6.h */,
+				E5FA88B01A4797D40067A0C0 /* u6.c */,
 				E525E5351A429B7000F43B81 /* DRHLabjackU6.h */,
 				E525E5361A429B7000F43B81 /* DRHLabjackU6.m */,
 				E55D2F631999940E006EF3D4 /* Deprecated */,
@@ -318,6 +327,7 @@
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
 				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
 				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
+				E5FA88B31A4797D40067A0C0 /* u6.h in Headers */,
 				E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */,
 				E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */,
 				E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */,
@@ -379,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */,
 				E5D4F0B319063A440091B4AE /* To do.rtf in Resources */,
 				E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */,
 				E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */,
@@ -415,6 +426,7 @@
 				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
 				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
 				E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */,
+				E5FA88B21A4797D40067A0C0 /* u6.c in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
 				E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */,

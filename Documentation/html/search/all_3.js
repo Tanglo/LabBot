@@ -22,6 +22,7 @@ var searchData=
   ['datestring',['dateString',['../interface_d_r_h_file_date.html#a5d5d4226017f4e8b5668ff82b75e2767',1,'DRHFileDate']]],
   ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
   ['device',['device',['../interface_d_r_h_still_camera.html#a6ad10c97406f22a556db70531a0223e9',1,'DRHStillCamera']]],
+  ['devicewithu6handle_3a',['deviceWithU6Handle:',['../interface_d_r_h_labjack_u6.html#a8bf8b9845c520e3999a44ecbfe183b0f',1,'DRHLabjackU6']]],
   ['drhaudioplayer',['DRHAudioPlayer',['../interface_d_r_h_audio_player.html',1,'']]],
   ['drhblankimage',['DRHBlankImage',['../interface_d_r_h_blank_image.html',1,'']]],
   ['drhchartview',['DRHChartView',['../interface_d_r_h_chart_view.html',1,'']]],
