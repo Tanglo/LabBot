@@ -8,31 +8,27 @@
 
 #import "DRHLabjackU6.h"
 
+NSString * const DRHLabJackU6ConfigScanRateKey = @"DRHLJU6ScanRateKey";
+NSString * const DRHLabJackU6ConfigNumAnalogueChanKey = @"DRHLJU6NumberAnalogueChannelsKey";
+NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPacketKey";
+
 @implementation DRHLabjackU6
 
 #pragma mark Initialisers
--(id)init{
-    if (self = [super init]) {
-        handle = NULL;
-        numChan = 5;
-        samplesPerPacket = 25;
-    }
-    return self;
-}
-
--(DRHLabjackU6 *)initWithU6Handle:(HANDLE)newHandle{
+-(DRHLabjackU6 *)initWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings{
     if (self = [super init]) {
         handle = newHandle;
         if (getCalibrationInfo(handle, &caliInfo) < 0)
             return nil;
-        numChan = 5;
-        samplesPerPacket = 25;
+        numAnalogueChan = [[settings objectForKey:DRHLabJackU6ConfigNumAnalogueChanKey] integerValue]; //5;
+        samplesPerPacket = [[settings objectForKey:DRHLabJackU6ConfigSamplesPerPacketKey] integerValue]; //25;
+        scanRate = [[settings objectForKey:DRHLabJackU6ConfigScanRateKey] integerValue];
     }
     return self;
 }
 
-+(DRHLabjackU6 *)deviceWithU6Handle:(HANDLE)newHandle{
-    return [[self alloc] initWithU6Handle:newHandle];
++(DRHLabjackU6 *)deviceWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings{
+    return [[self alloc] initWithU6Handle:newHandle AndSettings:settings];
 }
 
 #pragma mark Getters
@@ -40,9 +36,9 @@
     return handle;
 }
 
--(NSInteger)configureStreamWithScanRate:(uint16)scanRate{
+-(NSInteger)configureStream{
     int sendBuffSize;
-    sendBuffSize = 14+(int)numChan*2;
+    sendBuffSize = 14+(int)numAnalogueChan*2;
     uint8 sendBuff[sendBuffSize], recBuff[8];
     unsigned long sendChars, recChars;
     uint16 checksumTotal;
@@ -50,9 +46,9 @@
     int i;
     
     sendBuff[1] = (uint8)(0xF8);     //Command byte
-    sendBuff[2] = 4 + numChan;   //Number of data words = NumChannels + 4
+    sendBuff[2] = 4 + numAnalogueChan;   //Number of data words = NumChannels + 4
     sendBuff[3] = (uint8)(0x11);     //Extended command number
-    sendBuff[6] = numChan;       //NumChannels
+    sendBuff[6] = numAnalogueChan;       //NumChannels
     sendBuff[7] = 1;                 //ResolutionIndex
     sendBuff[8] = samplesPerPacket;  //SamplesPerPacket
     sendBuff[9] = 0;                 //Reserved
@@ -61,11 +57,11 @@
     //  Bit 3: Internal stream clock frequency = b0: 4 MHz
     //  Bit 1: Divide Clock by 256 = b0
     
-    scanInterval = 4000000 / scanRate;
+    scanInterval = 4000000 / scanRate;  //scanRate;
     sendBuff[12] = (uint8)(scanInterval&(0x00FF));  //scan interval (low byte)
     sendBuff[13] = (uint8)(scanInterval/256);       //scan interval (high byte)
     
-    for( i = 0; i < numChan; i++ )
+    for( i = 0; i < numAnalogueChan; i++ )
     {
         sendBuff[14 + i*2] = i;  //ChannelNumber (Positive) = i
         sendBuff[15 + i*2] = 0;  //ChannelOptions:
@@ -240,7 +236,7 @@
 
 -(NSInteger)readStreamData{
     int recBuffSize;
-    recBuffSize = 14 + (int)samplesPerPacket*2;
+//    recBuffSize = 14 + (int)samplesPerPacket*2;
     unsigned long recChars, backLog = 0;
     int i, j, k, m, packetCounter, currChannel, scanNumber;
     int totalPackets;  //The total number of StreamData responses read
@@ -262,7 +258,7 @@
      * samples for each channel.
      * Total number of scans = (SamplesPerPacket / NumChannels) * readSizeMultiplier * numReadsPerDisplay * numDisplay
      */
-    double voltages[(samplesPerPacket/numChan)*readSizeMultiplier*numReadsPerDisplay*numDisplay][numChan];
+    double voltages[(samplesPerPacket/numAnalogueChan)*readSizeMultiplier*numReadsPerDisplay*numDisplay][numAnalogueChan];
     uint8 recBuff[responseSize*readSizeMultiplier];
     packetCounter = 0;
     currChannel = 0;
@@ -362,7 +358,7 @@
                     getAinVoltCalibrated(&caliInfo, 1, 0, 0, voltageBytes, &(voltages[scanNumber][currChannel]));
                     
                     currChannel++;
-                    if( currChannel >= numChan )
+                    if( currChannel >= numAnalogueChan )
                     {
                         currChannel = 0;
                         scanNumber++;
@@ -381,12 +377,12 @@
         printf("Current PacketCounter: %d\n", ((packetCounter == 0) ? 255 : packetCounter-1));
         printf("Current BackLog: %lu\n", backLog);
         
-        for( k = 0; k < numChan; k++ )
+        for( k = 0; k < numAnalogueChan; k++ )
             printf("  AI%d: %.4f V\n", k, voltages[scanNumber - 1][k]);
     }
     
     endTime = getTickCount();
-    printf("\nRate of samples: %.0lf samples per second\n", (scanNumber*numChan)/((endTime - startTime)/1000.0));
+    printf("\nRate of samples: %.0lf samples per second\n", (scanNumber*numAnalogueChan)/((endTime - startTime)/1000.0));
     printf("Rate of scans: %.0lf scans per second\n\n", scanNumber/((endTime - startTime)/1000.0));
     
     return 0;

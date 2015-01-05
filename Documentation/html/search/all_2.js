@@ -8,7 +8,7 @@ var searchData=
   ['columncount',['columnCount',['../interface_d_r_h_data_matrix.html#a244e5e31fc3144a217fe5acfb72d6476',1,'DRHDataMatrix']]],
   ['columndata',['columnData',['../interface_d_r_h_data_column.html#ae101002424eab69be49e69b1a1a0f671',1,'DRHDataColumn']]],
   ['columnname',['columnName',['../interface_d_r_h_data_column.html#a1194ef84bd2b01dc8621b010d935e7ae',1,'DRHDataColumn']]],
-  ['configurestreamwithscanrate_3a',['configureStreamWithScanRate:',['../interface_d_r_h_labjack_u6.html#a06ac46ffbfce61a8afef948f678b6d41',1,'DRHLabjackU6']]],
+  ['configurestream',['configureStream',['../interface_d_r_h_labjack_u6.html#a9fc5eafd2e762bcb7e824b4ee7195be2',1,'DRHLabjackU6']]],
   ['constants',['Constants',['../group__constants.html',1,'']]],
   ['count',['count',['../interface_d_r_h_data_column.html#ae8b8976a4dc0d55f1a94343ce02ef4d8',1,'DRHDataColumn']]]
 ];

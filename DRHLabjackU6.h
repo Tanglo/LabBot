@@ -10,6 +10,22 @@
 #import "u6.h"
 
 /*!
+ * @memberof DRHLabjackU6
+ * Key for the number of analogue channels in the initialising setting dictionary.
+ */
+extern NSString * const DRHLabJackU6ConfigNumAnalogueChanKey;
+/*!
+ * @memberof DRHLabjackU6
+ * Key for the scan rate in the initialising setting dictionary.  1 scan is 1 sample of each configured channel.
+ */
+extern NSString * const DRHLabJackU6ConfigScanRateKey;
+/*!
+ * @memberof DRHLabjackU6
+ * Key for the samples per apcket setting in the initialising setting dictionary.
+ */
+extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
+
+/*!
  @brief A class for controlling a LabJack U6 or U6-Pro data aquisition device.
     
     This class provides properties and methods to facilitate interacting with a LabJack U6 or U6-Pro device.  This class is specific to the U6 and U6-Pro.  If you have a different LabJack device you should be using a different subclass of @c DRHLabJack.  If your data aqusition hardware is not a LabJack device you should be using a different subclass of @c DRHDaqDevice.
@@ -20,25 +36,29 @@
     /// @brief A structure for storing calibration constants.  Details by LabJack in @c u6.h file.
     u6CalibrationInfo caliInfo;
     /// @brief The number of sampling analogChannels
-    NSInteger numChan;
+    NSInteger numAnalogueChan;
     /// @brief The number of samples received on each read stream loop;
     NSInteger samplesPerPacket;
+    /// @brief The rate that scans are collected in Hz.  1 scan equals 1 sample from each configured channel.
+    NSInteger scanRate;
 }
 
 #pragma mark Initialisers
 /*!
  * Initialises the receiver with the specified device handle.
  * @param newHandle The device handle of an exisiting LabJack U6 device.
+ * @param settings An NSDictionary of the configuration settings.  Keys are defined under class constants.
  * @return The receiver initialised with the specified handle.
  */
--(DRHLabjackU6 *)initWithU6Handle:(HANDLE)newHandle;
+-(DRHLabjackU6 *)initWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings;
 
 /*!
  * Creates a new isntance of @c DRHLabJackU6 and initialises it with the specified device handle.
  * @param newHandle The device handle of an exisiting LabJack U6 device.
+ * @param settings An NSDictionary of the configuration settings.  Keys are defined under class constants.
  * @return The receiver initialised with the specified handle.
  */
-+(DRHLabjackU6 *)deviceWithU6Handle:(HANDLE)newHandle;
++(DRHLabjackU6 *)deviceWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings;
 
 #pragma mark Getters
 /*!
@@ -49,10 +69,9 @@
 
 /*!
  * Sends a low-level command to configure the LabJack for analogue streaming.
- * @param scanRate The rate the tha LabJack will scan.  1 scan = 1 measurement from all configured channels.
  * @return @c 0 if successful, else @c -1.
  */
--(NSInteger)configureStreamWithScanRate:(uint16)scanRate;
+-(NSInteger)configureStream;
 
 /*!
  * Sends a low-level command to start the configured stream.
