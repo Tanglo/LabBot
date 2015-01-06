@@ -234,158 +234,113 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     return 0;
 }
 
--(NSInteger)readStreamData{
+-(NSArray *)readStreamData{
     int recBuffSize;
-//    recBuffSize = 14 + (int)samplesPerPacket*2;
-    unsigned long recChars, backLog = 0;
-    int i, j, k, m, packetCounter, currChannel, scanNumber;
-    int totalPackets;  //The total number of StreamData responses read
+    recBuffSize = 14 + (int)samplesPerPacket*2;
     uint16 voltageBytes, checksumTotal;
-    long startTime, endTime;
-    int autoRecoveryOn;
+//    long startTime, endTime;
+    NSInteger numScans = samplesPerPacket / numAnalogueChan;
+    double voltages[numScans][numAnalogueChan];
+    uint8 recBuff[recBuffSize];
+    NSInteger currChannel = 0, scanNumber = 0;
+    unsigned long recChars = 0, backLog = 0;
+    BOOL autoRecoveryOn = NO;
     
-    int numDisplay;          //Number of times to display streaming information
-    int numReadsPerDisplay;  //Number of packets to read before displaying streaming information
-    int readSizeMultiplier;  //Multiplier for the StreamData receive buffer size
-    int responseSize;        //The number of bytes in a StreamData response (differs with SamplesPerPacket)
+//    printf("Reading Samples...\n");
     
-    numDisplay = 6;
-    numReadsPerDisplay = 24;
-    readSizeMultiplier = 5;
-    responseSize = 14 + (int)samplesPerPacket*2;
-    
-    /* Each StreamData response contains (SamplesPerPacket / NumChannels) * readSizeMultiplier
-     * samples for each channel.
-     * Total number of scans = (SamplesPerPacket / NumChannels) * readSizeMultiplier * numReadsPerDisplay * numDisplay
-     */
-    double voltages[(samplesPerPacket/numAnalogueChan)*readSizeMultiplier*numReadsPerDisplay*numDisplay][numAnalogueChan];
-    uint8 recBuff[responseSize*readSizeMultiplier];
-    packetCounter = 0;
-    currChannel = 0;
-    scanNumber = 0;
-    totalPackets = 0;
-    recChars = 0;
-    autoRecoveryOn = 0;
-    
-    printf("Reading Samples...\n");
-    
-    startTime = getTickCount();
-    
-    for( i = 0; i < numDisplay; i++ )
+//    startTime = getTickCount();
+    //Reading stream response from U6
+    recChars = LJUSB_Stream(handle, recBuff, recBuffSize);
+    if( recChars < recBuffSize )
     {
-        for( j = 0; j < numReadsPerDisplay; j++ )
-        {
-            /* For USB StreamData, use Endpoint 3 for reads.  You can read the multiple
-             * StreamData responses of 64 bytes only if SamplesPerPacket is 25 to help
-             * improve streaming performance.  In this example this multiple is adjusted
-             * by the readSizeMultiplier variable.
-             */
-            
-            //Reading stream response from U6
-            recChars = LJUSB_Stream(handle, recBuff, responseSize*readSizeMultiplier);
-            if( recChars < responseSize*readSizeMultiplier )
-            {
-                if(recChars == 0)
-                    printf("Error : read failed (StreamData).\n");
-                else
-                    printf("Error : did not read all of the buffer, expected %d bytes but received %lu(StreamData).\n", responseSize*readSizeMultiplier, recChars);
-                
-                return -1;
-            }
-            
-            //Checking for errors and getting data out of each StreamData response
-            for( m = 0; m < readSizeMultiplier; m++ )
-            {
-                totalPackets++;
-                
-                checksumTotal = extendedChecksum16(recBuff + m*recBuffSize, recBuffSize);
-                if( (uint8)((checksumTotal >> 8) & 0xff) != recBuff[m*recBuffSize + 5] )
-                {
-                    printf("Error : read buffer has bad checksum16(MSB) (StreamData).\n");
-                    return -1;
-                }
-                
-                if( (uint8)(checksumTotal & 0xff) != recBuff[m*recBuffSize + 4] )
-                {
-                    printf("Error : read buffer has bad checksum16(LSB) (StreamData).\n");
-                    return -1;
-                }
-                
-                checksumTotal = extendedChecksum8(recBuff + m*recBuffSize);
-                if( checksumTotal != recBuff[m*recBuffSize] )
-                {
-                    printf("Error : read buffer has bad checksum8 (StreamData).\n");
-                    return -1;
-                }
-                
-                if( recBuff[m*recBuffSize + 1] != (uint8)(0xF9) || recBuff[m*recBuffSize + 2] != 4 + samplesPerPacket || recBuff[m*recBuffSize + 3] != (uint8)(0xC0) )
-                {
-                    printf("Error : read buffer has wrong command bytes (StreamData).\n");
-                    return -1;
-                }
-                
-                if( recBuff[m*recBuffSize + 11] == 59 )
-                {
-                    if( !autoRecoveryOn )
-                    {
-                        printf("\nU6 data buffer overflow detected in packet %d.\nNow using auto-recovery and reading buffered samples.\n", totalPackets);
-                        autoRecoveryOn = 1;
-                    }
-                }
-                else if( recBuff[m*recBuffSize + 11] == 60 )
-                {
-                    printf("Auto-recovery report in packet %d: %d scans were dropped.\nAuto-recovery is now off.\n", totalPackets, recBuff[m*recBuffSize + 6] + recBuff[m*recBuffSize + 7]*256);
-                    autoRecoveryOn = 0;
-                }
-                else if( recBuff[m*recBuffSize + 11] != 0 )
-                {
-                    printf("Errorcode # %d from StreamData read.\n", (unsigned int)recBuff[11]);
-                    return -1;
-                }
-                
-                if( packetCounter != (int)recBuff[m*recBuffSize + 10] )
-                {
-                    printf("PacketCounter (%d) does not match with with current packet count (%d)(StreamData).\n", recBuff[m*recBuffSize + 10], packetCounter);
-                    return -1;
-                }
-                
-                backLog = (int)recBuff[m*48 + 12 + samplesPerPacket*2];
-                
-                for( k = 12; k < (12 + samplesPerPacket*2); k += 2 )
-                {
-                    voltageBytes = (uint16)recBuff[m*recBuffSize + k] + (uint16)recBuff[m*recBuffSize + k+1]*256;
-                    
-                    getAinVoltCalibrated(&caliInfo, 1, 0, 0, voltageBytes, &(voltages[scanNumber][currChannel]));
-                    
-                    currChannel++;
-                    if( currChannel >= numAnalogueChan )
-                    {
-                        currChannel = 0;
-                        scanNumber++;
-                    }
-                }
-                
-                if(packetCounter >= 255)
-                    packetCounter = 0;
-                else
-                    packetCounter++;
-            }
-        }
+        if(recChars == 0)
+            printf("Error : read failed (StreamData).\n");
+        else
+            printf("Error : did not read all of the buffer, expected %d bytes but received %lu(StreamData).\n", recBuffSize, recChars);
         
-        printf("\nNumber of scans: %d\n", scanNumber);
-        printf("Total packets read: %d\n", totalPackets);
-        printf("Current PacketCounter: %d\n", ((packetCounter == 0) ? 255 : packetCounter-1));
-        printf("Current BackLog: %lu\n", backLog);
-        
-        for( k = 0; k < numAnalogueChan; k++ )
-            printf("  AI%d: %.4f V\n", k, voltages[scanNumber - 1][k]);
+        return nil;
     }
     
-    endTime = getTickCount();
-    printf("\nRate of samples: %.0lf samples per second\n", (scanNumber*numAnalogueChan)/((endTime - startTime)/1000.0));
-    printf("Rate of scans: %.0lf scans per second\n\n", scanNumber/((endTime - startTime)/1000.0));
+    checksumTotal = extendedChecksum16(recBuff, recBuffSize);
+    if( (uint8)((checksumTotal >> 8) & 0xff) != recBuff[5] )
+    {
+        printf("Error : read buffer has bad checksum16(MSB) (StreamData).\n");
+        return nil;
+    }
     
-    return 0;
+    if( (uint8)(checksumTotal & 0xff) != recBuff[4] )
+    {
+        printf("Error : read buffer has bad checksum16(LSB) (StreamData).\n");
+        return nil;
+    }
+    
+    checksumTotal = extendedChecksum8(recBuff);
+    if( checksumTotal != recBuff[0] )
+    {
+        printf("Error : read buffer has bad checksum8 (StreamData).\n");
+        return nil;
+    }
+    
+    if( recBuff[1] != (uint8)(0xF9) || recBuff[2] != 4 + samplesPerPacket || recBuff[3] != (uint8)(0xC0) )
+    {
+        printf("Error : read buffer has wrong command bytes (StreamData).\n");
+        return nil;
+    }
+    
+    NSInteger packetNum = (NSInteger)recBuff[10];
+    if( recBuff[11] == 59 )
+    {
+        if( !autoRecoveryOn )
+        {
+            printf("\nU6 data buffer overflow detected in packet %ld.\nNow using auto-recovery and reading buffered samples.\n", packetNum);
+            autoRecoveryOn = YES;
+        }
+    }
+    else if( recBuff[11] == 60 )
+    {
+        printf("Auto-recovery report in packet %ld: %d scans were dropped.\nAuto-recovery is now off.\n", packetNum, recBuff[6] + recBuff[7]*256);
+        autoRecoveryOn = NO;
+    }
+    else if( recBuff[11] != 0 )
+    {
+        printf("Errorcode # %d from StreamData read.\n", (unsigned int)recBuff[11]);
+        return nil;
+    }
+
+/*    if( packetCounter != (int)recBuff[10] )
+    {
+        printf("PacketCounter (%d) does not match with with current packet count (%d)(StreamData).\n", recBuff[10], packetCounter);
+        return -1;
+    }*/
+    
+    backLog = (int)recBuff[12 + samplesPerPacket*2];
+    
+    for(NSInteger k = 12; k < (12 + samplesPerPacket*2); k += 2 )
+    {
+        voltageBytes = (uint16)recBuff[k] + (uint16)recBuff[k+1]*256;
+        
+        getAinVoltCalibrated(&caliInfo, 1, 0, 0, voltageBytes, &(voltages[scanNumber][currChannel]));
+        
+        currChannel++;
+        if( currChannel >= numAnalogueChan )
+        {
+            currChannel = 0;
+            scanNumber++;
+        }
+    }
+    
+//    endTime = getTickCount();
+    
+    NSMutableArray *dataArray = [NSMutableArray array];
+    for(NSInteger k = 0; k < numScans; k++ ){
+        NSMutableArray *channelArray = [NSMutableArray array];
+        for (NSInteger l=0; l<numAnalogueChan; l++) {
+            [channelArray addObject:[NSNumber numberWithDouble:voltages[k][l]]];
+        }
+        [dataArray addObject:[NSArray arrayWithArray:channelArray]];
+    }
+    
+    return [NSArray arrayWithArray:dataArray];
 }
 
 @end

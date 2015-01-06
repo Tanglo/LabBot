@@ -21,7 +21,7 @@ extern NSString * const DRHLabJackU6ConfigNumAnalogueChanKey;
 extern NSString * const DRHLabJackU6ConfigScanRateKey;
 /*!
  * @memberof DRHLabjackU6
- * Key for the samples per apcket setting in the initialising setting dictionary.
+ * Key for the samples per packet setting in the initialising setting dictionary.  At this stage this should be an integer multiple of the value set for DRHLabJackU6ConfigNumAnalogueChanKey.
  */
 extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
 
@@ -37,7 +37,7 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
     u6CalibrationInfo caliInfo;
     /// @brief The number of sampling analogChannels
     NSInteger numAnalogueChan;
-    /// @brief The number of samples received on each read stream loop;
+    /// @brief The number of samples received on each read stream loop.   At this stage this should be an integer multiple of the value set for numAnalogueChan.
     NSInteger samplesPerPacket;
     /// @brief The rate that scans are collected in Hz.  1 scan equals 1 sample from each configured channel.
     NSInteger scanRate;
@@ -88,8 +88,8 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
 /*!
  * Reads the StreamData low-level function response in a loop.
  * All voltages from the stream are stored in the voltages 2D array.
- * @return @c 0 if successful, else @c -1.
+ * @return @c Nill if error, otherwise an array of arrays where each sub array represents a scan and contains NSNumbers of the sampled data from each streaming analogue channel.
  */
--(NSInteger)readStreamData;
+-(NSArray *)readStreamData;
 
 @end
