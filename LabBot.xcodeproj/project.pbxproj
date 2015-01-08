@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E50E6F6B1A5E420B00110C70 /* DRHDataOutputView.h in Headers */ = {isa = PBXBuildFile; fileRef = E50E6F691A5E420B00110C70 /* DRHDataOutputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E50E6F6C1A5E420B00110C70 /* DRHDataOutputView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E6F6A1A5E420B00110C70 /* DRHDataOutputView.m */; };
+		E50E6F6F1A5E42AC00110C70 /* DRHDataOutputBarView.h in Headers */ = {isa = PBXBuildFile; fileRef = E50E6F6D1A5E42AC00110C70 /* DRHDataOutputBarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */; };
 		E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E514A4991980E7F100D7F490 /* DRHAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */; };
 		E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,6 +85,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E50E6F691A5E420B00110C70 /* DRHDataOutputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataOutputView.h; sourceTree = "<group>"; };
+		E50E6F6A1A5E420B00110C70 /* DRHDataOutputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataOutputView.m; sourceTree = "<group>"; };
+		E50E6F6D1A5E42AC00110C70 /* DRHDataOutputBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataOutputBarView.h; sourceTree = "<group>"; };
+		E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataOutputBarView.m; sourceTree = "<group>"; };
 		E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHAudioPlayer.h; sourceTree = "<group>"; };
 		E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHAudioPlayer.m; sourceTree = "<group>"; };
 		E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHVerticalSpacingChartView.h; sourceTree = "<group>"; };
@@ -216,6 +224,10 @@
 				E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */,
 				E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */,
 				E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */,
+				E50E6F691A5E420B00110C70 /* DRHDataOutputView.h */,
+				E50E6F6A1A5E420B00110C70 /* DRHDataOutputView.m */,
+				E50E6F6D1A5E42AC00110C70 /* DRHDataOutputBarView.h */,
+				E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */,
 				E541FC7719A5BA3600FD9252 /* DRHFileDate.h */,
 				E541FC7819A5BA3600FD9252 /* DRHFileDate.m */,
 				E525E5391A429C8600F43B81 /* DRHDaqDevice.h */,
@@ -324,6 +336,8 @@
 				E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
 				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
+				E50E6F6F1A5E42AC00110C70 /* DRHDataOutputBarView.h in Headers */,
+				E50E6F6B1A5E420B00110C70 /* DRHDataOutputView.h in Headers */,
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
 				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
 				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
@@ -430,10 +444,12 @@
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
 				E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */,
+				E50E6F6C1A5E420B00110C70 /* DRHDataOutputView.m in Sources */,
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
 				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
 				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
+				E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */,
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
 				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,

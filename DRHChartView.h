@@ -9,9 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 /*!
- @brief A class to specify the properties and methods for all chart classes.
+ @brief A class to specify the properties and methods that are common to all chart classes.
  
- This class exisits to be a parent for other DRHChart classes and so it contains the properties and methods that are common to all DRHCharts.
+ This class exisits to be a parent for other @c DRHChart classes and so it contains the properties and methods that are common to all charts.
  */
 @interface DRHChartView : NSView {
     /// @brief The size of the lables used on the chart.

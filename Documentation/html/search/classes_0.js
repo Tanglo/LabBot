@@ -6,6 +6,8 @@ var searchData=
   ['drhdaqdevice',['DRHDaqDevice',['../interface_d_r_h_daq_device.html',1,'']]],
   ['drhdatacolumn',['DRHDataColumn',['../interface_d_r_h_data_column.html',1,'']]],
   ['drhdatamatrix',['DRHDataMatrix',['../interface_d_r_h_data_matrix.html',1,'']]],
+  ['drhdataoutputbarview',['DRHDataOutputBarView',['../interface_d_r_h_data_output_bar_view.html',1,'']]],
+  ['drhdataoutputview',['DRHDataOutputView',['../interface_d_r_h_data_output_view.html',1,'']]],
   ['drhexperiment',['DRHExperiment',['../class_d_r_h_experiment.html',1,'']]],
   ['drhexperimentcontroller',['DRHExperimentController',['../interface_d_r_h_experiment_controller.html',1,'']]],
   ['drhexperimentdata',['DRHExperimentData',['../interface_d_r_h_experiment_data.html',1,'']]],

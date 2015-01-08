@@ -13,6 +13,9 @@ extern NSString * const DRHLabJackU3DeviceKey;
 extern NSString * const DRHLabJackU6DeviceKey;
 extern NSString * const DRHLabJackUE9DeviceKey;
 
+extern NSString * const DRHStreamedDataKey;
+extern NSString * const DRHLabJackStreamBacklogKey;
+
 /*!
  @brief The parent class used to interact with LabJack data aqusition hardware.
  

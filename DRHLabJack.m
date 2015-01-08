@@ -12,6 +12,9 @@ NSString * const DRHLabJackU3DeviceKey = @"LJU3";
 NSString * const DRHLabJackU6DeviceKey = @"LJU6";
 NSString * const DRHLabJackUE9DeviceKey = @"LJUE9";
 
+NSString * const DRHStreamedDataKey = @"DRHStreamedData";
+NSString * const DRHLabJackStreamBacklogKey = @"DRHLabJackBacklog";
+
 @implementation DRHLabJack
 
 +(NSDictionary *)numberOfConnectedLabJackDevices{
