@@ -14,6 +14,7 @@
     _fgColour = [NSColor redColor];
     _bgColour = nil;
     _altColour = [NSColor blueColor];
+    _alternate = NO;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {

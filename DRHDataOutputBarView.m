@@ -18,7 +18,8 @@ NSInteger const DRHDataOutputOrientationRight = 3;
 -(void)awakeFromNib{
     [super awakeFromNib];
     _value = 0.5;
-    _target = 0.75;
+    _target = 0.0;
+    _targetLineWidth = 3.0;
     _orientation = DRHDataOutputOrientationUp;
 }
 
@@ -26,7 +27,8 @@ NSInteger const DRHDataOutputOrientationRight = 3;
     [super drawRect:dirtyRect];
 
     // Drawing code here.
-    NSRect barRect = [self bounds];
+    NSRect barViewBounds = [self bounds];
+    NSRect barRect = barViewBounds;
     if (_orientation==DRHDataOutputOrientationUp || _orientation==DRHDataOutputOrientationDown)
         barRect.size.height *= _value;
     else if (_orientation==DRHDataOutputOrientationRight)
@@ -37,8 +39,34 @@ NSInteger const DRHDataOutputOrientationRight = 3;
     }
     
     NSBezierPath *barPath = [NSBezierPath bezierPathWithRect:barRect];
-    [[self fgColour] setFill];
+    if (![self alternate])
+        [[self fgColour] setFill];
+    else
+        [[self altColour] setFill];
     [barPath fill];
+    
+    if (_target > 0) {
+        NSBezierPath *targetPath = [NSBezierPath bezierPath];
+        NSPoint startPt, endPt;
+        if (_orientation==DRHDataOutputOrientationUp || _orientation==DRHDataOutputOrientationDown){
+            startPt.x = barViewBounds.origin.x;
+            startPt.y = endPt.y = barViewBounds.size.height * _target;
+            endPt.x = barViewBounds.size.width;
+        } else if (_orientation==DRHDataOutputOrientationRight){
+            startPt.x = endPt.x = barViewBounds.size.width * _target;
+            startPt.y = barViewBounds.origin.y;
+            endPt.y = barViewBounds.size.height;
+        } else if (_orientation==DRHDataOutputOrientationLeft){
+            startPt.x = endPt.x = barViewBounds.size.width * (1-_target);
+            startPt.y = barViewBounds.origin.y;
+            endPt.y = barViewBounds.size.height;
+        }
+        [[NSColor blackColor] setStroke];
+        [targetPath setLineWidth:_targetLineWidth];
+        [targetPath moveToPoint:startPt];
+        [targetPath lineToPoint:endPt];
+        [targetPath stroke];
+    }
 }
 
 -(BOOL)isFlipped{

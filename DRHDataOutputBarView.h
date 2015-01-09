@@ -38,9 +38,11 @@ extern NSInteger const DRHDataOutputOrientationRight;
 
 /// @brief The value of the bar which relative to the frame.  E.g, 1.0 would specify the bar is full, 0.5 would specificy that the bar is half full.
 @property CGFloat value;
-/// @brief The position of the target line relative to the frame.  E.g, 0.75 would position the taget 3/4 of the way long the bar.
+/// @brief The position of the target line relative to the frame.  E.g, 0.75 would position the taget 3/4 of the way long the bar.  Set to zero or less to hide.  Default is @c 0.0.
 @property CGFloat target;
-/// @brief Indicates the orientation of the bar.  Values are set by @c DRHDataOutputOrientation constants.
+/// @brief The width of the target line.  Default is @c 3.0.
+@property CGFloat targetLineWidth;
+/// @brief Indicates the orientation of the bar.  Values are set by @c DRHDataOutputOrientation constants.  The default is @c DRHDataOutputOrientationUp.
 @property NSInteger orientation;
 
 @end

@@ -15,11 +15,13 @@
  */
 @interface DRHDataOutputView : NSView
 
-/// @brief The draw colour of the data output.  Deafult is red.
+/// @brief The draw colour of the data output.  Deafult is @code [NSColor redColor] @endcode.
 @property NSColor *fgColour;
-/// @brief The draw colour of the data output's background.  Deafult is nil.
+/// @brief The draw colour of the data output's background.  Deafult is @c nil.
 @property NSColor *bgColour;
-/// @brief The alternate colour of drawing the data used by some subclasses.  Deafult is blue.
+/// @brief The alternate colour of drawing the data used by some subclasses.  Deafult is @code [NSColor blueColor] @endcode.
 @property NSColor *altColour;
+/// @brief If YES uses @c altColour instead of @c fgColour.  Default is @c NO.
+@property BOOL alternate;
 
 @end
