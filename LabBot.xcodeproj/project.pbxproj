@@ -30,6 +30,8 @@
 		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */ = {isa = PBXBuildFile; fileRef = E541FC7719A5BA3600FD9252 /* DRHFileDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E541FC7819A5BA3600FD9252 /* DRHFileDate.m */; };
+		E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */; };
+		E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */; };
 		E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55AE27218F7C65700FDD48E /* DRHInstructionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
 		E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5776B881925E41700F1A064 /* DRHBlankImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -108,6 +110,8 @@
 		E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHMeasureExperimentDocument.m; sourceTree = "<group>"; };
 		E541FC7719A5BA3600FD9252 /* DRHFileDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHFileDate.h; sourceTree = "<group>"; };
 		E541FC7819A5BA3600FD9252 /* DRHFileDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHFileDate.m; sourceTree = "<group>"; };
+		E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHSamplingOperation.h; sourceTree = "<group>"; };
+		E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHSamplingOperation.m; sourceTree = "<group>"; };
 		E55AE27218F7C65700FDD48E /* DRHInstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInstructionView.h; sourceTree = "<group>"; };
 		E55AE27318F7C65700FDD48E /* DRHInstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInstructionView.m; sourceTree = "<group>"; };
 		E5776B881925E41700F1A064 /* DRHBlankImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHBlankImage.h; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				E5FA88B01A4797D40067A0C0 /* u6.c */,
 				E525E5351A429B7000F43B81 /* DRHLabjackU6.h */,
 				E525E5361A429B7000F43B81 /* DRHLabjackU6.m */,
+				E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */,
+				E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */,
 				E55D2F631999940E006EF3D4 /* Deprecated */,
 				E5C8977518F52A4300335057 /* LabBot */,
 				E5C8978A18F52A4300335057 /* LabBotTests */,
@@ -332,6 +338,7 @@
 				E579301F18F7A32800F012B7 /* DRHInitExperimentWindowController.h in Headers */,
 				E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */,
 				E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */,
+				E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */,
 				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
 				E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
@@ -461,6 +468,7 @@
 				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
+				E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

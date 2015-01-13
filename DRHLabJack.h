@@ -29,4 +29,28 @@ extern NSString * const DRHLabJackStreamBacklogKey;
  */
 +(NSDictionary *)numberOfConnectedLabJackDevices;
 
+/*!
+ * As a subclass of @c DRHDaqDevice, it is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Starts a configured data streaming session on the receiver's LabJack.
+ * @return @c YES if successful, else @c NO.
+ */
+-(BOOL)startStream;
+
+/*!
+ * As a subclass of @c DRHDaqDevice, it is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Stops a running data streaming session on the receiver's LabJack.
+ * @return @c YES if successful, else @c NO.
+ */
+-(BOOL)stopStream;
+
+/*!
+ * As a subclass of @c DRHDaqDevice, it is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Reads the buffered data from the receivers LabJack and returns it stored in an array.
+ * @return An array of the data collected from the LabJack buffer.
+ */
+-(NSArray *)readStreamData;
+
 @end

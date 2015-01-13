@@ -36,7 +36,7 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     return handle;
 }
 
--(NSInteger)configureStream{
+-(BOOL)configureStream{
     int sendBuffSize;
     sendBuffSize = 14+(int)numAnalogueChan*2;
     uint8 sendBuff[sendBuffSize], recBuff[8];
@@ -79,7 +79,7 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
             printf("Error : write failed (StreamConfig).\n");
         else
             printf("Error : did not write all of the buffer (StreamConfig).\n");
-        return -1;
+        return NO;
     }
     
     for( i = 0; i < 8; i++ )
@@ -97,44 +97,44 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
         for( i = 0; i < 8; i++)
             printf("%d ", recBuff[i]);
         
-        return -1;
+        return NO;
     }
     
     checksumTotal = extendedChecksum16(recBuff, 8);
     if( (uint8)((checksumTotal / 256) & 0xff) != recBuff[5])
     {
         printf("Error : read buffer has bad checksum16(MSB) (StreamConfig).\n");
-        return -1;
+        return NO;
     }
     
     if( (uint8)(checksumTotal & 0xff) != recBuff[4] )
     {
         printf("Error : read buffer has bad checksum16(LSB) (StreamConfig).\n");
-        return -1;
+        return NO;
     }
     
     if( extendedChecksum8(recBuff) != recBuff[0] )
     {
         printf("Error : read buffer has bad checksum8 (StreamConfig).\n");
-        return -1;
+        return NO;
     }
     
     if( recBuff[1] != (uint8)(0xF8) || recBuff[2] != (uint8)(0x01) || recBuff[3] != (uint8)(0x11) || recBuff[7] != (uint8)(0x00) )
     {
         printf("Error : read buffer has wrong command bytes (StreamConfig).\n");
-        return -1;
+        return NO;
     }
     
     if( recBuff[6] != 0 )
     {
         printf("Errorcode # %d from StreamConfig read.\n", (unsigned int)recBuff[6]);
-        return -1;
+        return NO;
     }
     
-    return 0;
+    return YES;
 }
 
--(NSInteger)startStream{
+-(BOOL)startStream{
     uint8 sendBuff[2], recBuff[4];
     unsigned long sendChars, recChars;
     
@@ -149,7 +149,7 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
             printf("Error : write failed.\n");
         else
             printf("Error : did not write all of the buffer.\n");
-        return -1;
+        return NO;
     }
     
     //Reading response from U6
@@ -160,31 +160,31 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
             printf("Error : read failed.\n");
         else
             printf("Error : did not read all of the buffer.\n");
-        return -1;
+        return NO;
     }
     
     if( normalChecksum8(recBuff, 4) != recBuff[0] )
     {
         printf("Error : read buffer has bad checksum8 (StreamStart).\n");
-        return -1;
+        return NO;
     }
     
     if( recBuff[1] != (uint8)(0xA9) || recBuff[3] != (uint8)(0x00) )
     {
         printf("Error : read buffer has wrong command bytes \n");
-        return -1;
+        return NO;
     }
     
     if( recBuff[2] != 0 )
     {
         printf("Errorcode # %d from StreamStart read.\n", (unsigned int)recBuff[2]);
-        return -1;
+        return NO;
     }
     
-    return 0;
+    return YES;
 }
 
--(NSInteger)stopStream{
+-(BOOL)stopStream{
     uint8 sendBuff[2], recBuff[4];
     unsigned long sendChars, recChars;
     
@@ -199,7 +199,7 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
             printf("Error : write failed (StreamStop).\n");
         else
             printf("Error : did not write all of the buffer (StreamStop).\n");
-        return -1;
+        return NO;
     }
     
     //Reading response from U6
@@ -210,25 +210,25 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
             printf("Error : read failed (StreamStop).\n");
         else
             printf("Error : did not read all of the buffer (StreamStop).\n");
-        return -1;
+        return NO;
     }
     
     if( normalChecksum8(recBuff, 4) != recBuff[0] )
     {
         printf("Error : read buffer has bad checksum8 (StreamStop).\n");
-        return -1;
+        return NO;
     }
     
     if( recBuff[1] != (uint8)(0xB1) || recBuff[3] != (uint8)(0x00) )
     {
         printf("Error : read buffer has wrong command bytes (StreamStop).\n");
-        return -1;
+        return NO;
     }
     
     if( recBuff[2] != 0 )
     {
         printf("Errorcode # %d from StreamStop read.\n", (unsigned int)recBuff[2]);
-        return -1;
+        return -NO;
     }
     
     return 0;

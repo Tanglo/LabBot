@@ -15,4 +15,28 @@
  */
 @interface DRHDaqDevice : NSObject
 
+/*!
+ * It is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Starts a configured data streaming session on the receiver's device.
+ * @return @c YES if successful, else @c NO.
+ */
+-(BOOL)startStream;
+
+/*!
+ * It is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Stops a running data streaming session on the receiver's device.
+ * @return @c YES if successful, else @c NO.
+ */
+-(BOOL)stopStream;
+
+/*!
+ * It is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Reads the buffered data from the receivers device and returns it stored in an array.
+ * @return An array of the data collected from the device buffer.
+ */
+-(NSArray *)readStreamData;
+
 @end

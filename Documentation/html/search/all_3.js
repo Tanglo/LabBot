@@ -58,6 +58,7 @@ var searchData=
   ['drhlandmarkdata',['DRHLandmarkData',['../class_d_r_h_landmark_data.html',1,'']]],
   ['drhmeasureexperimentdocument',['DRHMeasureExperimentDocument',['../class_d_r_h_measure_experiment_document.html',1,'']]],
   ['drhrulerchartview',['DRHRulerChartView',['../interface_d_r_h_ruler_chart_view.html',1,'']]],
+  ['drhsamplingoperation',['DRHSamplingOperation',['../interface_d_r_h_sampling_operation.html',1,'']]],
   ['drhstillcamera',['DRHStillCamera',['../interface_d_r_h_still_camera.html',1,'']]],
   ['drhsubjectwindowcontroller',['DRHSubjectWindowController',['../interface_d_r_h_subject_window_controller.html',1,'']]],
   ['drhsubjectwindowcontroller_28_29',['DRHSubjectWindowController()',['../category_d_r_h_subject_window_controller_07_08.html',1,'']]],

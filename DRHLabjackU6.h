@@ -71,19 +71,19 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
  * Sends a low-level command to configure the LabJack for analogue streaming.
  * @return @c 0 if successful, else @c -1.
  */
--(NSInteger)configureStream;
+-(BOOL)configureStream;
 
 /*!
  * Sends a low-level command to start the configured stream.
  * @return @c 0 if successful, else @c -1.
  */
--(NSInteger)startStream;
+-(BOOL)startStream;
 
 /*!
  * Sends a low-level command to stop any exisiting streams.
  * @return @c 0 if successful, else @c -1.
  */
--(NSInteger)stopStream;
+-(BOOL)stopStream;
 
 /*!
  * Reads the StreamData low-level function response in a loop.
