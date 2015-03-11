@@ -17,6 +17,5 @@ var searchData=
   ['datarowatindex_3a',['dataRowAtIndex:',['../interface_d_r_h_data_matrix.html#ac51153339d1fd2a2f3d6e6a9ed50611c',1,'DRHDataMatrix']]],
   ['datarowatindex_3aforcolumnswithindexes_3a',['dataRowAtIndex:ForColumnsWithIndexes:',['../interface_d_r_h_data_matrix.html#a007b822c0be1d23857d7ec1a364a4d0d',1,'DRHDataMatrix']]],
   ['datarowatindex_3aforcolumnswithnames_3a',['dataRowAtIndex:ForColumnsWithNames:',['../interface_d_r_h_data_matrix.html#a7b455a3e59a273d6a04dc9965e2d3f07',1,'DRHDataMatrix']]],
-  ['datestring',['dateString',['../interface_d_r_h_file_date.html#a5d5d4226017f4e8b5668ff82b75e2767',1,'DRHFileDate']]],
-  ['devicewithu6handle_3aandsettings_3a',['deviceWithU6Handle:AndSettings:',['../interface_d_r_h_labjack_u6.html#a20af3a3ffdbebc0c71daada779a39f84',1,'DRHLabjackU6']]]
+  ['datestring',['dateString',['../interface_d_r_h_file_date.html#a5d5d4226017f4e8b5668ff82b75e2767',1,'DRHFileDate']]]
 ];

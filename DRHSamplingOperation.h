@@ -15,11 +15,13 @@
  
  */
 @protocol DRHSamplingOperationRecipient
+
 /*!
  * This method will be called by an instance of a @c DRHSamplingOperation everytime data is streamed from a @c DRHDaqDevice.  This method receives an array containing the most recently streamed data.
- * @param newData This is an array of arrays, where each sub-array is an array of @c NSNumber instances that represent the data from one of the sampled channels.
+ * @param newData This array contains the streamed data.  The format of the data within this array is determined by the @c readStreamData method of the @c DRHDaqDevice subclass that read the data from the hardware.
  */
 -(void)receiveData:(NSArray *)newData;
+
 @end
 
 @class DRHDaqDevice;

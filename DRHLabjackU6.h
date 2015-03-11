@@ -45,20 +45,34 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
 
 #pragma mark Initialisers
 /*!
- * Initialises the receiver with the specified device handle.
- * @param newHandle The device handle of an exisiting LabJack U6 device.
- * @param settings An NSDictionary of the configuration settings.  Keys are defined under class constants.
+ * Initialises the receiver with the specified device serial number.
+ * @param serialNum The serial number of a LabJack U6 device that is connected to a USB port.
  * @return The receiver initialised with the specified handle.
  */
--(DRHLabjackU6 *)initWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings;
+-(DRHLabjackU6 *)initWithSerialNum:(int)serialNum;
 
 /*!
- * Creates a new isntance of @c DRHLabJackU6 and initialises it with the specified device handle.
- * @param newHandle The device handle of an exisiting LabJack U6 device.
+ * Creates a new instance of @c DRHLabJackU6 and initialises it with the the device with the specified serial number.
+ * @param serialNum The serial number of a LabJack U6 device that is connected to a USB port.
+ * @return The receiver initialised with the specified handle.
+ */
++(DRHLabjackU6 *)u6WithSerialNum:(int)serialNum;
+
+/*!
+ * Initialises the receiver with the specified device handle.
+ * @param serialNum The device handle of an exisiting LabJack U6 device.
  * @param settings An NSDictionary of the configuration settings.  Keys are defined under class constants.
  * @return The receiver initialised with the specified handle.
  */
-+(DRHLabjackU6 *)deviceWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings;
+-(DRHLabjackU6 *)initForStreamingWithSerialNum:(int)serialNum AndSettings:(NSDictionary *)settings;
+
+/*!
+ * Creates a new instance of @c DRHLabJackU6 and initialises it with the specified device handle.
+ * @param serialNum The device handle of an exisiting LabJack U6 device.
+ * @param settings An NSDictionary of the configuration settings.  Keys are defined under class constants.
+ * @return The receiver initialised with the specified handle.
+ */
++(DRHLabjackU6 *)u6ForStreamingWithSerialNum:(int)serialNum AndSettings:(NSDictionary *)settings;
 
 #pragma mark Getters
 /*!
@@ -66,6 +80,21 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
  * @return Current @c HANDLE of the LabJack U6 device being controlled by the receiver.
  */
 -(HANDLE)handle;
+
+/*!
+ * Reads a single sample from a single analogue channel.  Intended for calibration routines.
+ * @param channel The number of the analogue channel to read one sample from.
+ * @return Returns the voltage read as a @c NSNumber.
+ */
+-(NSNumber *)readOneSampleFromAnalogueChannel:(uint8)channel;
+
+/*!
+ * Reads a single sample from a single analogue channel and then closes the device.  Intended for calibration routines.
+ * @param channel The number of the analogue channel to read one sample from.
+ * @param serialNum The serial number of the U6 device to sample from.
+ * @return Returns the voltage read as a @c NSNumber.
+ */
++(NSNumber *)readOneSampleFromAnalogueChannel:(uint8)channel AndDeviceWithSerialNum:(int)serialNum;
 
 /*!
  * Sends a low-level command to configure the LabJack for analogue streaming.

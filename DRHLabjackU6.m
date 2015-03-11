@@ -15,11 +15,31 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
 @implementation DRHLabjackU6
 
 #pragma mark Initialisers
--(DRHLabjackU6 *)initWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings{
+-(DRHLabjackU6 *)initWithSerialNum:(int)serialNum{
     if (self = [super init]) {
-        handle = newHandle;
+        handle = NULL;
+        if( (handle = openUSBConnection(serialNum)) != NULL ){
+            if (getCalibrationInfo(handle, &caliInfo) < 0)
+                return nil;
+            numAnalogueChan = 0;
+            samplesPerPacket = 0;
+            scanRate = 0;
+            return self;
+        }
+    }
+    return nil;
+}
+
++(DRHLabjackU6 *)u6WithSerialNum:(int)serialNum{
+    return [[self alloc] initWithSerialNum:serialNum];
+}
+
+-(DRHLabjackU6 *)initForStreamingWithSerialNum:(int)serialNum AndSettings:(NSDictionary *)settings{
+    if (self = [self initWithSerialNum:serialNum]) {
+/*        handle = newHandle;
         if (getCalibrationInfo(handle, &caliInfo) < 0)
-            return nil;
+            return nil;*/
+        
         numAnalogueChan = [[settings objectForKey:DRHLabJackU6ConfigNumAnalogueChanKey] integerValue]; //5;
         samplesPerPacket = [[settings objectForKey:DRHLabJackU6ConfigSamplesPerPacketKey] integerValue]; //25;
         scanRate = [[settings objectForKey:DRHLabJackU6ConfigScanRateKey] integerValue];
@@ -27,13 +47,105 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     return self;
 }
 
-+(DRHLabjackU6 *)deviceWithU6Handle:(HANDLE)newHandle AndSettings:(NSDictionary *)settings{
-    return [[self alloc] initWithU6Handle:newHandle AndSettings:settings];
++(DRHLabjackU6 *)u6ForStreamingWithSerialNum:(int)serialNum AndSettings:(NSDictionary *)settings{
+    return [[self alloc] initForStreamingWithSerialNum:serialNum AndSettings:settings];
 }
 
 #pragma mark Getters
 -(HANDLE)handle{
     return handle;
+}
+
+#pragma mark Sampling
+-(NSNumber *)readOneSampleFromAnalogueChannel:(uint8)channel{
+    long count;
+    uint8 sendBuff[12], recBuff[12];
+    unsigned long sendChars, recChars;
+    uint16 checksumTotal;
+    double voltage; //, temperature;
+    
+    sendBuff[1] = (uint8)(0xF8);  //Command byte
+    sendBuff[2] = 3;             //Number of data words (.5 word for echo, 2 words for sample and 0.5 words of padding)
+    sendBuff[3] = (uint8)(0x00);  //Extended command number
+    
+    sendBuff[6] = 0;  //Echo
+    
+    sendBuff[7] = 2;         //IOType is AIN24
+    sendBuff[8] = channel;  //0;         //Positive channel
+    sendBuff[9] = 8 + 0*16;  //ResolutionIndex(Bits 0-3) = 8,
+    //GainIndex(Bits 4-7) = 0 (+-10V)
+    
+    sendBuff[10] =  0 + 0*128;  //SettlingFactor(Bits 0-2) = 0 (5 microseconds),
+    // Differential(Bit 7) = 0
+    
+    sendBuff[11] = 0;    //Padding byte
+    
+    extendedChecksum(sendBuff, 12);
+    
+    count = 0;
+        //Sending command to U6
+    if( (sendChars = LJUSB_Write(handle, sendBuff, 12)) < 12 )
+    {
+        if(sendChars == 0)
+            printf("Feedback loop error : write failed\n");
+        else
+            printf("Feedback loop error : did not write all of the buffer\n");
+        return nil;
+    }
+    
+    //Reading response from U6
+    if( (recChars = LJUSB_Read(handle, recBuff, 12)) < 12 )
+    {
+        if( recChars == 0 )
+        {
+            printf("Feedback loop error : read failed\n");
+            return nil;
+        }
+        else
+            printf("Feedback loop error : did not read all of the expected buffer\n");
+    }
+    
+    if( recChars < 10 )
+    {
+        printf("Feedback loop error : response is not large enough\n");
+        return nil;
+    }
+    
+    checksumTotal = extendedChecksum16(recBuff, (int)recChars);
+    if( (uint8)((checksumTotal / 256 ) & 0xff) != recBuff[5] )
+    {
+        printf("Feedback loop error : read buffer has bad checksum16(MSB)\n");
+        return nil;
+    }
+    
+    if( (uint8)(checksumTotal & 0xff) != recBuff[4] )
+    {
+        printf("Feedback loop error : read buffer has bad checksum16(LBS)\n");
+        return nil;
+    }
+    
+    if( extendedChecksum8(recBuff) != recBuff[0] )
+    {
+        printf("Feedback loop error : read buffer has bad checksum8\n");
+        return nil;
+    }
+    
+    if( recBuff[1] != (uint8)(0xF8) ||  recBuff[3] != (uint8)(0x00) )
+    {
+        printf("Feedback loop error : read buffer has wrong command bytes \n");
+        return nil;
+    }
+        
+    getAinVoltCalibrated(&(caliInfo), 8, 0, 1, recBuff[9] + recBuff[10]*256 + recBuff[11]*65536, &voltage);
+    
+    return [NSNumber numberWithDouble:voltage];
+}
+
++(NSNumber *)readOneSampleFromAnalogueChannel:(uint8)channel AndDeviceWithSerialNum:(int)serialNum{
+    DRHLabjackU6 *labJack = [DRHLabjackU6 u6WithSerialNum:serialNum];
+    NSNumber *sample = [labJack readOneSampleFromAnalogueChannel:channel];
+    closeUSBConnection([labJack handle]);
+    return sample;
 }
 
 -(BOOL)configureStream{
