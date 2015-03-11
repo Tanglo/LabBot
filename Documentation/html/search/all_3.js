@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['daqdevice',['daqDevice',['../interface_d_r_h_sampling_operation.html#a6b9c4064b5fecf6d5c529d95a57e030f',1,'DRHSamplingOperation']]],
   ['data',['data',['../interface_d_r_h_data_matrix.html#a88ac1386302a4f699c4deb5057a7c40f',1,'DRHDataMatrix::data()'],['../interface_d_r_h_data_column.html#ae304fe318206f090a4dd37918347b1fe',1,'DRHDataColumn::data()']]],
   ['datacolumnatindex_3a',['dataColumnAtIndex:',['../interface_d_r_h_data_matrix.html#a9ffe55a8781b73807ae8c4e0cb894d80',1,'DRHDataMatrix']]],
   ['datacolumnbycropingtolength_3a',['dataColumnByCropingToLength:',['../interface_d_r_h_data_column.html#aff1862002f4902b6764997bdfce755a5',1,'DRHDataColumn']]],
@@ -14,6 +15,7 @@ var searchData=
   ['datamatrixbyremovingcolumnwithname_3a',['dataMatrixByRemovingColumnWithName:',['../interface_d_r_h_data_matrix.html#adc6470cff59623eb2920d31edcd420d9',1,'DRHDataMatrix']]],
   ['datamatrixwithcolumnarrays_3a',['dataMatrixWithColumnArrays:',['../interface_d_r_h_data_matrix.html#a5c2e537c8e773f0b47572501246ded49',1,'DRHDataMatrix']]],
   ['datamatrixwithdatacolumnarray_3a',['dataMatrixWithDataColumnArray:',['../interface_d_r_h_data_matrix.html#ae308c6cacff3235751835c8e60a7028a',1,'DRHDataMatrix']]],
+  ['datarecipient',['dataRecipient',['../interface_d_r_h_sampling_operation.html#a1957a2179e374271a78c33a4393ffb7b',1,'DRHSamplingOperation']]],
   ['datarowatindex_3a',['dataRowAtIndex:',['../interface_d_r_h_data_matrix.html#ac51153339d1fd2a2f3d6e6a9ed50611c',1,'DRHDataMatrix']]],
   ['datarowatindex_3aforcolumnswithindexes_3a',['dataRowAtIndex:ForColumnsWithIndexes:',['../interface_d_r_h_data_matrix.html#a007b822c0be1d23857d7ec1a364a4d0d',1,'DRHDataMatrix']]],
   ['datarowatindex_3aforcolumnswithnames_3a',['dataRowAtIndex:ForColumnsWithNames:',['../interface_d_r_h_data_matrix.html#a7b455a3e59a273d6a04dc9965e2d3f07',1,'DRHDataMatrix']]],
@@ -59,6 +61,7 @@ var searchData=
   ['drhmeasureexperimentdocument',['DRHMeasureExperimentDocument',['../class_d_r_h_measure_experiment_document.html',1,'']]],
   ['drhrulerchartview',['DRHRulerChartView',['../interface_d_r_h_ruler_chart_view.html',1,'']]],
   ['drhsamplingoperation',['DRHSamplingOperation',['../interface_d_r_h_sampling_operation.html',1,'']]],
+  ['drhsamplingoperationrecipient_2dp',['DRHSamplingOperationRecipient-p',['../protocol_d_r_h_sampling_operation_recipient-p.html',1,'']]],
   ['drhstillcamera',['DRHStillCamera',['../interface_d_r_h_still_camera.html',1,'']]],
   ['drhsubjectwindowcontroller',['DRHSubjectWindowController',['../interface_d_r_h_subject_window_controller.html',1,'']]],
   ['drhsubjectwindowcontroller_28_29',['DRHSubjectWindowController()',['../category_d_r_h_subject_window_controller_07_08.html',1,'']]],

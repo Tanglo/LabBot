@@ -30,7 +30,7 @@
 		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */ = {isa = PBXBuildFile; fileRef = E541FC7719A5BA3600FD9252 /* DRHFileDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E541FC7819A5BA3600FD9252 /* DRHFileDate.m */; };
-		E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */; };
+		E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */; };
 		E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55AE27218F7C65700FDD48E /* DRHInstructionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
@@ -338,7 +338,6 @@
 				E579301F18F7A32800F012B7 /* DRHInitExperimentWindowController.h in Headers */,
 				E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */,
 				E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */,
-				E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */,
 				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
 				E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
@@ -346,13 +345,14 @@
 				E50E6F6F1A5E42AC00110C70 /* DRHDataOutputBarView.h in Headers */,
 				E50E6F6B1A5E420B00110C70 /* DRHDataOutputView.h in Headers */,
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
-				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
-				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
-				E5FA88B31A4797D40067A0C0 /* u6.h in Headers */,
-				E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */,
 				E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */,
 				E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */,
+				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
 				E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */,
+				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
+				E5FA88B31A4797D40067A0C0 /* u6.h in Headers */,
+				E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */,
+				E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

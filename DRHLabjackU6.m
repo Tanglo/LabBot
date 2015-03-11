@@ -146,7 +146,7 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     if( sendChars < 2 )
     {
         if( sendChars == 0 )
-            printf("Error : write failed.\n");
+            printf("Error : write failed (StreamStart).\n");
         else
             printf("Error : did not write all of the buffer.\n");
         return NO;
