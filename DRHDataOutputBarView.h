@@ -44,5 +44,29 @@ extern NSInteger const DRHDataOutputOrientationRight;
 @property CGFloat targetLineWidth;
 /// @brief Indicates the orientation of the bar.  Values are set by @c DRHDataOutputOrientation constants.  The default is @c DRHDataOutputOrientationUp.
 @property NSInteger orientation;
+/// @brief Used to calibrate @c value and @c target if they are set using the @c setCalibratedValue: and @c setCalibratedTarget setter methods.  This property is set to @c 1.0 by default.
+@property CGFloat gain;
+/// @brief Used to calibrate @c value and @c target if they are set using the @c setCalibratedValue: and @c setCalibratedTarget setter methods.  This property is set to @c 0.0 by default.
+@property CGFloat offset;
+
+/*!
+ * This methods sets the @c value property using the formula:
+ @code
+ value = gain*newValue +offset
+ @endcode
+ where @c value, @c gain, and @c offset are properties of the receiver and have been previoosuly set.
+ * @param newValue A @c CGFloat that will be calibrated and set as the new @c value of the receiver.
+ */
+-(void)setCalibratedValue:(CGFloat)newValue;
+
+/*!
+ * This methods sets the @c target property using the formula:
+ @code
+ target = gain*newTarget +offset
+ @endcode
+ where @c target, @c gain, and @c offset are properties of the receiver.
+ * @param newTarget A @c CGFloat that will be calibrated and set as the new @c target of the receiver
+ */
+-(void)setCalibratedTarget:(CGFloat)newTarget;
 
 @end

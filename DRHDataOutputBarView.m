@@ -21,6 +21,8 @@ NSInteger const DRHDataOutputOrientationRight = 3;
     _target = 0.0;
     _targetLineWidth = 3.0;
     _orientation = DRHDataOutputOrientationUp;
+    _gain = 1.0;
+    _offset = 0.0;
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
@@ -74,6 +76,18 @@ NSInteger const DRHDataOutputOrientationRight = 3;
         return YES;
     else
         return NO;
+}
+
+-(void)setCalibratedValue:(CGFloat)newValue{
+    [self willChangeValueForKey:@"value"];
+    _value = _gain*newValue +_offset;
+    [self didChangeValueForKey:@"value"];
+}
+
+-(void)setCalibratedTarget:(CGFloat)newTarget{
+    [self willChangeValueForKey:@"target"];
+    _target = _gain*newTarget +_offset;
+    [self didChangeValueForKey:@"target"];
 }
 
 @end
