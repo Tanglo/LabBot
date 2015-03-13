@@ -90,4 +90,13 @@ NSInteger const DRHDataOutputOrientationRight = 3;
     [self didChangeValueForKey:@"target"];
 }
 
+-(void)twoPointLinearcalibrationUsing:(NSPoint)firstPoint And:(NSPoint)secondPoint{
+    [self willChangeValueForKey:@"gain"];
+    _gain = (secondPoint.y-firstPoint.y) / (secondPoint.x-firstPoint.x);
+    [self didChangeValueForKey:@"gain"];
+    [self willChangeValueForKey:@"offset"];
+    _offset = secondPoint.y - _gain*secondPoint.x;
+    [self didChangeValueForKey:@"offset"];
+}
+
 @end

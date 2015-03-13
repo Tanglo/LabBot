@@ -69,4 +69,11 @@ extern NSInteger const DRHDataOutputOrientationRight;
  */
 -(void)setCalibratedTarget:(CGFloat)newTarget;
 
+/*!
+ * Sets the @c gain and @c offset properties of the receiver based on a two-point linear calibration between two @c NSPoint values.
+ * @param firstPoint The x-value of this point is the raw uncalibrated value, the y-value is the calibrated output between @c 0.0 and @c 1.0.  The y-value of this point should be less than the y-value of @c secondPoint.
+ * @param secondPoint The x-value of this point is the raw uncalibrated value, the y-value is the calibrated output between @c 0.0 and @c 1.0.  The y-value of this point should be more than the y-value of @c firstPoint.
+ */
+-(void)twoPointLinearcalibrationUsing:(NSPoint)firstPoint And:(NSPoint)secondPoint;
+
 @end

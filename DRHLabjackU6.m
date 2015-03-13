@@ -340,10 +340,11 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     if( recBuff[2] != 0 )
     {
         printf("Errorcode # %d from StreamStop read.\n", (unsigned int)recBuff[2]);
-        return -NO;
+        return NO;
     }
     
-    return 0;
+    closeUSBConnection(handle);
+    return YES;
 }
 
 -(NSArray *)readStreamData{
