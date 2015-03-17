@@ -60,6 +60,7 @@
 		E58A65E919DD309B00948D42 /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = E58A65E819DD309B00948D42 /* Documentation */; };
 		E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */; };
+		E5A958D61AB2AC9C00B8A764 /* DRHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */; };
 		E5C8977018F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
 		E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8977818F52A4300335057 /* InfoPlist.strings */; };
 		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
@@ -140,6 +141,7 @@
 		E58A65E819DD309B00948D42 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialMatrix.h; sourceTree = "<group>"; };
 		E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialMatrix.m; sourceTree = "<group>"; };
+		E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHGridView.swift; sourceTree = "<group>"; };
 		E5C8976C18F52A4300335057 /* LabBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8976F18F52A4300335057 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E5C8977218F52A4300335057 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -232,6 +234,7 @@
 				E50E6F6A1A5E420B00110C70 /* DRHDataOutputView.m */,
 				E50E6F6D1A5E42AC00110C70 /* DRHDataOutputBarView.h */,
 				E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */,
+				E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */,
 				E541FC7719A5BA3600FD9252 /* DRHFileDate.h */,
 				E541FC7819A5BA3600FD9252 /* DRHFileDate.m */,
 				E525E5391A429C8600F43B81 /* DRHDaqDevice.h */,
@@ -467,6 +470,7 @@
 				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,
 				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
+				E5A958D61AB2AC9C00B8A764 /* DRHGridView.swift in Sources */,
 				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
 				E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */,
 			);
@@ -575,17 +579,21 @@
 		E5C8979518F52A4300335057 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 0.2;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -593,14 +601,17 @@
 		E5C8979618F52A4300335057 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 0.2;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
