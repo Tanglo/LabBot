@@ -435,7 +435,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "doxygen Doxyfile";
+			shellScript = "#doxygen Doxyfile\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n    doxygen Doxyfile\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

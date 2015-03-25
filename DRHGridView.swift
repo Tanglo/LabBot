@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 
 extension String {
     public func incrementBy(increment: Int, floor: Character, ceiling: Character) -> String {
@@ -32,6 +33,11 @@ extension String {
     }
 }
 
+/*!
+@brief A class that defines a size as a width and height.
+
+* This class defines a size as a width and a height.  It is analogous to the @c NSSize structure of the Cocoa framework, but it works natively with @c Double types.
+*/
 public class Size {
     public var width = 0.0
     public var height = 0.0
@@ -47,13 +53,17 @@ public class Size {
     }
 }
 
+/*!
+@brief A view class for displaying grids with coordinate systems.
+
+* This class is a subclass of NSView and is used to display grids that have coordinate systems.  The coordinate system is similar to a chess board where rows are labelled with a number and columns are labelled with a letter.  The grid size and cell size are set by the appropriate class properties, as is the starting values of the coordinate system.
+*/
 public class DRHGridView: NSView {
     let xPadding = 75.0
     let yPadding = 50.0
     
     public var gridSize = Size()
-    public var cellWidth = 100.0
-    public var cellHeight = 100.0
+    public var cellSize = Size(width: 100.0, height: 100.0)
     public var firstRowLabel = 0
     public var firstColumnLabel = "A"
     public var viewSize: Size {
@@ -62,6 +72,8 @@ public class DRHGridView: NSView {
         }
     }
     public var labelSize = 45.0
+    public var flipVertically = false;
+    public var flipHorizontally = false;
 
     override public func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
@@ -71,14 +83,27 @@ public class DRHGridView: NSView {
         NSColor.whiteColor().setFill()
         bgPath.fill()
         
+        if flipVertically {
+            var flipTransform = NSAffineTransform()
+            flipTransform.scaleXBy(1.0, yBy: -1.0)
+            flipTransform.translateXBy(0.0, yBy: -frame.size.height)
+            flipTransform.concat()
+        }
+        if flipHorizontally {
+            var flipTransform = NSAffineTransform()
+            flipTransform.scaleXBy(-1.0, yBy: 1.0)
+            flipTransform.translateXBy(-frame.size.width, yBy: 0.0)
+            flipTransform.concat()
+        }
+        
         //Calculate the number of whole cells that will fit in the padded space
-        var numCols = Int((gridSize.width - 2*xPadding) / cellWidth)
-        var numRows = Int((gridSize.height - 2*yPadding) / cellHeight)
+        var numCols = Int((gridSize.width - 2*xPadding) / cellSize.width)
+        var numRows = Int((gridSize.height - 2*yPadding) / cellSize.height)
         
         //Draw grid and coordinate labels
         if numCols>0 && numRows>0{
-            let maxWidth = Double(numCols) * cellWidth + xPadding
-            let maxHeight = Double(numRows) * cellHeight + yPadding
+            let maxWidth = Double(numCols) * cellSize.width + xPadding
+            let maxHeight = Double(numRows) * cellSize.height + yPadding
             var gridPath = NSBezierPath()
             var currentWidth = xPadding
             var colLabel: NSString
@@ -95,10 +120,10 @@ public class DRHGridView: NSView {
                 if i < numCols {
                     colLabel = firstColumnLabel.incrementBy(i, floor: "A", ceiling: "Z")
                     labelRect = NSRect(origin: NSPoint(x: currentWidth, y: 0.0), size: colLabel.sizeWithAttributes(labelAttr))
-                    labelRect = NSOffsetRect(labelRect, 0.5*(CGFloat(cellWidth) - labelRect.size.width), 0.0)
+                    labelRect = NSOffsetRect(labelRect, 0.5*(CGFloat(cellSize.width) - labelRect.size.width), CGFloat(yPadding) - labelRect.size.height)
                     colLabel.drawInRect(labelRect, withAttributes: labelAttr)
                 }
-                currentWidth += cellWidth
+                currentWidth += cellSize.width
             }
             var currentHeight = yPadding
             var rowLabel: NSString
@@ -108,17 +133,16 @@ public class DRHGridView: NSView {
                 if i < numRows {
                     rowLabel = "\(firstRowLabel+i)"
                     labelRect = NSRect(origin: NSPoint(x: 0.0, y: currentHeight), size: rowLabel.sizeWithAttributes(labelAttr))
-                    labelRect = NSOffsetRect(labelRect, 0.0, 0.5*(CGFloat(cellHeight) - labelRect.size.height))
+                    labelRect = NSOffsetRect(labelRect, 0.0, 0.5*(CGFloat(cellSize.height) - labelRect.size.height))
                     if CGFloat(0.9*xPadding) > labelRect.size.width {
                         labelRect.origin.x += CGFloat(0.9*xPadding) - labelRect.size.width
                     }
                     rowLabel.drawInRect(labelRect, withAttributes: labelAttr)
                 }
-                currentHeight += cellHeight
+                currentHeight += cellSize.height
             }
             NSColor.blackColor().setStroke()
             gridPath.stroke()
         }
     }
-    
 }
