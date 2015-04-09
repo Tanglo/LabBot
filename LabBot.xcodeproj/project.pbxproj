@@ -69,6 +69,7 @@
 		E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */; };
 		E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6562418FE4A0000727834 /* DRHLandmarkData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
+		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
 		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */ = {isa = PBXBuildFile; fileRef = E5FA88B51A479A6D0067A0C0 /* Doxyfile */; };
@@ -159,6 +160,7 @@
 		E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialArray.m; sourceTree = "<group>"; };
 		E5E6562418FE4A0000727834 /* DRHLandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLandmarkData.h; sourceTree = "<group>"; };
 		E5E6562518FE4A0000727834 /* DRHLandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLandmarkData.m; sourceTree = "<group>"; };
+		E5F856911AD6465700A2A384 /* LBDataMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDataMatrix.swift; sourceTree = "<group>"; };
 		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
 		E5FA88B11A4797D40067A0C0 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
 		E5FA88B51A479A6D0067A0C0 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
 				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
 				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
+				E5F856911AD6465700A2A384 /* LBDataMatrix.swift */,
 				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
 				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
 				E579300618F7A32800F012B7 /* DRHExperimentController.h */,
@@ -458,6 +461,7 @@
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
 				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
+				E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */,
 				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
 				E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */,
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
