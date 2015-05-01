@@ -29,7 +29,12 @@
 #import "DRHChartView.h"
 #import "DRHRulerChartView.h"
 #import "DRHVerticalSpacingChartView.h"
+#import "DRHDataOutputView.h"
+#import "DRHDataOutputBarView.h"
 #import "DRHFileDate.h"
+#import "DRHDaqDevice.h"
+//#import "DRHLabJack.h"
+//#import "DRHLabJackU6.h"
 #import "DRHSamplingOperation.h"
 
 

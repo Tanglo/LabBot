@@ -14,7 +14,7 @@ extension String {
         let lastChar = self.substringFromIndex(self.endIndex.predecessor())
         var remString = self.substringToIndex(self.endIndex.predecessor())
         let lastCharUnicode = lastChar.unicodeScalars[lastChar.unicodeScalars.startIndex].value
-        let newUnicode = lastCharUnicode + increment
+        let newUnicode = lastCharUnicode + UInt32(increment)
         var newLastChar = Character(UnicodeScalar(newUnicode))
         let ceilingUnicode = String(ceiling).unicodeScalars[lastChar.unicodeScalars.startIndex].value
         if newUnicode > ceilingUnicode {

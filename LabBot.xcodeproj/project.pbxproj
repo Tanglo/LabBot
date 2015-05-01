@@ -71,7 +71,7 @@
 		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
-		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; };
 		E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */ = {isa = PBXBuildFile; fileRef = E5FA88B51A479A6D0067A0C0 /* Doxyfile */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +142,7 @@
 		E58A65E819DD309B00948D42 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialMatrix.h; sourceTree = "<group>"; };
 		E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialMatrix.m; sourceTree = "<group>"; };
+		E5A17B1F1AF34D0F00814798 /* LabBot.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LabBot.playground; sourceTree = "<group>"; };
 		E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHGridView.swift; sourceTree = "<group>"; };
 		E5C8976C18F52A4300335057 /* LabBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8976F18F52A4300335057 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -255,6 +256,7 @@
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
 				E5C8976D18F52A4300335057 /* Products */,
+				E5A17B1F1AF34D0F00814798 /* LabBot.playground */,
 				E58A65E819DD309B00948D42 /* Documentation */,
 			);
 			sourceTree = "<group>";
@@ -356,9 +358,9 @@
 				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
 				E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */,
 				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
-				E5FA88B31A4797D40067A0C0 /* u6.h in Headers */,
 				E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */,
 				E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */,
+				E5FA88B31A4797D40067A0C0 /* u6.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +585,7 @@
 		E5C8979518F52A4300335057 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -605,6 +608,7 @@
 		E5C8979618F52A4300335057 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;

@@ -9,17 +9,73 @@
 import Cocoa
 
 public class LBDataMatrix {
-    private var data = Dictionary<String, [AnyObject]>()
+    private var variables = Array<String>()
+    private var data = Array<Array<AnyObject>>()
     
     public convenience init(variableNames:[String], observations: [[AnyObject]]){
         self.init()
         let numVars = variableNames.count
-        for i in 0..<numVars {
-            data[variableNames[i]] = [AnyObject]()
-            //I seem to have to interate over the colums to create variable arrays
-            //  but how to I get the size of observations?
-            
-//            data[variableNames[i]] = observations[][i]
+        for obsArray in observations {
+            var mutObsArray = changeArrayLength(obsArray, newLength: numVars)
+            data.append(mutObsArray)
+        }
+        variables = variableNames
+    }
+    
+    private func changeArrayLength(array:[AnyObject], newLength: Int)->[AnyObject] {
+        var mutArray = array
+        while mutArray.count > newLength {
+            mutArray.removeLast()
+        }
+        while mutArray.count < newLength {
+            mutArray.append(Double.NaN)
+        }
+        return mutArray
+    }
+    
+    public func appendObservation(newObs:[AnyObject]){
+        data.append(self.changeArrayLength(newObs, newLength: self.variables.count))
+    }
+    
+    public func appendVariable(newVariable:String){
+        self.variables.append(newVariable)
+        let numObs = data.count
+        for i in 0..<numObs {
+            data[i].append(Double.NaN)
+        }
+    }
+    
+    public func numberOfObservations()->Int{
+        return data.count
+    }
+    
+    public func numberOfVariables()->Int{
+        return variables.count
+    }
+    
+    public func indexOfVariable(variable: String)->Int?{
+        return find(self.variables, variable)
+    }
+    
+    public func changeDataPoint(variable: String, observation: Int, newValue: Double){
+        let varIndex = indexOfVariable(variable)
+        if varIndex != nil {
+            data[observation][varIndex!] = newValue
+        }
+    }
+    
+    public func printDataMatrix(){
+        var outStr = ""
+        for varName in variables {
+            outStr = outStr + "\(varName)\t"
+        }
+        println(outStr)
+        for obsArray in data {
+            outStr = ""
+            for dataPt in obsArray {
+                outStr += "\(dataPt)\t"
+            }
+            println(outStr)
         }
     }
 }
