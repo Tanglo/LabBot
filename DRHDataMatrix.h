@@ -23,6 +23,7 @@ extern NSString * const DRHDataMatrixFactorNamesKey;
  
  Several methods exist to interact with the @c DRHDataColumn class.  For example @c DRHDataColumn objects can be added or inserted into an exisiting @c DRHDataMatrix object, or can be generated from a column of and exisiting @c DRHDataMatrix.
  */
+__attribute__((deprecated))
 @interface DRHDataMatrix : NSObject <NSCoding>
 
 /*!

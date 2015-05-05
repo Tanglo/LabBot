@@ -3,8 +3,12 @@
 //  LabBot
 //
 //  Created by Lee Walsh on 9/04/2015.
-//  Copyright (c) 2015 Dead Rubber Hand. All rights reserved.
+//  Copyright (c) 2015 Lee David Walsh. All rights reserved.
+//  This sofware is licensed under the The MIT License (MIT)
+//  See: https://github.com/Tanglo/LabBot/blob/master/LICENSE.md
 //
+
+//  Data is stored in an array of arrays.  Each sub array (row) is an observation and contains value for each variable.
 
 import Cocoa
 
@@ -33,18 +37,7 @@ public class LBDataMatrix {
         return mutArray
     }
     
-    public func appendObservation(newObs:[AnyObject]){
-        data.append(self.changeArrayLength(newObs, newLength: self.variables.count))
-    }
-    
-    public func appendVariable(newVariable:String){
-        self.variables.append(newVariable)
-        let numObs = data.count
-        for i in 0..<numObs {
-            data[i].append(Double.NaN)
-        }
-    }
-    
+    // MARK: Getting data
     public func numberOfObservations()->Int{
         return data.count
     }
@@ -57,6 +50,43 @@ public class LBDataMatrix {
         return find(self.variables, variable)
     }
     
+    public func observationAtIndex(index: Int)->[AnyObject]{
+        return data[index]
+    }
+    
+    public func variableAtIndex(index: Int)->[AnyObject]?{
+        if index < variables.count {
+            var varArray = Array<AnyObject>()
+            for observation in data {
+                varArray.append(observation[index])
+            }
+            return varArray
+        }
+        return nil
+    }
+    
+    public func variableWithName(name: String)->[AnyObject]?{
+        let variableIndex = indexOfVariable(name)
+        if variableIndex != nil {
+            return variableAtIndex(variableIndex!)
+        }
+        return nil
+    }
+    
+    // MARK: Adding data
+    public func appendObservation(newObs:[AnyObject]){
+        data.append(self.changeArrayLength(newObs, newLength: self.variables.count))
+    }
+    
+    public func appendVariable(newVariable:String){
+        self.variables.append(newVariable)
+        let numObs = data.count
+        for i in 0..<numObs {
+            data[i].append(Double.NaN)
+        }
+    }
+    
+    // MARK: Changing data
     public func changeDataPoint(variable: String, observation: Int, newValue: Double){
         let varIndex = indexOfVariable(variable)
         if varIndex != nil {
@@ -64,6 +94,22 @@ public class LBDataMatrix {
         }
     }
     
+    // MARK: Organising data
+    public func shuffleObservations(){
+        var shuffledData = self.data
+        let numObs = shuffledData.count
+        for i in stride(from: numObs, through: 1, by: -1) {
+            let j = Int(arc4random_uniform(UInt32(i)))
+            let movedObs = shuffledData.removeAtIndex(j)
+   //         println("--\(movedObs)")
+            shuffledData.insert(movedObs, atIndex: i-1)
+        }
+        data = shuffledData
+    }
+    
+    
+    
+    // MARK: Debuging methods
     public func printDataMatrix(){
         var outStr = ""
         for varName in variables {
@@ -79,23 +125,3 @@ public class LBDataMatrix {
         }
     }
 }
-
-/*
--(DRHDataMatrix *)initWithRowArrays:(NSArray *)rowArrays;
-+(DRHDataMatrix *)dataMatrixWithColumnArrays:(NSArray *)dataArrays __attribute__((deprecated));
-+(DRHDataMatrix *)dataMatrixWithDataColumnArray:(NSArray *)dataArrays;
--(NSInteger)rowCount;
--(NSInteger)columnCount;
--(NSArray *)dataRowAtIndex:(NSInteger)index;
--(NSArray *)dataRowAtIndex:(NSInteger)index ForColumnsWithIndexes:(NSIndexSet *)columnIndexes;
--(NSArray *)dataRowAtIndex:(NSInteger)index ForColumnsWithNames:(NSArray *)nameArray;
--(NSInteger)indexOfDataColumnWithName:(NSString *)columnName;
--(NSIndexSet *)indexesOfDataColumnsWithNames:(NSArray *)nameArray;
--(DRHDataColumn *)dataColumnAtIndex:(NSInteger)index;
--(DRHDataColumn *)dataColumnWithName:(NSString *)name;
--(DRHDataMatrix *)dataMatrixByAddingDataColumn:(DRHDataColumn *)dataColumn;
--(DRHDataMatrix *)dataMatrixByInsertingColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index __attribute__((deprecated));
--(DRHDataMatrix *)dataMatrixByInsertingDataColumn:(DRHDataColumn *)dataColumn AtIndex:(NSInteger)index;
--(DRHDataMatrix *)dataMatrixByRemovingColumnWithName:(NSString *)columnName;
--(void)shuffleRows;
-*/

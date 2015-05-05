@@ -389,8 +389,9 @@
 		E5C8976318F52A4300335057 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LB;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Dead Rubber Hand";
+				ORGANIZATIONNAME = "Lee David Walsh";
 			};
 			buildConfigurationList = E5C8976618F52A4300335057 /* Build configuration list for PBXProject "LabBot" */;
 			compatibilityVersion = "Xcode 3.2";

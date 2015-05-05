@@ -3,7 +3,9 @@
 //  LabBot
 //
 //  Created by Lee Walsh on 18/12/2014.
-//  Copyright (c) 2014 Dead Rubber Hand. All rights reserved.
+//  Copyright (c) 2014 Lee David Walsh. All rights reserved.
+//  This sofware is licensed under the The MIT License (MIT)
+//  See: https://github.com/Tanglo/LabBot/blob/master/LICENSE.md
 //
 
 #import "DRHLabJack.h"
