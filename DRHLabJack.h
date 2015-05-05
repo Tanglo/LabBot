@@ -7,7 +7,7 @@
 //
 
 #import "DRHDaqDevice.h"
-#import "/usr/local/include/labjackusb.h"
+//#import "/usr/local/include/labjackusb.h"
 
 extern NSString * const DRHLabJackU3DeviceKey;
 extern NSString * const DRHLabJackU6DeviceKey;

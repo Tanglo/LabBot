@@ -7,12 +7,18 @@
 //
 
 #import "DRHLabjackU6.h"
+#import "u6.h"
 
 NSString * const DRHLabJackU6ConfigScanRateKey = @"DRHLJU6ScanRateKey";
 NSString * const DRHLabJackU6ConfigNumAnalogueChanKey = @"DRHLJU6NumberAnalogueChannelsKey";
 NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPacketKey";
 
-@implementation DRHLabjackU6
+@implementation DRHLabjackU6 {
+    //The LabJack U6 device's handle.  Details by LabJack in u6.h file.
+    HANDLE handle;
+    //A structure for storing calibration constants.  Details by LabJack in u6.h file.
+    u6CalibrationInfo caliInfo;
+}
 
 #pragma mark Initialisers
 -(DRHLabjackU6 *)initWithSerialNum:(int)serialNum{
@@ -454,6 +460,10 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     }
     
     return [NSArray arrayWithArray:dataArray];
+}
+
+-(void)close{
+    closeUSBConnection(handle);
 }
 
 @end

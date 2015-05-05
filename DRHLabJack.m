@@ -7,6 +7,7 @@
 //
 
 #import "DRHLabJack.h"
+#import "/usr/local/include/labjackusb.h"
 
 NSString * const DRHLabJackU3DeviceKey = @"LJU3";
 NSString * const DRHLabJackU6DeviceKey = @"LJU6";

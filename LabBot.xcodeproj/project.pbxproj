@@ -71,7 +71,7 @@
 		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
-		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; };
+		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */ = {isa = PBXBuildFile; fileRef = E5FA88B51A479A6D0067A0C0 /* Doxyfile */; };
 /* End PBXBuildFile section */
 
@@ -142,7 +142,6 @@
 		E58A65E819DD309B00948D42 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
 		E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialMatrix.h; sourceTree = "<group>"; };
 		E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialMatrix.m; sourceTree = "<group>"; };
-		E5A17B1F1AF34D0F00814798 /* LabBot.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LabBot.playground; sourceTree = "<group>"; };
 		E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHGridView.swift; sourceTree = "<group>"; };
 		E5C8976C18F52A4300335057 /* LabBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8976F18F52A4300335057 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -152,7 +151,6 @@
 		E5C8977718F52A4300335057 /* LabBot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBot-Info.plist"; sourceTree = "<group>"; };
 		E5C8977918F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8977B18F52A4300335057 /* LabBot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LabBot-Prefix.pch"; sourceTree = "<group>"; };
-		E5C8978418F52A4300335057 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		E5C8978C18F52A4300335057 /* LabBotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBotTests-Info.plist"; sourceTree = "<group>"; };
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
@@ -256,7 +254,6 @@
 				E5C8978A18F52A4300335057 /* LabBotTests */,
 				E5C8976E18F52A4300335057 /* Frameworks */,
 				E5C8976D18F52A4300335057 /* Products */,
-				E5A17B1F1AF34D0F00814798 /* LabBot.playground */,
 				E58A65E819DD309B00948D42 /* Documentation */,
 			);
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				E5C8976F18F52A4300335057 /* Cocoa.framework */,
-				E5C8978418F52A4300335057 /* XCTest.framework */,
 				E5C8977118F52A4300335057 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -592,6 +588,7 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 0.2;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
@@ -615,6 +612,7 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
 				DYLIB_CURRENT_VERSION = 0.2;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";

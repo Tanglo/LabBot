@@ -7,7 +7,7 @@
 //
 
 #import "DRHLabJack.h"
-#import "u6.h"
+//
 
 /*!
  * @memberof DRHLabjackU6
@@ -31,10 +31,6 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
     This class provides properties and methods to facilitate interacting with a LabJack U6 or U6-Pro device.  This class is specific to the U6 and U6-Pro.  If you have a different LabJack device you should be using a different subclass of @c DRHLabJack.  If your data aqusition hardware is not a LabJack device you should be using a different subclass of @c DRHDaqDevice.
  */
 @interface DRHLabjackU6 : DRHLabJack {
-    /// @brief The LabJack U6 device's handle.  Details by LabJack in @c u6.h file.
-    HANDLE handle;
-    /// @brief A structure for storing calibration constants.  Details by LabJack in @c u6.h file.
-    u6CalibrationInfo caliInfo;
     /// @brief The number of sampling analogChannels
     NSInteger numAnalogueChan;
     /// @brief The number of samples received on each read stream loop.   At this stage this should be an integer multiple of the value set for numAnalogueChan.
@@ -79,7 +75,7 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
  * Getter method for the device handle of this initialised LabJack U6 device ID.
  * @return Current @c HANDLE of the LabJack U6 device being controlled by the receiver.
  */
--(HANDLE)handle;
+-(void *)handle;
 
 /*!
  * Reads a single sample from a single analogue channel.  Intended for calibration routines.
@@ -120,5 +116,10 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
  * @return @c Nill if error, otherwise an array of arrays where each sub array represents a scan and contains NSNumbers of the sampled data from each streaming analogue channel.
  */
 -(NSArray *)readStreamData;
+
+/*!
+ * Closes the LabJack U6
+ */
+-(void)close;
 
 @end

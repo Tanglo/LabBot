@@ -8,6 +8,7 @@
 
 #import "DRHSamplingOperation.h"
 #import "DRHLabjackU6.h"
+#import "u6.h"
 
 @implementation DRHSamplingOperation
 
