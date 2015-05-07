@@ -25,8 +25,6 @@
 		E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */; };
 		E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */; };
-		E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */; };
 		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */ = {isa = PBXBuildFile; fileRef = E541FC7719A5BA3600FD9252 /* DRHFileDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E541FC7819A5BA3600FD9252 /* DRHFileDate.m */; };
@@ -42,33 +40,22 @@
 		E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A60C199867D200D6B190 /* DRHDataColumn.m */; };
 		E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A6141998753D00D6B190 /* DRHExperimentData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A6151998753D00D6B190 /* DRHExperimentData.m */; };
-		E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300418F7A32800F012B7 /* DRHExperiment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300518F7A32800F012B7 /* DRHExperiment.m */; };
 		E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300618F7A32800F012B7 /* DRHExperimentController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300718F7A32800F012B7 /* DRHExperimentController.m */; };
 		E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300818F7A32800F012B7 /* DRHExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300918F7A32800F012B7 /* DRHExperimentDocument.m */; };
 		E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300C18F7A32800F012B7 /* DRHExperimenterWindowController.m */; };
-		E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */; };
-		E579301F18F7A32800F012B7 /* DRHInitExperimentWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */; };
 		E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = E579301018F7A32800F012B7 /* DRHStillCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E579301118F7A32800F012B7 /* DRHStillCamera.m */; };
 		E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */; };
 		E58A65E919DD309B00948D42 /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = E58A65E819DD309B00948D42 /* Documentation */; };
-		E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */; };
-		E5A958D61AB2AC9C00B8A764 /* DRHGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */; };
+		E5A958D61AB2AC9C00B8A764 /* LBGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A958D51AB2AC9C00B8A764 /* LBGridView.swift */; };
 		E5C8977018F52A4300335057 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976F18F52A4300335057 /* Cocoa.framework */; };
 		E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8977818F52A4300335057 /* InfoPlist.strings */; };
 		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5D4F0B319063A440091B4AE /* To do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D4F0B219063A440091B4AE /* To do.rtf */; };
-		E5DDCCC3197F7F8E00F06528 /* DRHTrialArray.h in Headers */ = {isa = PBXBuildFile; fileRef = E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */; };
-		E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */ = {isa = PBXBuildFile; fileRef = E5E6562418FE4A0000727834 /* DRHLandmarkData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E6562518FE4A0000727834 /* DRHLandmarkData.m */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
 		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -108,8 +95,6 @@
 		E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHRulerChartView.h; sourceTree = "<group>"; };
 		E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHRulerChartView.m; sourceTree = "<group>"; };
 		E540991918FE407A001CBB30 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
-		E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHMeasureExperimentDocument.h; sourceTree = "<group>"; };
-		E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHMeasureExperimentDocument.m; sourceTree = "<group>"; };
 		E541FC7719A5BA3600FD9252 /* DRHFileDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHFileDate.h; sourceTree = "<group>"; };
 		E541FC7819A5BA3600FD9252 /* DRHFileDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHFileDate.m; sourceTree = "<group>"; };
 		E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHSamplingOperation.h; sourceTree = "<group>"; };
@@ -124,25 +109,18 @@
 		E578A60C199867D200D6B190 /* DRHDataColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataColumn.m; sourceTree = "<group>"; };
 		E578A6141998753D00D6B190 /* DRHExperimentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentData.h; sourceTree = "<group>"; };
 		E578A6151998753D00D6B190 /* DRHExperimentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentData.m; sourceTree = "<group>"; };
-		E579300418F7A32800F012B7 /* DRHExperiment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperiment.h; sourceTree = "<group>"; };
-		E579300518F7A32800F012B7 /* DRHExperiment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperiment.m; sourceTree = "<group>"; };
 		E579300618F7A32800F012B7 /* DRHExperimentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentController.h; sourceTree = "<group>"; };
 		E579300718F7A32800F012B7 /* DRHExperimentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentController.m; sourceTree = "<group>"; };
 		E579300818F7A32800F012B7 /* DRHExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentDocument.h; sourceTree = "<group>"; };
 		E579300918F7A32800F012B7 /* DRHExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentDocument.m; sourceTree = "<group>"; };
 		E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimenterWindowController.h; sourceTree = "<group>"; };
 		E579300C18F7A32800F012B7 /* DRHExperimenterWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimenterWindowController.m; sourceTree = "<group>"; };
-		E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DRHInitExperimentWindow.xib; sourceTree = "<group>"; };
-		E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInitExperimentWindowController.h; sourceTree = "<group>"; };
-		E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInitExperimentWindowController.m; sourceTree = "<group>"; };
 		E579301018F7A32800F012B7 /* DRHStillCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHStillCamera.h; sourceTree = "<group>"; };
 		E579301118F7A32800F012B7 /* DRHStillCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHStillCamera.m; sourceTree = "<group>"; };
 		E579301318F7A32800F012B7 /* DRHSubjectWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHSubjectWindowController.h; sourceTree = "<group>"; };
 		E579301418F7A32800F012B7 /* DRHSubjectWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHSubjectWindowController.m; sourceTree = "<group>"; };
 		E58A65E819DD309B00948D42 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
-		E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialMatrix.h; sourceTree = "<group>"; };
-		E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialMatrix.m; sourceTree = "<group>"; };
-		E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRHGridView.swift; sourceTree = "<group>"; };
+		E5A958D51AB2AC9C00B8A764 /* LBGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBGridView.swift; sourceTree = "<group>"; };
 		E5C8976C18F52A4300335057 /* LabBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C8976F18F52A4300335057 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E5C8977218F52A4300335057 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,10 +133,6 @@
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
 		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "To do.rtf"; sourceTree = "<group>"; };
-		E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHTrialArray.h; sourceTree = "<group>"; };
-		E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHTrialArray.m; sourceTree = "<group>"; };
-		E5E6562418FE4A0000727834 /* DRHLandmarkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLandmarkData.h; sourceTree = "<group>"; };
-		E5E6562518FE4A0000727834 /* DRHLandmarkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLandmarkData.m; sourceTree = "<group>"; };
 		E5F856911AD6465700A2A384 /* LBDataMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDataMatrix.swift; sourceTree = "<group>"; };
 		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
 		E5FA88B11A4797D40067A0C0 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
@@ -180,19 +154,10 @@
 		E55D2F631999940E006EF3D4 /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
-				E5DDCCC1197F7F8E00F06528 /* DRHTrialArray.h */,
-				E5DDCCC2197F7F8E00F06528 /* DRHTrialArray.m */,
-				E59C4C9018FB921900C24E6E /* DRHTrialMatrix.h */,
-				E59C4C9118FB921900C24E6E /* DRHTrialMatrix.m */,
-				E5E6562418FE4A0000727834 /* DRHLandmarkData.h */,
-				E5E6562518FE4A0000727834 /* DRHLandmarkData.m */,
-				E579300418F7A32800F012B7 /* DRHExperiment.h */,
-				E579300518F7A32800F012B7 /* DRHExperiment.m */,
-				E579300E18F7A32800F012B7 /* DRHInitExperimentWindowController.h */,
-				E579300F18F7A32800F012B7 /* DRHInitExperimentWindowController.m */,
-				E579300D18F7A32800F012B7 /* DRHInitExperimentWindow.xib */,
-				E540991A18FE4141001CBB30 /* DRHMeasureExperimentDocument.h */,
-				E540991B18FE4141001CBB30 /* DRHMeasureExperimentDocument.m */,
+				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
+				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
+				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
+				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
 			);
 			name = Deprecated;
 			sourceTree = "<group>";
@@ -203,10 +168,6 @@
 				E5D4F0B219063A440091B4AE /* To do.rtf */,
 				E5FA88B51A479A6D0067A0C0 /* Doxyfile */,
 				E540991918FE407A001CBB30 /* LabBot.h */,
-				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
-				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
-				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
-				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
 				E5F856911AD6465700A2A384 /* LBDataMatrix.swift */,
 				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
 				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
@@ -236,7 +197,7 @@
 				E50E6F6A1A5E420B00110C70 /* DRHDataOutputView.m */,
 				E50E6F6D1A5E42AC00110C70 /* DRHDataOutputBarView.h */,
 				E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */,
-				E5A958D51AB2AC9C00B8A764 /* DRHGridView.swift */,
+				E5A958D51AB2AC9C00B8A764 /* LBGridView.swift */,
 				E541FC7719A5BA3600FD9252 /* DRHFileDate.h */,
 				E541FC7819A5BA3600FD9252 /* DRHFileDate.m */,
 				E525E5391A429C8600F43B81 /* DRHDaqDevice.h */,
@@ -329,23 +290,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E540991E18FE416E001CBB30 /* LabBot.h in Headers */,
-				E5DDCCC3197F7F8E00F06528 /* DRHTrialArray.h in Headers */,
 				E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */,
-				E59C4C9218FB921900C24E6E /* DRHTrialMatrix.h in Headers */,
 				E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */,
-				E5E6562618FE4A0000727834 /* DRHLandmarkData.h in Headers */,
-				E579301518F7A32800F012B7 /* DRHExperiment.h in Headers */,
 				E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */,
 				E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */,
 				E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */,
 				E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */,
-				E579301F18F7A32800F012B7 /* DRHInitExperimentWindowController.h in Headers */,
 				E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */,
 				E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */,
 				E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */,
 				E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */,
 				E579302118F7A32800F012B7 /* DRHStillCamera.h in Headers */,
-				E540991C18FE4141001CBB30 /* DRHMeasureExperimentDocument.h in Headers */,
 				E50E6F6F1A5E42AC00110C70 /* DRHDataOutputBarView.h in Headers */,
 				E50E6F6B1A5E420B00110C70 /* DRHDataOutputView.h in Headers */,
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
@@ -368,6 +323,7 @@
 			buildConfigurationList = E5C8979418F52A4300335057 /* Build configuration list for PBXNativeTarget "LabBot" */;
 			buildPhases = (
 				E5C8976718F52A4300335057 /* Sources */,
+				E515A1531AFAED32006C162F /* Run Script */,
 				E5C8976818F52A4300335057 /* Frameworks */,
 				E5C8976918F52A4300335057 /* Headers */,
 				E5746D1A19DD277900F72CDD /* ShellScript */,
@@ -417,7 +373,6 @@
 			files = (
 				E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */,
 				E5D4F0B319063A440091B4AE /* To do.rtf in Resources */,
-				E579301E18F7A32800F012B7 /* DRHInitExperimentWindow.xib in Resources */,
 				E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */,
 				E58A65E919DD309B00948D42 /* Documentation in Resources */,
 			);
@@ -426,6 +381,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E515A1531AFAED32006C162F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/tools/incBuildNum.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}\"";
+		};
 		E5746D1A19DD277900F72CDD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,34 +415,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59C4C9318FB921900C24E6E /* DRHTrialMatrix.m in Sources */,
 				E514A4991980E7F100D7F490 /* DRHAudioPlayer.m in Sources */,
 				E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */,
 				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
 				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
-				E5DDCCC4197F7F8E00F06528 /* DRHTrialArray.m in Sources */,
 				E5FA88B21A4797D40067A0C0 /* u6.c in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
 				E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */,
 				E50E6F6C1A5E420B00110C70 /* DRHDataOutputView.m in Sources */,
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
-				E579301618F7A32800F012B7 /* DRHExperiment.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
 				E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */,
 				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
 				E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */,
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
-				E5E6562718FE4A0000727834 /* DRHLandmarkData.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
 				E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */,
 				E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */,
-				E540991D18FE4141001CBB30 /* DRHMeasureExperimentDocument.m in Sources */,
-				E579302018F7A32800F012B7 /* DRHInitExperimentWindowController.m in Sources */,
 				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
-				E5A958D61AB2AC9C00B8A764 /* DRHGridView.swift in Sources */,
+				E5A958D61AB2AC9C00B8A764 /* LBGridView.swift in Sources */,
 				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
 				E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */,
 			);
@@ -587,10 +550,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = 0.2;
+				DYLIB_COMPATIBILITY_VERSION = 0.3;
+				DYLIB_CURRENT_VERSION = 0.3;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_VERSION = A;
+				FRAMEWORK_VERSION = B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
@@ -598,6 +561,7 @@
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -611,10 +575,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 3;
-				DYLIB_CURRENT_VERSION = 0.2;
+				DYLIB_COMPATIBILITY_VERSION = 0.3;
+				DYLIB_CURRENT_VERSION = 0.3;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_VERSION = A;
+				FRAMEWORK_VERSION = B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LabBot/LabBot-Prefix.pch";
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
@@ -622,6 +586,7 @@
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

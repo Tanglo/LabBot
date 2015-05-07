@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &quot;DRHDataMatrix.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#import &lt;LabBot/LabBot-Swift.h&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_data.html">   19</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_experiment_data.html">DRHExperimentData</a> : NSObject &lt;NSCoding&gt;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_data.html#a74d1ee8dbee1c5764d805ed72fb2e00b">   34</a></span>&#160;<span class="keyword">@property</span> NSString *<a class="code" href="interface_d_r_h_experiment_data.html#a74d1ee8dbee1c5764d805ed72fb2e00b">experimentFilenameStem</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_data.html#a46c1459da1b739470c173b5a93f01ac2">   37</a></span>&#160;<span class="keyword">@property</span> <a class="code" href="interface_d_r_h_data_matrix.html">DRHDataMatrix</a> *<a class="code" href="interface_d_r_h_experiment_data.html#a46c1459da1b739470c173b5a93f01ac2">experimentDataMatrix</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="interface_d_r_h_experiment_data.html#ad11f50ec7d5cf2109395f09b53994581">   37</a></span>&#160;<span class="keyword">@property</span> LBDataMatrix *<a class="code" href="interface_d_r_h_experiment_data.html#ad11f50ec7d5cf2109395f09b53994581">experimentDataMatrix</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_d_r_h_experiment_data_html_ad95b61a58cf8b6649f023a0e487200dd"><div class="ttname"><a href="interface_d_r_h_experiment_data.html#ad95b61a58cf8b6649f023a0e487200dd">DRHExperimentData::experimentName</a></div><div class="ttdeci">NSString * experimentName</div><div class="ttdoc">The name of the experiment. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:22</div></div>
@@ -119,13 +119,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="interface_d_r_h_experiment_data_html_acf412bcf45b7581f66d9f11d132ef3c7"><div class="ttname"><a href="interface_d_r_h_experiment_data.html#acf412bcf45b7581f66d9f11d132ef3c7">DRHExperimentData::experimentSubject</a></div><div class="ttdeci">NSString * experimentSubject</div><div class="ttdoc">A string that uniquely identifies the experimental subject. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:25</div></div>
 <div class="ttc" id="interface_d_r_h_experiment_data_html_a74d1ee8dbee1c5764d805ed72fb2e00b"><div class="ttname"><a href="interface_d_r_h_experiment_data.html#a74d1ee8dbee1c5764d805ed72fb2e00b">DRHExperimentData::experimentFilenameStem</a></div><div class="ttdeci">NSString * experimentFilenameStem</div><div class="ttdoc">The filename stem to use when experiemntal data files are created. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:34</div></div>
 <div class="ttc" id="interface_d_r_h_experiment_data_html"><div class="ttname"><a href="interface_d_r_h_experiment_data.html">DRHExperimentData</a></div><div class="ttdoc">An root level object to store basic experimental data and tables of experimental variables. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:19</div></div>
-<div class="ttc" id="interface_d_r_h_data_matrix_html"><div class="ttname"><a href="interface_d_r_h_data_matrix.html">DRHDataMatrix</a></div><div class="ttdoc">An object to store a table of experimental variables. </div><div class="ttdef"><b>Definition:</b> DRHDataMatrix.h:26</div></div>
 <div class="ttc" id="interface_d_r_h_experiment_data_html_adfa04768c6b33e96fad643c41f4d9f99"><div class="ttname"><a href="interface_d_r_h_experiment_data.html#adfa04768c6b33e96fad643c41f4d9f99">DRHExperimentData::experimentDate</a></div><div class="ttdeci">NSDate * experimentDate</div><div class="ttdoc">The date this experiemntal session was run. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:31</div></div>
-<div class="ttc" id="interface_d_r_h_experiment_data_html_a46c1459da1b739470c173b5a93f01ac2"><div class="ttname"><a href="interface_d_r_h_experiment_data.html#a46c1459da1b739470c173b5a93f01ac2">DRHExperimentData::experimentDataMatrix</a></div><div class="ttdeci">DRHDataMatrix * experimentDataMatrix</div><div class="ttdoc">A dataMatrix object to store experimental variables. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:37</div></div>
+<div class="ttc" id="interface_d_r_h_experiment_data_html_ad11f50ec7d5cf2109395f09b53994581"><div class="ttname"><a href="interface_d_r_h_experiment_data.html#ad11f50ec7d5cf2109395f09b53994581">DRHExperimentData::experimentDataMatrix</a></div><div class="ttdeci">LBDataMatrix * experimentDataMatrix</div><div class="ttdoc">A dataMatrix object to store experimental variables. </div><div class="ttdef"><b>Definition:</b> DRHExperimentData.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 23 2015 17:18:18 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 7 2015 14:39:25 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

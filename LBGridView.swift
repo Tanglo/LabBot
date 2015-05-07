@@ -35,6 +35,19 @@ extension String {
     }
 }
 
+extension Array {
+    func shuffle() -> Array<T> {
+        var shuffledArray = self
+        let count = shuffledArray.count
+        for i in stride(from: count, through: 1, by: -1) {
+            let j = Int(arc4random_uniform(UInt32(i)))
+            let movedElement = shuffledArray.removeAtIndex(j)
+            shuffledArray.insert(movedElement, atIndex: i-1)
+        }
+        return shuffledArray
+    }
+}
+
 /*!
 @brief A class that defines a size as a width and height.
 
@@ -60,7 +73,7 @@ public class Size {
 
 * This class is a subclass of NSView and is used to display grids that have coordinate systems.  The coordinate system is similar to a chess board where rows are labelled with a number and columns are labelled with a letter.  The grid size and cell size are set by the appropriate class properties, as is the starting values of the coordinate system.
 */
-public class DRHGridView: NSView {
+public class LBGridView: NSView {
     let xPadding = 75.0
     let yPadding = 50.0
     
@@ -74,8 +87,13 @@ public class DRHGridView: NSView {
         }
     }
     public var labelSize = 45.0
-    public var flipVertically = false;
-    public var flipHorizontally = false;
+    public var flipVertically = false
+    public var flipHorizontally = false
+    public var labelCells = false
+    public var shuffleLabels = false
+    var cellLabels = Array<Array<Int>>()
+    var cellLabelRows = Array<Int>()
+    var cellLabelColumns = Array<Int>()
 
     override public func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
@@ -119,7 +137,7 @@ public class DRHGridView: NSView {
             for i in 0...numCols {
                 gridPath.moveToPoint(NSPoint(x: currentWidth, y: yPadding))
                 gridPath.lineToPoint(NSPoint(x: currentWidth, y: maxHeight))
-                if i < numCols {
+                if i < numCols && labelCells==false {
                     colLabel = firstColumnLabel.incrementBy(i, floor: "A", ceiling: "Z")
                     labelRect = NSRect(origin: NSPoint(x: currentWidth, y: 0.0), size: colLabel.sizeWithAttributes(labelAttr))
                     labelRect = NSOffsetRect(labelRect, 0.5*(CGFloat(cellSize.width) - labelRect.size.width), CGFloat(yPadding) - labelRect.size.height)
@@ -132,7 +150,7 @@ public class DRHGridView: NSView {
             for i in 0...numRows {
                 gridPath.moveToPoint(NSPoint(x: xPadding, y: currentHeight))
                 gridPath.lineToPoint(NSPoint(x: maxWidth, y: currentHeight))
-                if i < numRows {
+                if i < numRows  && labelCells==false {
                     rowLabel = "\(firstRowLabel+i)"
                     labelRect = NSRect(origin: NSPoint(x: 0.0, y: currentHeight), size: rowLabel.sizeWithAttributes(labelAttr))
                     labelRect = NSOffsetRect(labelRect, 0.0, 0.5*(CGFloat(cellSize.height) - labelRect.size.height))
@@ -145,6 +163,44 @@ public class DRHGridView: NSView {
             }
             NSColor.blackColor().setStroke()
             gridPath.stroke()
+            
+            if labelCells {
+                cellLabels = [[Int]](count: numRows, repeatedValue: [Int](count: numCols, repeatedValue: Int()))
+                cellLabelRows = [Int](count: numRows*numCols+1, repeatedValue: Int())
+                cellLabelColumns = [Int](count: numRows*numCols+1, repeatedValue: Int())
+                var newLabels = [Int]()
+                var count = 1
+                for i in 0..<numRows {
+                    for j in 0..<numCols {
+                        newLabels.append(count++)
+                    }
+                }
+                if shuffleLabels {
+                    newLabels = newLabels.shuffle()
+                }
+                for i in 0..<numRows {
+                    for j in 0..<numCols {
+                        cellLabels[i][j] = newLabels[i*numCols+j]
+                        cellLabelRows[cellLabels[i][j]] = i
+                        cellLabelColumns[cellLabels[i][j]] = j
+                       
+                        let cellLabel: NSString = "\(cellLabels[i][j])"
+                        var xLabelPos = CGFloat(cellSize.width*Double(j)) + CGFloat(xPadding) + (CGFloat(cellSize.width) - cellLabel.sizeWithAttributes(labelAttr).width)/2.0
+                        var yLabelPos = CGFloat(cellSize.height*Double(i)) + CGFloat(yPadding) + (CGFloat(cellSize.height) - cellLabel.sizeWithAttributes(labelAttr).height)/2.0
+                        labelRect = NSRect(origin: NSPoint(x: xLabelPos, y: yLabelPos), size: cellLabel.sizeWithAttributes(labelAttr))
+                        cellLabel.drawInRect(labelRect, withAttributes: labelAttr)
+                    }
+                }
+            }
         }
+    }
+    
+    public func gridReferenceOfLabel(label: Int) -> (Int?, Int?){
+        if cellLabelRows.count > 0 && cellLabelColumns.count > 0 {
+            let row = cellLabelRows[label]
+            let column = cellLabelColumns[label]
+            return (row, column)
+        }
+        return (nil,nil)
     }
 }

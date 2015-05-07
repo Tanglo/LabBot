@@ -12,7 +12,7 @@
 
 import Cocoa
 
-public class LBDataMatrix {
+@objc public class LBDataMatrix {
     private var variables = Array<String>()
     private var data = Array<Array<AnyObject>>()
     

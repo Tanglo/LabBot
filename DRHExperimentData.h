@@ -9,7 +9,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DRHDataMatrix.h"
+#import <LabBot/LabBot-Swift.h>
 
 /*!
  @brief An root level object to store basic experimental data and tables of experimental variables.
@@ -34,6 +34,6 @@
 @property NSString *experimentFilenameStem;
 
 /// @brief A dataMatrix object to store experimental variables.
-@property DRHDataMatrix *experimentDataMatrix;
+@property LBDataMatrix *experimentDataMatrix;
 
 @end

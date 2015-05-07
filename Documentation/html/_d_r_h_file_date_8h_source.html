@@ -91,32 +91,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  LabBot</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Lee Walsh on 21/08/2014.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Dead Rubber Hand. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2014 Lee David Walsh. All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  This sofware is licensed under the The MIT License (MIT)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//  See: https://github.com/Tanglo/LabBot/blob/master/LICENSE.md</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="interface_d_r_h_file_date.html">   16</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_file_date.html">DRHFileDate</a> : NSObject{</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">   18</a></span>&#160;    NSDate *<a class="code" href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">date</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">   20</a></span>&#160;    NSDateFormatter *<a class="code" href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">dateFormatter</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;-(<a class="code" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)initWithDate:(NSDate *)newDate;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;+(<a class="code" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)fileDateWithDate:(NSDate *)newDate;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;-(void)setDate:(NSDate *)newDate;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;-(NSString *)dateString;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interface_d_r_h_file_date_html_abdc3738accd96188583f0c5636d96338"><div class="ttname"><a href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">DRHFileDate::dateFormatter</a></div><div class="ttdeci">NSDateFormatter * dateFormatter</div><div class="ttdoc">The format that should be used to display or draw this date. </div><div class="ttdef"><b>Definition:</b> DRHFileDate.h:20</div></div>
-<div class="ttc" id="interface_d_r_h_file_date_html"><div class="ttname"><a href="interface_d_r_h_file_date.html">DRHFileDate</a></div><div class="ttdoc">Used to hold a date and it&#39;s display format. </div><div class="ttdef"><b>Definition:</b> DRHFileDate.h:16</div></div>
-<div class="ttc" id="interface_d_r_h_file_date_html_ab1a9e6949038ca4ada72d7e829ecbd1a"><div class="ttname"><a href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">DRHFileDate::date</a></div><div class="ttdeci">NSDate * date</div><div class="ttdoc">The date. </div><div class="ttdef"><b>Definition:</b> DRHFileDate.h:18</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="interface_d_r_h_file_date.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_d_r_h_file_date.html">DRHFileDate</a> : NSObject{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">   20</a></span>&#160;    NSDate *<a class="code" href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">date</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">   22</a></span>&#160;    NSDateFormatter *<a class="code" href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">dateFormatter</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;-(<a class="code" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)initWithDate:(NSDate *)newDate;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;+(<a class="code" href="interface_d_r_h_file_date.html">DRHFileDate</a> *)fileDateWithDate:(NSDate *)newDate;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;-(void)setDate:(NSDate *)newDate;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;-(NSString *)dateString;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interface_d_r_h_file_date_html_abdc3738accd96188583f0c5636d96338"><div class="ttname"><a href="interface_d_r_h_file_date.html#abdc3738accd96188583f0c5636d96338">DRHFileDate::dateFormatter</a></div><div class="ttdeci">NSDateFormatter * dateFormatter</div><div class="ttdoc">The format that should be used to display or draw this date. </div><div class="ttdef"><b>Definition:</b> DRHFileDate.h:22</div></div>
+<div class="ttc" id="interface_d_r_h_file_date_html"><div class="ttname"><a href="interface_d_r_h_file_date.html">DRHFileDate</a></div><div class="ttdoc">Used to hold a date and it&#39;s display format. </div><div class="ttdef"><b>Definition:</b> DRHFileDate.h:18</div></div>
+<div class="ttc" id="interface_d_r_h_file_date_html_ab1a9e6949038ca4ada72d7e829ecbd1a"><div class="ttname"><a href="interface_d_r_h_file_date.html#ab1a9e6949038ca4ada72d7e829ecbd1a">DRHFileDate::date</a></div><div class="ttdeci">NSDate * date</div><div class="ttdoc">The date. </div><div class="ttdef"><b>Definition:</b> DRHFileDate.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 23 2015 17:18:18 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 7 2015 14:39:25 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

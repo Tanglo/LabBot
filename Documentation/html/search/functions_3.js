@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['data',['data',['../interface_d_r_h_data_column.html#ae304fe318206f090a4dd37918347b1fe',1,'DRHDataColumn']]],
-  ['datacolumnatindex_3a',['dataColumnAtIndex:',['../interface_d_r_h_data_matrix.html#a9ffe55a8781b73807ae8c4e0cb894d80',1,'DRHDataMatrix']]],
-  ['datacolumnbycropingtolength_3a',['dataColumnByCropingToLength:',['../interface_d_r_h_data_column.html#aff1862002f4902b6764997bdfce755a5',1,'DRHDataColumn']]],
-  ['datacolumnbyfillingwithobject_3atolength_3a',['dataColumnByFillingWithObject:ToLength:',['../interface_d_r_h_data_column.html#a1894ec8789c0be4c1085ae327a99f0f6',1,'DRHDataColumn']]],
-  ['datacolumnwithname_3a',['dataColumnWithName:',['../interface_d_r_h_data_matrix.html#adf79e98da0035219c227e28e46638fbd',1,'DRHDataMatrix']]],
-  ['datacolumnwithname_3aandarray_3a',['dataColumnWithName:AndArray:',['../interface_d_r_h_data_column.html#ac9210ad5e8d72558396c916f7c3b341f',1,'DRHDataColumn']]],
-  ['datacolumnwithname_3abyrepeatingarray_3awithrepetitions_3a',['dataColumnWithName:ByRepeatingArray:WithRepetitions:',['../interface_d_r_h_data_column.html#a7c3f61a5f0d33aee19ef38d1219f3a4c',1,'DRHDataColumn']]],
-  ['datacolumnwithname_3aofnanwithlength_3a',['dataColumnWithName:OfNanWithLength:',['../interface_d_r_h_data_column.html#a7bd9ca9e73bedcc63470104b1697db4f',1,'DRHDataColumn']]],
-  ['datamatrixbyaddingdatacolumn_3a',['dataMatrixByAddingDataColumn:',['../interface_d_r_h_data_matrix.html#ae4278848eda78d6e8f0aa8375dfd7a44',1,'DRHDataMatrix']]],
-  ['datamatrixbyinsertingcolumn_3aatindex_3a',['dataMatrixByInsertingColumn:AtIndex:',['../interface_d_r_h_data_matrix.html#a3205eea412069e45b7c051ed67ba5698',1,'DRHDataMatrix']]],
-  ['datamatrixbyinsertingdatacolumn_3aatindex_3a',['dataMatrixByInsertingDataColumn:AtIndex:',['../interface_d_r_h_data_matrix.html#ac9f3d3daa40a4c38eee2a657dc48999c',1,'DRHDataMatrix']]],
-  ['datamatrixbyremovingcolumnwithname_3a',['dataMatrixByRemovingColumnWithName:',['../interface_d_r_h_data_matrix.html#adc6470cff59623eb2920d31edcd420d9',1,'DRHDataMatrix']]],
-  ['datamatrixwithcolumnarrays_3a',['dataMatrixWithColumnArrays:',['../interface_d_r_h_data_matrix.html#a5c2e537c8e773f0b47572501246ded49',1,'DRHDataMatrix']]],
-  ['datamatrixwithdatacolumnarray_3a',['dataMatrixWithDataColumnArray:',['../interface_d_r_h_data_matrix.html#ae308c6cacff3235751835c8e60a7028a',1,'DRHDataMatrix']]],
-  ['datarowatindex_3a',['dataRowAtIndex:',['../interface_d_r_h_data_matrix.html#ac51153339d1fd2a2f3d6e6a9ed50611c',1,'DRHDataMatrix']]],
-  ['datarowatindex_3aforcolumnswithindexes_3a',['dataRowAtIndex:ForColumnsWithIndexes:',['../interface_d_r_h_data_matrix.html#a007b822c0be1d23857d7ec1a364a4d0d',1,'DRHDataMatrix']]],
-  ['datarowatindex_3aforcolumnswithnames_3a',['dataRowAtIndex:ForColumnsWithNames:',['../interface_d_r_h_data_matrix.html#a7b455a3e59a273d6a04dc9965e2d3f07',1,'DRHDataMatrix']]],
   ['datestring',['dateString',['../interface_d_r_h_file_date.html#a5d5d4226017f4e8b5668ff82b75e2767',1,'DRHFileDate']]]
 ];

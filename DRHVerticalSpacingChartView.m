@@ -9,7 +9,7 @@
 //
 
 #import "DRHVerticalSpacingChartView.h"
-#import "DRHTrialMatrix.h"
+//#import "DRHTrialMatrix.h"
 
 NSInteger const DRHLabBotAlignmentScatter = -1;
 NSInteger const DRHLabBotAlignmentTop = 0;

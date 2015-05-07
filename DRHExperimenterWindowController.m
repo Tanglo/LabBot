@@ -10,7 +10,6 @@
 
 #import "DRHExperimenterWindowController.h"
 #import "DRHExperimentDocument.h"
-#import "DRHExperiment.h"
 
 @interface DRHExperimenterWindowController ()
 
