@@ -20,7 +20,7 @@
         _experimentSession = @"";
         _experimentDate = [NSDate date];
         _experimentFilenameStem = @"";
-        _experimentDataMatrix = nil;
+        _experimentDataMatrix = [LBDataMatrix dataMatrix];
     }
     return self;
 }

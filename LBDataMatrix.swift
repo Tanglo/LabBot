@@ -13,8 +13,13 @@
 import Cocoa
 
 @objc public class LBDataMatrix {
-    private var variables = Array<String>()
-    private var data = Array<Array<AnyObject>>()
+    private var variables: Array<String>
+    private var data: Array<Array<AnyObject>>
+    
+    public init(){
+        variables = Array<String>()
+        data = Array<Array<AnyObject>>()
+    }
     
     public convenience init(variableNames:[String], observations: [[AnyObject]]){
         self.init()
@@ -24,6 +29,10 @@ import Cocoa
             data.append(mutObsArray)
         }
         variables = variableNames
+    }
+    
+    public class func dataMatrix() ->LBDataMatrix{
+        return LBDataMatrix()
     }
     
     private func changeArrayLength(array:[AnyObject], newLength: Int)->[AnyObject] {

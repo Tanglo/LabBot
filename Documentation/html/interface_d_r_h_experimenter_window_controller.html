@@ -144,8 +144,11 @@ IBOutlet NSDatePicker *&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for controlling the main window of an experiment. </p>
-<p>A <code><a class="el" href="interface_d_r_h_experimenter_window_controller.html" title="A class for controlling the main window of an experiment. ">DRHExperimenterWindowController</a></code> is intended to be used to control the main window of an experiment. The class is intended to the viewController class in an MVC setup that uses <code><a class="el" href="interface_d_r_h_experiment_data.html" title="An root level object to store basic experimental data and tables of experimental variables. ">DRHExperimentData</a></code> and so it includes <code>IBOutlet</code> instances that match the instance variables of the <code><a class="el" href="interface_d_r_h_experiment_data.html" title="An root level object to store basic experimental data and tables of experimental variables. ">DRHExperimentData</a></code> class. It is compulsory to use this class if you use the <code><a class="el" href="interface_d_r_h_experiment_document.html" title="A document object to handle the saving and opening of experiment data files. ">DRHExperimentDocument</a></code> class. </p>
-</div><h2 class="groupheader">Method Documentation</h2>
+<p>A <code><a class="el" href="interface_d_r_h_experimenter_window_controller.html" title="A class for controlling the main window of an experiment. ">DRHExperimenterWindowController</a></code> is intended to be used to control the main window of an experiment. The class is intended to the viewController class in an MVC setup that uses <code><a class="el" href="interface_d_r_h_experiment_data.html" title="An root level object to store basic experimental data and tables of experimental variables. ">DRHExperimentData</a></code> and so it includes <code>IBOutlet</code> instances that match the instance variables of the <code><a class="el" href="interface_d_r_h_experiment_data.html" title="An root level object to store basic experimental data and tables of experimental variables. ">DRHExperimentData</a></code> class. It is compulsory to use this class if you use the <code><a class="el" href="interface_d_r_h_experiment_document.html" title="A document object to handle the saving and opening of experiment data files. ">DRHExperimentDocument</a></code> class.</p>
+<p>If subclassing <code>DRHExperimentWindowController</code> in Swift it can be easier to override <code>windowNibName</code> instead of overriding initailisers. For example: </p><div class="fragment"><div class="line"><span class="keyword">override</span> var windowNibName : String! {</div>
+<div class="line"><span class="keywordflow">return</span> <span class="stringliteral">&quot;MyWindowControllerNib&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Method Documentation</h2>
 <a class="anchor" id="afaa80d6d21e8c0476d0a4c157441d542"></a>
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +236,7 @@ IBOutlet NSDatePicker *&#160;</td><td class="memItemRight" valign="bottom"><a cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 7 2015 14:39:25 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 8 2015 15:28:48 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

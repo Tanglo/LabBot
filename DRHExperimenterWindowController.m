@@ -17,13 +17,11 @@
 
 @implementation DRHExperimenterWindowController
 
+@synthesize startButton, stopButton, finishButton;
+
 - (id)init
 {
     self = [super initWithWindowNibName:@"DRHExperimenterWindow" owner:self];
-    if (self) {
-        // Add your subclass-specific initialization here.
-        //        NSLog(@"A new DRHLibrariumWindowController has been init");
-    }
     return self;
 }
 
@@ -43,8 +41,8 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    [[[[self document] experimenterWindowController] experimentDatePicker] setDateValue:[NSDate date]];
+// Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
 //    [experimentNameField setStringValue:[NSString stringWithFormat:@"Experiment: %@",[[[self document] experiment] experimentName]]];
 //    [experimentSubjectField setStringValue:[NSString stringWithFormat:@"Subject: %@",[[[self document] experiment] experimentSubject]]];
 //    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

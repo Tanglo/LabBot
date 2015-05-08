@@ -9,8 +9,6 @@
 //
 
 #import "DRHExperimentDocument.h"
-//#import "DRHExperiment.h"
-//#import "DRHInitExperimentWindowController.h"
 #import "DRHExperimenterWindowController.h"
 #import "DRHSubjectWindowController.h"
 
