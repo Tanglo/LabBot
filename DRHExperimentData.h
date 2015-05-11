@@ -33,7 +33,32 @@
 /// @brief The filename stem to use when experiemntal data files are created.
 @property NSString *experimentFilenameStem;
 
+/// @brief The working directory for the experiment; where any data files will be written.
+@property NSString *experimentPath;
+
 /// @brief A dataMatrix object to store experimental variables.
 @property LBDataMatrix *experimentDataMatrix;
+
+/*!
+ * Writes the string values of:
+ * @code
+ * experimentName
+ * experimentDate
+ * experimentSubject
+ * experimentSession
+ * @endcode
+ 
+ * to a unicode text file.
+ * @param path The file file path to save the text file to
+ * @return @c YES if sucessful, otherwise @c NO
+ */
+-(BOOL)writeExperimentDataTo:(NSString *)path;
+
+/*!
+ * Creates a new subdirectory with the specified name in the @c experimentPath directory.
+ * @param name The name of the new directory to create.
+ * @return @c YES if sucessful, otherwise @c NO
+ */
+-(BOOL)createExperimentSubdirectory:(NSString *)name;
 
 @end

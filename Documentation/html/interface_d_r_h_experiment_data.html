@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Instance Methods</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_d_r_h_experiment_data-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -105,6 +106,11 @@ Inheritance diagram for DRHExperimentData:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Instance Methods</h2></td></tr>
+<tr class="memitem:a87e8ff073ed9544daaff7b3b08148130"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experiment_data.html#a87e8ff073ed9544daaff7b3b08148130">saveExperimentDataTo:</a></td></tr>
+<tr class="separator:a87e8ff073ed9544daaff7b3b08148130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ad95b61a58cf8b6649f023a0e487200dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad95b61a58cf8b6649f023a0e487200dd"></a>
@@ -135,13 +141,41 @@ LBDataMatrix *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An root level object to store basic experimental data and tables of experimental variables. </p>
 <p>A <code>DRHExperimentalData</code> object is intended to be the top level model object in an experimental applcaition. It will contain all experimental data. A <code>DRHExperimentalData</code> object contains instance variables to store basic experiment details such name, data, session, etc and also contains one instance of <code><a class="el" href="class_d_r_h_data_matrix.html">DRHDataMatrix</a></code>. It is expected that most LabBot experiments will use a sub-class of <code>DRHExperimentalData</code> because each experiment is unique and will have it's own requirements. This object is here to provde a base template to facilitate defining a LabBot experiment's root data object. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a87e8ff073ed9544daaff7b3b08148130"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) saveExperimentDataTo: </td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>path</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Writes the string values of: </p><div class="fragment"><div class="line"><a class="code" href="interface_d_r_h_experiment_data.html#ad95b61a58cf8b6649f023a0e487200dd">experimentName</a></div>
+<div class="line"><a class="code" href="interface_d_r_h_experiment_data.html#adfa04768c6b33e96fad643c41f4d9f99">experimentDate</a></div>
+<div class="line"><a class="code" href="interface_d_r_h_experiment_data.html#acf412bcf45b7581f66d9f11d132ef3c7">experimentSubject</a></div>
+<div class="line"><a class="code" href="interface_d_r_h_experiment_data.html#a20b4acfd2f1a82342028840a134b3a4c">experimentSession</a></div>
+</div><!-- fragment --><p>to a unicode text file. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>The file file path to save the text file to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>YES</code> if sucessful, otherwise <code>NO</code> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_d_r_h_experiment_data_8h_source.html">DRHExperimentData.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 8 2015 15:28:48 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 11 2015 13:19:24 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

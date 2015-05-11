@@ -61,6 +61,20 @@
     return YES;
 }
 
+- (void)canCloseDocumentWithDelegate:(id)delegate shouldCloseSelector:(SEL)shouldCloseSelector contextInfo:(void *)contextInfo{
+    if (![experimenterWindowController experimentIsFinished]) {
+        NSAlert *confirmCloseUnfinishedExpAlert = [NSAlert alertWithMessageText:@"Warning: this experiment is not finished. Do you still want to close?" defaultButton:@"No" alternateButton:@"Yes" otherButton:nil informativeTextWithFormat:@"Bad things might happen if you close and unfinished experiment"];
+        [confirmCloseUnfinishedExpAlert beginSheetModalForWindow:[experimenterWindowController window] completionHandler:^(NSModalResponse returnCode){
+            if (returnCode != 0){
+                return;
+            } else
+                [super canCloseDocumentWithDelegate:delegate shouldCloseSelector:shouldCloseSelector contextInfo:contextInfo];
+        }];
+    } else {
+        [super canCloseDocumentWithDelegate:delegate shouldCloseSelector:shouldCloseSelector contextInfo:contextInfo];
+    }
+}
+
 #pragma mark Getters
 -(id)newExperimenterWindowController{
     NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];

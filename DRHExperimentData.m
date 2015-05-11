@@ -9,6 +9,7 @@
 //
 
 #import "DRHExperimentData.h"
+#import "DRHFileDate.h"
 
 @implementation DRHExperimentData
 
@@ -20,6 +21,7 @@
         _experimentSession = @"";
         _experimentDate = [NSDate date];
         _experimentFilenameStem = @"";
+        _experimentPath = [@"~/Documents" stringByExpandingTildeInPath];
         _experimentDataMatrix = [LBDataMatrix dataMatrix];
     }
     return self;
@@ -43,9 +45,12 @@
         _experimentFilenameStem = [aDecoder decodeObjectForKey:@"experimentFilenameStem"];
         if (!_experimentFilenameStem)
             _experimentFilenameStem = @"";
+        _experimentPath = [aDecoder decodeObjectForKey:@"experimentPath"];
+        if (!_experimentPath)
+            _experimentPath = [@"~/Documents" stringByExpandingTildeInPath];
         _experimentDataMatrix = [aDecoder decodeObjectForKey:@"experimentDataMatrix"];
         if (!_experimentDataMatrix)
-            _experimentDataMatrix = nil;
+            _experimentDataMatrix = [LBDataMatrix dataMatrix];
     }
     return self;
 }
@@ -56,7 +61,35 @@
     [aCoder encodeObject:_experimentSession forKey:@"experimentSession"];
     [aCoder encodeObject:_experimentDate forKey:@"experimentDate"];
     [aCoder encodeObject:_experimentFilenameStem forKey:@"experimentFilenameStem"];
+    [aCoder encodeObject:_experimentPath forKey:@"experimentPath"];
     [aCoder encodeObject:_experimentDataMatrix forKey:@"experimentDataMatrix"];
+}
+
+-(BOOL)writeExperimentDataTo:(NSString *)path{
+    NSMutableString *dataString = [NSMutableString stringWithFormat:@"Experiment: %@\n", _experimentName];
+    [dataString appendFormat:@"Date: %@\n", [DRHFileDate fileDateWithDate:_experimentDate].dateString];
+    [dataString appendFormat:@"Subject: %@\n", _experimentSubject];
+    [dataString appendFormat:@"Session: %@\n", _experimentSession];
+    NSError *writeError;
+    if ([dataString writeToFile:path atomically:YES encoding:NSUnicodeStringEncoding error:&writeError]) {
+        return YES;
+    } else {
+        NSAlert *errorAlert = [NSAlert alertWithError:writeError];
+        [errorAlert runModal];
+    }
+    return NO;
+}
+
+-(BOOL)createExperimentSubdirectory:(NSString *)name{
+    NSError *fileError;
+    NSString *newPath = [_experimentPath stringByAppendingPathComponent:name];
+    if ([[NSFileManager defaultManager] createDirectoryAtPath:newPath withIntermediateDirectories:NO attributes:nil error:&fileError]) {
+        return YES;
+    } else {
+        NSAlert *errorAlert = [NSAlert alertWithError:fileError];
+        [errorAlert runModal];
+    }
+    return NO;
 }
 
 @end

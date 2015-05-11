@@ -109,18 +109,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
 <div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="interface_d_r_h_experimenter_window_controller.html#a4ae54a64f6f98739909288a2106dbaee">   39</a></span>&#160;    IBOutlet NSDatePicker *<a class="code" href="interface_d_r_h_experimenter_window_controller.html#a4ae54a64f6f98739909288a2106dbaee">experimentDatePicker</a>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;-(NSTextField *)experimentNameField;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;-(NSTextField *)experimentSubjectField;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;-(NSTextField *)experimentSessionField;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;-(NSTextField *)experimentFilenameStemField;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;-(NSDatePicker *)experimentDatePicker;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="interface_d_r_h_experimenter_window_controller.html#a4d1d5e3534b931934b7c724ba3ce6b0b">   42</a></span>&#160;<span class="keyword">@property</span> (readonly) IBOutlet NSButton *startButton;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="interface_d_r_h_experimenter_window_controller.html#abd3180166ab46598f5ec249bb4cfe85b">   45</a></span>&#160;<span class="keyword">@property</span> (readonly) IBOutlet NSButton *stopButton;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="interface_d_r_h_experimenter_window_controller.html#a08b2ce834e46044dcc31bdaa6aa1a799">   48</a></span>&#160;<span class="keyword">@property</span> (readonly) IBOutlet NSButton *finishButton;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;-(NSTextField *)experimentNameField;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;-(NSTextField *)experimentSubjectField;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;-(NSTextField *)experimentSessionField;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;-(NSTextField *)experimentFilenameStemField;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;-(NSDatePicker *)experimentDatePicker;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_d_r_h_experimenter_window_controller_html"><div class="ttname"><a href="interface_d_r_h_experimenter_window_controller.html">DRHExperimenterWindowController</a></div><div class="ttdoc">A class for controlling the main window of an experiment. </div><div class="ttdef"><b>Definition:</b> DRHExperimenterWindowController.h:25</div></div>
 <div class="ttc" id="interface_d_r_h_experimenter_window_controller_html_a7c0b13c41680992844ccfe834124d72c"><div class="ttname"><a href="interface_d_r_h_experimenter_window_controller.html#a7c0b13c41680992844ccfe834124d72c">DRHExperimenterWindowController::experimentSubjectField</a></div><div class="ttdeci">IBOutlet NSTextField * experimentSubjectField</div><div class="ttdoc">An IBOutlet to the NSTextField instance that edits the experimental subject&#39;s identifier. </div><div class="ttdef"><b>Definition:</b> DRHExperimenterWindowController.h:30</div></div>
 <div class="ttc" id="interface_d_r_h_experimenter_window_controller_html_a70132bfd6638b322e81bc9e34c64c285"><div class="ttname"><a href="interface_d_r_h_experimenter_window_controller.html#a70132bfd6638b322e81bc9e34c64c285">DRHExperimenterWindowController::experimentSessionField</a></div><div class="ttdeci">IBOutlet NSTextField * experimentSessionField</div><div class="ttdoc">An IBOutlet to the NSTextField instance that edits the name of the experimental session. </div><div class="ttdef"><b>Definition:</b> DRHExperimenterWindowController.h:33</div></div>
@@ -130,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 8 2015 15:28:48 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 11 2015 13:19:24 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

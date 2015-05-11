@@ -40,8 +40,6 @@
 		E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A60C199867D200D6B190 /* DRHDataColumn.m */; };
 		E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A6141998753D00D6B190 /* DRHExperimentData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A6151998753D00D6B190 /* DRHExperimentData.m */; };
-		E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300618F7A32800F012B7 /* DRHExperimentController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300718F7A32800F012B7 /* DRHExperimentController.m */; };
 		E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300818F7A32800F012B7 /* DRHExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E579300918F7A32800F012B7 /* DRHExperimentDocument.m */; };
 		E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,6 +54,7 @@
 		E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8977818F52A4300335057 /* InfoPlist.strings */; };
 		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5D4F0B319063A440091B4AE /* To do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D4F0B219063A440091B4AE /* To do.rtf */; };
+		E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
 		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -109,8 +108,6 @@
 		E578A60C199867D200D6B190 /* DRHDataColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataColumn.m; sourceTree = "<group>"; };
 		E578A6141998753D00D6B190 /* DRHExperimentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentData.h; sourceTree = "<group>"; };
 		E578A6151998753D00D6B190 /* DRHExperimentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentData.m; sourceTree = "<group>"; };
-		E579300618F7A32800F012B7 /* DRHExperimentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentController.h; sourceTree = "<group>"; };
-		E579300718F7A32800F012B7 /* DRHExperimentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentController.m; sourceTree = "<group>"; };
 		E579300818F7A32800F012B7 /* DRHExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentDocument.h; sourceTree = "<group>"; };
 		E579300918F7A32800F012B7 /* DRHExperimentDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentDocument.m; sourceTree = "<group>"; };
 		E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimenterWindowController.h; sourceTree = "<group>"; };
@@ -133,6 +130,7 @@
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
 		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "To do.rtf"; sourceTree = "<group>"; };
+		E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExperimentDelegate.swift; sourceTree = "<group>"; };
 		E5F856911AD6465700A2A384 /* LBDataMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDataMatrix.swift; sourceTree = "<group>"; };
 		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
 		E5FA88B11A4797D40067A0C0 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
@@ -171,8 +169,7 @@
 				E5F856911AD6465700A2A384 /* LBDataMatrix.swift */,
 				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
 				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
-				E579300618F7A32800F012B7 /* DRHExperimentController.h */,
-				E579300718F7A32800F012B7 /* DRHExperimentController.m */,
+				E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */,
 				E579300818F7A32800F012B7 /* DRHExperimentDocument.h */,
 				E579300918F7A32800F012B7 /* DRHExperimentDocument.m */,
 				E579300B18F7A32800F012B7 /* DRHExperimenterWindowController.h */,
@@ -293,7 +290,6 @@
 				E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */,
 				E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */,
 				E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */,
-				E579301718F7A32800F012B7 /* DRHExperimentController.h in Headers */,
 				E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */,
 				E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */,
 				E579302418F7A32800F012B7 /* DRHSubjectWindowController.h in Headers */,
@@ -432,8 +428,8 @@
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
+				E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */,
 				E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */,
-				E579301818F7A32800F012B7 /* DRHExperimentController.m in Sources */,
 				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 				E5A958D61AB2AC9C00B8A764 /* LBGridView.swift in Sources */,

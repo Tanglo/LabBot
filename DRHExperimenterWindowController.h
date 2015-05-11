@@ -78,4 +78,10 @@
  */
 -(NSDatePicker *)experimentDatePicker;
 
+/*!
+ * Gets the finished state of the experiment.  Importantly @c DRHExperimentDocument uses this to check if the document can be closed.  This method must be overidden by subclasses.
+ * @return @c YES if the experiment is finished, otherwise @c NO.
+ */
+-(BOOL)experimentIsFinished;
+
 @end
