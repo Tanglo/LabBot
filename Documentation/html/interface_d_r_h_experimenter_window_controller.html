@@ -119,6 +119,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a0d5d21136079e2742b37f6cc39a3a1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa80d6d21e8c0476d0a4c157441d542"><td class="memItemLeft" align="right" valign="top">(NSDatePicker *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#afaa80d6d21e8c0476d0a4c157441d542">experimentDatePicker</a></td></tr>
 <tr class="separator:afaa80d6d21e8c0476d0a4c157441d542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1734c0b7bbd23dca2c4432c6611d4c"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_experimenter_window_controller.html#a7a1734c0b7bbd23dca2c4432c6611d4c">experimentIsFinished</a></td></tr>
+<tr class="separator:a7a1734c0b7bbd23dca2c4432c6611d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -197,6 +199,22 @@ IBOutlet NSButton *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
+<a class="anchor" id="a7a1734c0b7bbd23dca2c4432c6611d4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) experimentIsFinished </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets the finished state of the experiment. Importantly <code><a class="el" href="interface_d_r_h_experiment_document.html" title="A document object to handle the saving and opening of experiment data files. ">DRHExperimentDocument</a></code> uses this to check if the document can be closed. This method must be overidden by subclasses. </p><dl class="section return"><dt>Returns</dt><dd><code>YES</code> if the experiment is finished, otherwise <code>NO</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ab85ff601e12fa01cd6abfa2891e43937"></a>
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +270,7 @@ IBOutlet NSButton *&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 11 2015 13:19:24 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 12 2015 12:01:01 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

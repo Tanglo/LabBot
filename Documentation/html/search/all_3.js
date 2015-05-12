@@ -18,7 +18,6 @@ var searchData=
   ['drhdataoutputorientationright',['DRHDataOutputOrientationRight',['../interface_d_r_h_data_output_bar_view.html#adfe46250af876c820615ae5cc556ae28',1,'DRHDataOutputBarView']]],
   ['drhdataoutputorientationup',['DRHDataOutputOrientationUp',['../interface_d_r_h_data_output_bar_view.html#aa5d491d7ebc1e474b129acffa72b3b06',1,'DRHDataOutputBarView']]],
   ['drhdataoutputview',['DRHDataOutputView',['../interface_d_r_h_data_output_view.html',1,'']]],
-  ['drhexperimentcontroller',['DRHExperimentController',['../interface_d_r_h_experiment_controller.html',1,'']]],
   ['drhexperimentdata',['DRHExperimentData',['../interface_d_r_h_experiment_data.html',1,'']]],
   ['drhexperimentdocument',['DRHExperimentDocument',['../interface_d_r_h_experiment_document.html',1,'']]],
   ['drhexperimenterwindowcontroller',['DRHExperimenterWindowController',['../interface_d_r_h_experimenter_window_controller.html',1,'']]],

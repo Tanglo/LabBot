@@ -8,7 +8,6 @@ var searchData=
   ['drhdatamatrix',['DRHDataMatrix',['../class_d_r_h_data_matrix.html',1,'']]],
   ['drhdataoutputbarview',['DRHDataOutputBarView',['../interface_d_r_h_data_output_bar_view.html',1,'']]],
   ['drhdataoutputview',['DRHDataOutputView',['../interface_d_r_h_data_output_view.html',1,'']]],
-  ['drhexperimentcontroller',['DRHExperimentController',['../interface_d_r_h_experiment_controller.html',1,'']]],
   ['drhexperimentdata',['DRHExperimentData',['../interface_d_r_h_experiment_data.html',1,'']]],
   ['drhexperimentdocument',['DRHExperimentDocument',['../interface_d_r_h_experiment_document.html',1,'']]],
   ['drhexperimenterwindowcontroller',['DRHExperimenterWindowController',['../interface_d_r_h_experimenter_window_controller.html',1,'']]],
