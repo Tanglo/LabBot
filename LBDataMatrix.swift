@@ -12,11 +12,11 @@
 
 import Cocoa
 
-@objc public class LBDataMatrix {
+@objc public class LBDataMatrix: NSObject, NSCoding {
     private var variables: Array<String>
     private var data: Array<Array<AnyObject>>
     
-    public init(){
+    public override init(){
         variables = Array<String>()
         data = Array<Array<AnyObject>>()
     }
@@ -35,6 +35,18 @@ import Cocoa
         return LBDataMatrix()
     }
     
+    // MARK: NSCoding
+    required public init(coder aDecoder: NSCoder) {
+        self.variables = aDecoder.decodeObjectForKey("variables") as! [String]
+        self.data = aDecoder.decodeObjectForKey("data") as! [[AnyObject]]
+    }
+    
+    public func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(variables, forKey: "variables")
+        aCoder.encodeObject(data, forKey: "data")
+    }
+    
+    // MARK: Enforcing a rectangular matrix
     private func changeArrayLength(array:[AnyObject], newLength: Int)->[AnyObject] {
         var mutArray = array
         while mutArray.count > newLength {
@@ -87,11 +99,12 @@ import Cocoa
         data.append(self.changeArrayLength(newObs, newLength: self.variables.count))
     }
     
-    public func appendVariable(newVariable:String){
+    public func appendVariable(newVariable:String, values:[AnyObject]){
         self.variables.append(newVariable)
         let numObs = data.count
+        let newValues = changeArrayLength(values, newLength: numObs)
         for i in 0..<numObs {
-            data[i].append(Double.NaN)
+            data[i].append(newValues[i])
         }
     }
     
