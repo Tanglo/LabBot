@@ -109,7 +109,7 @@ import Cocoa
     }
     
     // MARK: Changing data
-    public func changeDataPoint(variable: String, observation: Int, newValue: Double){
+    public func changeDataPoint(variable: String, observation: Int, newValue: AnyObject){
         let varIndex = indexOfVariable(variable)
         if varIndex != nil {
             data[observation][varIndex!] = newValue
