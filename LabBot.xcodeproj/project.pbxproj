@@ -54,6 +54,9 @@
 		E5C8977A18F52A4300335057 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5C8977818F52A4300335057 /* InfoPlist.strings */; };
 		E5C897BD18F52A7B00335057 /* LabBot.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5D4F0B319063A440091B4AE /* To do.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E5D4F0B219063A440091B4AE /* To do.rtf */; };
+		E5DA8B581B0415D200D50848 /* LBSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA8B571B0415D200D50848 /* LBSize.swift */; };
+		E5DA8B5A1B0415F900D50848 /* LBPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA8B591B0415F900D50848 /* LBPoint.swift */; };
+		E5DA8B5C1B04164500D50848 /* LBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA8B5B1B04164500D50848 /* LBExtensions.swift */; };
 		E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
@@ -130,6 +133,9 @@
 		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
 		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "To do.rtf"; sourceTree = "<group>"; };
+		E5DA8B571B0415D200D50848 /* LBSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBSize.swift; sourceTree = "<group>"; };
+		E5DA8B591B0415F900D50848 /* LBPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBPoint.swift; sourceTree = "<group>"; };
+		E5DA8B5B1B04164500D50848 /* LBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExtensions.swift; sourceTree = "<group>"; };
 		E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExperimentDelegate.swift; sourceTree = "<group>"; };
 		E5F856911AD6465700A2A384 /* LBDataMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDataMatrix.swift; sourceTree = "<group>"; };
 		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
@@ -166,6 +172,9 @@
 				E5D4F0B219063A440091B4AE /* To do.rtf */,
 				E5FA88B51A479A6D0067A0C0 /* Doxyfile */,
 				E540991918FE407A001CBB30 /* LabBot.h */,
+				E5DA8B5B1B04164500D50848 /* LBExtensions.swift */,
+				E5DA8B591B0415F900D50848 /* LBPoint.swift */,
+				E5DA8B571B0415D200D50848 /* LBSize.swift */,
 				E5F856911AD6465700A2A384 /* LBDataMatrix.swift */,
 				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
 				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
@@ -419,6 +428,7 @@
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
 				E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */,
+				E5DA8B581B0415D200D50848 /* LBSize.swift in Sources */,
 				E50E6F6C1A5E420B00110C70 /* DRHDataOutputView.m in Sources */,
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
@@ -426,6 +436,7 @@
 				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
 				E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */,
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
+				E5DA8B5C1B04164500D50848 /* LBExtensions.swift in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
 				E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */,
@@ -433,6 +444,7 @@
 				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 				E5A958D61AB2AC9C00B8A764 /* LBGridView.swift in Sources */,
+				E5DA8B5A1B0415F900D50848 /* LBPoint.swift in Sources */,
 				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
 				E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */,
 			);

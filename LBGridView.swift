@@ -11,63 +11,6 @@
 import Cocoa
 import AppKit
 
-extension String {
-    public func incrementBy(increment: Int, floor: Character, ceiling: Character) -> String {
-        let lastChar = self.substringFromIndex(self.endIndex.predecessor())
-        var remString = self.substringToIndex(self.endIndex.predecessor())
-        let lastCharUnicode = lastChar.unicodeScalars[lastChar.unicodeScalars.startIndex].value
-        let newUnicode = lastCharUnicode + UInt32(increment)
-        var newLastChar = Character(UnicodeScalar(newUnicode))
-        let ceilingUnicode = String(ceiling).unicodeScalars[lastChar.unicodeScalars.startIndex].value
-        if newUnicode > ceilingUnicode {
-            var charOverflow = newUnicode-ceilingUnicode
-            let floorUnicode = String(floor).unicodeScalars[lastChar.unicodeScalars.startIndex].value
-            let unicodeRange = (ceilingUnicode + 1) - floorUnicode
-            var numOverflows = 1
-            while charOverflow > unicodeRange {
-                numOverflows++
-                charOverflow -= unicodeRange
-            }
-            newLastChar = Character(UnicodeScalar(floorUnicode+charOverflow-1))
-            remString = remString.incrementBy(numOverflows, floor: floor, ceiling: ceiling)
-        }
-        return remString+String(newLastChar)
-    }
-}
-
-extension Array {
-    func shuffle() -> Array<T> {
-        var shuffledArray = self
-        let count = shuffledArray.count
-        for i in stride(from: count, through: 1, by: -1) {
-            let j = Int(arc4random_uniform(UInt32(i)))
-            let movedElement = shuffledArray.removeAtIndex(j)
-            shuffledArray.insert(movedElement, atIndex: i-1)
-        }
-        return shuffledArray
-    }
-}
-
-/*!
-@brief A class that defines a size as a width and height.
-
-* This class defines a size as a width and a height.  It is analogous to the @c NSSize structure of the Cocoa framework, but it works natively with @c Double types.
-*/
-public class Size {
-    public var width = 0.0
-    public var height = 0.0
-    
-    init(){
-        width = 0.0
-        height = 0.0
-    }
-    
-    public init(width: Double, height: Double){
-        self.width = width
-        self.height = height
-    }
-}
-
 /*!
 @brief A view class for displaying grids with coordinate systems.
 
@@ -77,13 +20,13 @@ public class LBGridView: NSView {
     let xPadding = 75.0
     let yPadding = 50.0
     
-    public var gridSize = Size()
-    public var cellSize = Size(width: 100.0, height: 100.0)
+    public var gridSize = LBSize()
+    public var cellSize = LBSize(width: 100.0, height: 100.0)
     public var firstRowLabel = 0
     public var firstColumnLabel = "A"
-    public var viewSize: Size {
+    public var viewSize: LBSize {
         get {
-            return Size(width: Double(frame.size.width), height: Double(frame.size.height))
+            return LBSize(width: Double(frame.size.width), height: Double(frame.size.height))
         }
     }
     public var labelSize = 45.0
@@ -197,9 +140,11 @@ public class LBGridView: NSView {
     
     public func gridReferenceOfLabel(label: Int) -> (Int?, Int?){
         if cellLabelRows.count > 0 && cellLabelColumns.count > 0 {
-            let row = cellLabelRows[label]
-            let column = cellLabelColumns[label]
-            return (row, column)
+            if label < cellLabelRows.count && label < cellLabelColumns.count {
+                let row = cellLabelRows[label]
+                let column = cellLabelColumns[label]
+                return (row, column)
+            }
         }
         return (nil,nil)
     }
