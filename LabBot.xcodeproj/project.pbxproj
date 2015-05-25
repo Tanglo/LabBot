@@ -13,6 +13,7 @@
 		E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */; };
 		E514A4981980E7F100D7F490 /* DRHAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E514A4991980E7F100D7F490 /* DRHAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */; };
+		E514B5181B12D1D0005B2B96 /* LBImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E514B5171B12D1D0005B2B96 /* LBImageView.swift */; };
 		E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */; };
 		E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B5197657E10001BBE9 /* DRHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,6 +85,7 @@
 		E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataOutputBarView.m; sourceTree = "<group>"; };
 		E514A4961980E7F100D7F490 /* DRHAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHAudioPlayer.h; sourceTree = "<group>"; };
 		E514A4971980E7F100D7F490 /* DRHAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHAudioPlayer.m; sourceTree = "<group>"; };
+		E514B5171B12D1D0005B2B96 /* LBImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBImageView.swift; sourceTree = "<group>"; };
 		E524F2B1197629B80001BBE9 /* DRHVerticalSpacingChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHVerticalSpacingChartView.h; sourceTree = "<group>"; };
 		E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHVerticalSpacingChartView.m; sourceTree = "<group>"; };
 		E524F2B5197657E10001BBE9 /* DRHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHChartView.h; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				E50E6F6D1A5E42AC00110C70 /* DRHDataOutputBarView.h */,
 				E50E6F6E1A5E42AC00110C70 /* DRHDataOutputBarView.m */,
 				E5A958D51AB2AC9C00B8A764 /* LBGridView.swift */,
+				E514B5171B12D1D0005B2B96 /* LBImageView.swift */,
 				E541FC7719A5BA3600FD9252 /* DRHFileDate.h */,
 				E541FC7819A5BA3600FD9252 /* DRHFileDate.m */,
 				E525E5391A429C8600F43B81 /* DRHDaqDevice.h */,
@@ -420,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E514B5181B12D1D0005B2B96 /* LBImageView.swift in Sources */,
 				E514A4991980E7F100D7F490 /* DRHAudioPlayer.m in Sources */,
 				E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */,
 				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
