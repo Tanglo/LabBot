@@ -32,6 +32,11 @@ public class LBPoint: NSObject, NSCoding {
         self.y = Double(point.1)
     }
     
+    public init(point: NSPoint){
+        self.x = Double(point.x)
+        self.y = Double(point.y)
+    }
+    
     required public init(coder aDecoder: NSCoder) {
         self.x = aDecoder.decodeDoubleForKey("x")
         self.y = aDecoder.decodeDoubleForKey("y")
