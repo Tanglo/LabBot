@@ -11,7 +11,7 @@ import Cocoa
 public class LBImageView: NSView {
     public var image: NSImage?
     public var allowMarker = false
-    private(set) var markerLocation = LBPoint(x: -1.0, y: -1.0)
+    private(set) public var markerLocation = LBPoint(x: -1.0, y: -1.0)
     public var markerSize = 20.0
 
     public override func drawRect(dirtyRect: NSRect) {
