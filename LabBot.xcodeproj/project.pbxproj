@@ -58,7 +58,7 @@
 		E5DA8B581B0415D200D50848 /* LBSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA8B571B0415D200D50848 /* LBSize.swift */; };
 		E5DA8B5A1B0415F900D50848 /* LBPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA8B591B0415F900D50848 /* LBPoint.swift */; };
 		E5DA8B5C1B04164500D50848 /* LBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA8B5B1B04164500D50848 /* LBExtensions.swift */; };
-		E5E64E251B1457B000898564 /* LBCalibrationPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E64E241B1457B000898564 /* LBCalibrationPair.swift */; };
+		E5E64E251B1457B000898564 /* LBCalibratedPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E64E241B1457B000898564 /* LBCalibratedPair.swift */; };
 		E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
 		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
@@ -139,7 +139,7 @@
 		E5DA8B571B0415D200D50848 /* LBSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBSize.swift; sourceTree = "<group>"; };
 		E5DA8B591B0415F900D50848 /* LBPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBPoint.swift; sourceTree = "<group>"; };
 		E5DA8B5B1B04164500D50848 /* LBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExtensions.swift; sourceTree = "<group>"; };
-		E5E64E241B1457B000898564 /* LBCalibrationPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBCalibrationPair.swift; sourceTree = "<group>"; };
+		E5E64E241B1457B000898564 /* LBCalibratedPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBCalibratedPair.swift; sourceTree = "<group>"; };
 		E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExperimentDelegate.swift; sourceTree = "<group>"; };
 		E5F856911AD6465700A2A384 /* LBDataMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDataMatrix.swift; sourceTree = "<group>"; };
 		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				E5DA8B5B1B04164500D50848 /* LBExtensions.swift */,
 				E5DA8B591B0415F900D50848 /* LBPoint.swift */,
 				E5DA8B571B0415D200D50848 /* LBSize.swift */,
-				E5E64E241B1457B000898564 /* LBCalibrationPair.swift */,
+				E5E64E241B1457B000898564 /* LBCalibratedPair.swift */,
 				E5F856911AD6465700A2A384 /* LBDataMatrix.swift */,
 				E578A6141998753D00D6B190 /* DRHExperimentData.h */,
 				E578A6151998753D00D6B190 /* DRHExperimentData.m */,
@@ -443,7 +443,7 @@
 				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
 				E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */,
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
-				E5E64E251B1457B000898564 /* LBCalibrationPair.swift in Sources */,
+				E5E64E251B1457B000898564 /* LBCalibratedPair.swift in Sources */,
 				E5DA8B5C1B04164500D50848 /* LBExtensions.swift in Sources */,
 				E579301D18F7A32800F012B7 /* DRHExperimenterWindowController.m in Sources */,
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,

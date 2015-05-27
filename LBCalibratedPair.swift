@@ -8,18 +8,18 @@
 
 import Foundation
 
-public class LBCalibrationPair: NSObject, NSCoding {
-    public var raw = LBPoint(x: 0.0, y: 0.0)
-    public var calibrated = LBPoint(x: 0.0, y: 0.0)
+public class LBCalibratedPair: NSObject, NSCoding {
+    public var raw: AnyObject = 0.0
+    public var calibrated: AnyObject = 0.0
     
-    public init(raw: LBPoint, calibrated: LBPoint){
+    public init(raw: AnyObject, calibrated: AnyObject){
         self.raw = raw
         self.calibrated = calibrated
     }
     
     required public init(coder aDecoder: NSCoder) {
-        self.raw = aDecoder.decodeObjectForKey("raw") as! LBPoint
-        self.calibrated = aDecoder.decodeObjectForKey("calibrated") as! LBPoint
+        self.raw = aDecoder.decodeObjectForKey("raw")!
+        self.calibrated = aDecoder.decodeObjectForKey("calibrated")!
     }
     
     public func encodeWithCoder(aCoder: NSCoder) {
