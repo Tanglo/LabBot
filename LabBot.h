@@ -14,7 +14,7 @@
 #import "DRHDataColumn.h"
 #import "DRHDataMatrix.h"
 #import "DRHExperimentData.h"
-#import "DRHExperimentController.h"
+//#import "DRHExperimentController.h"
 #import "DRHExperimentDocument.h"
 #import "DRHExperimenterWindowController.h"
 #import "DRHSubjectWindowController.h"
