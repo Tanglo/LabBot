@@ -10,6 +10,7 @@
 
 #import "DRHExperimentData.h"
 #import "DRHFileDate.h"
+#import <LabBot/LabBot-Swift.h>
 
 @implementation DRHExperimentData
 

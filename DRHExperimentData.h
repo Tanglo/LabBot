@@ -9,7 +9,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <LabBot/LabBot-Swift.h>
+
+@class LBDataMatrix;
 
 /*!
  @brief An root level object to store basic experimental data and tables of experimental variables.
