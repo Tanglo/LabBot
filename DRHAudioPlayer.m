@@ -10,12 +10,20 @@
 
 #import "DRHAudioPlayer.h"
 
-@implementation DRHAudioPlayer
+@implementation DRHAudioPlayer {
+    SEL playbackDidEndSelector;
+    id playbackDidEndObject;
+}
+
+@synthesize shouldCallPlaybackDidEndSelector;
 
 -(DRHAudioPlayer *)initWithURL:(NSURL *)URL{
     if (self = [super init]) {
         isReadyToPlay = NO;
         audioPlayer = nil;
+        playbackDidEndSelector = nil;
+        playbackDidEndObject = nil;
+        shouldCallPlaybackDidEndSelector = false;
         AVURLAsset *audioAsset = [[AVURLAsset alloc] initWithURL:URL options:nil];
         [audioAsset loadValuesAsynchronouslyForKeys:@[@"tracks"] completionHandler:^(void) {
             dispatch_async(dispatch_get_main_queue(),
@@ -35,6 +43,10 @@
         }];
     }
     return self;
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 +(DRHAudioPlayer *)audioPlayerWithURL:(NSURL *)URL{
@@ -66,6 +78,20 @@
 
 -(void)play{
     [audioPlayer play];
+}
+
+-(void)setPlaybackDidEndSelector:(SEL) selector WithObject:(id) object{
+    playbackDidEndSelector = selector;
+    playbackDidEndObject = object;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(itemDidFinishPlaying:) name:AVPlayerItemDidPlayToEndTimeNotification object:audioPlayer.currentItem];
+}
+
+-(void)itemDidFinishPlaying:(NSNotification *) notification{
+    if (shouldCallPlaybackDidEndSelector && playbackDidEndSelector && playbackDidEndObject && notification.object==audioPlayer.currentItem) {
+        IMP imp = [playbackDidEndObject methodForSelector:playbackDidEndSelector];
+        void (*func)(id, SEL) = (void *)imp;
+        func(playbackDidEndObject, playbackDidEndSelector);
+    }
 }
 
 @end

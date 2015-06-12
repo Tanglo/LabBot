@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Instance Methods</a> &#124;
 <a href="#pub-static-methods">Class Methods</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_d_r_h_audio_player-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DRHAudioPlayer Class Reference</div>  </div>
@@ -115,6 +116,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a93fa14735be1c8d78016d649a2b15db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac21fc4af0162c85d89c76a6f7865ec2a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_audio_player.html#ac21fc4af0162c85d89c76a6f7865ec2a">play</a></td></tr>
 <tr class="separator:ac21fc4af0162c85d89c76a6f7865ec2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3539a3946ef78fa2665a20a1ccbefdff"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_d_r_h_audio_player.html#a3539a3946ef78fa2665a20a1ccbefdff">setPlaybackDidEndSelector:WithObject:</a></td></tr>
+<tr class="separator:a3539a3946ef78fa2665a20a1ccbefdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Class Methods</h2></td></tr>
@@ -131,6 +134,13 @@ AVPlayer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_audio_player.html#acd32e697b3ec53b3b5697d936399f780">isReadyToPlay</a></td></tr>
 <tr class="memdesc:acd32e697b3ec53b3b5697d936399f780"><td class="mdescLeft">&#160;</td><td class="mdescRight">An instance variable that tracks if this object is setup and ready to play. <br /></td></tr>
 <tr class="separator:acd32e697b3ec53b3b5697d936399f780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:aba5e30c923d74c5933575f2fb9c12b08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba5e30c923d74c5933575f2fb9c12b08"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_d_r_h_audio_player.html#aba5e30c923d74c5933575f2fb9c12b08">shouldCallPlaybackDidEndSelector</a></td></tr>
+<tr class="memdesc:aba5e30c923d74c5933575f2fb9c12b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will the instance run its <code>playbackDidEndSelector</code>. <br /></td></tr>
+<tr class="separator:aba5e30c923d74c5933575f2fb9c12b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class for loading and audio files and managing its playback. </p>
@@ -214,6 +224,33 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
 
 </div>
 </div>
+<a class="anchor" id="a3539a3946ef78fa2665a20a1ccbefdff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setPlaybackDidEndSelector: </td>
+          <td></td>
+          <td class="paramtype">(SEL)&#160;</td>
+          <td class="paramname"><em>selector</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">WithObject:</td>
+          <td></td>
+          <td class="paramtype">(id)&#160;</td>
+          <td class="paramname"><em>object</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets a selector to run on an object when playback of the receiver is completed. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_d_r_h_audio_player_8h_source.html">DRHAudioPlayer.h</a></li>
 <li>DRHAudioPlayer.m</li>
@@ -221,7 +258,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 16:20:03 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 12 2015 16:06:35 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

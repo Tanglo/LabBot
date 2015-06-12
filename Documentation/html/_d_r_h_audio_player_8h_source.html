@@ -103,23 +103,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="interface_d_r_h_audio_player.html#a57e0891b5d608c7848796ca1b5b6a890">   21</a></span>&#160;    AVPlayer *<a class="code" href="interface_d_r_h_audio_player.html#a57e0891b5d608c7848796ca1b5b6a890">audioPlayer</a>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="interface_d_r_h_audio_player.html#acd32e697b3ec53b3b5697d936399f780">   23</a></span>&#160;    BOOL <a class="code" href="interface_d_r_h_audio_player.html#acd32e697b3ec53b3b5697d936399f780">isReadyToPlay</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;-(<a class="code" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)initWithURL:(NSURL *)URL;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;+(<a class="code" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)audioPlayerWithURL:(NSURL *)URL;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;-(BOOL)isReadyToPlay;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;-(void)play;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="interface_d_r_h_audio_player.html#aba5e30c923d74c5933575f2fb9c12b08">   26</a></span>&#160;<span class="keyword">@property</span> BOOL <a class="code" href="interface_d_r_h_audio_player.html#aba5e30c923d74c5933575f2fb9c12b08">shouldCallPlaybackDidEndSelector</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;-(<a class="code" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)initWithURL:(NSURL *)URL;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;+(<a class="code" href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a> *)audioPlayerWithURL:(NSURL *)URL;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;-(BOOL)isReadyToPlay;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;-(void)play;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;-(void)setPlaybackDidEndSelector:(<span class="keywordtype">SEL</span>) selector WithObject:(<span class="keywordtype">id</span>) object;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interface_d_r_h_audio_player_html_a57e0891b5d608c7848796ca1b5b6a890"><div class="ttname"><a href="interface_d_r_h_audio_player.html#a57e0891b5d608c7848796ca1b5b6a890">DRHAudioPlayer::audioPlayer</a></div><div class="ttdeci">AVPlayer * audioPlayer</div><div class="ttdoc">The AVPlayer object that will be used to play the audio file. </div><div class="ttdef"><b>Definition:</b> DRHAudioPlayer.h:21</div></div>
 <div class="ttc" id="interface_d_r_h_audio_player_html_acd32e697b3ec53b3b5697d936399f780"><div class="ttname"><a href="interface_d_r_h_audio_player.html#acd32e697b3ec53b3b5697d936399f780">DRHAudioPlayer::isReadyToPlay</a></div><div class="ttdeci">BOOL isReadyToPlay</div><div class="ttdoc">An instance variable that tracks if this object is setup and ready to play. </div><div class="ttdef"><b>Definition:</b> DRHAudioPlayer.h:23</div></div>
 <div class="ttc" id="interface_d_r_h_audio_player_html"><div class="ttname"><a href="interface_d_r_h_audio_player.html">DRHAudioPlayer</a></div><div class="ttdoc">A class for loading and audio files and managing its playback. </div><div class="ttdef"><b>Definition:</b> DRHAudioPlayer.h:19</div></div>
+<div class="ttc" id="interface_d_r_h_audio_player_html_aba5e30c923d74c5933575f2fb9c12b08"><div class="ttname"><a href="interface_d_r_h_audio_player.html#aba5e30c923d74c5933575f2fb9c12b08">DRHAudioPlayer::shouldCallPlaybackDidEndSelector</a></div><div class="ttdeci">BOOL shouldCallPlaybackDidEndSelector</div><div class="ttdoc">Will the instance run its playbackDidEndSelector. </div><div class="ttdef"><b>Definition:</b> DRHAudioPlayer.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 9 2015 16:20:02 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 12 2015 16:06:35 for LabBot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

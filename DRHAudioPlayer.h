@@ -22,6 +22,8 @@
     /// @brief An instance variable that tracks if this object is setup and ready to play.
     BOOL isReadyToPlay;
 }
+/// @brief Will the instance run its @c playbackDidEndSelector
+@property BOOL shouldCallPlaybackDidEndSelector;
 
 /*!
  * Initialises the receiver including loading the audio file from the specified URL and getting the receiver ready to play.
@@ -47,5 +49,10 @@
  * Begins playback of the receiver.
  */
 -(void)play;
+
+/*!
+ * Sets a selector to run on an object when playback of the receiver is completed.
+ */
+-(void)setPlaybackDidEndSelector:(SEL) selector WithObject:(id) object;
 
 @end
