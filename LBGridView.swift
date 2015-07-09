@@ -140,8 +140,8 @@ public class LBGridView: LBSubjectView {
                     for i in 0..<numRows {
                         for j in 0..<numCols {
                             cellLabels[i][j] = newLabels[i*numCols+j]
-                            cellLabelRows[cellLabels[i][j]] = i
-                            cellLabelColumns[cellLabels[i][j]] = j
+                            cellLabelRows[cellLabels[i][j]] = j
+                            cellLabelColumns[cellLabels[i][j]] = i
                             
                             var cellLabel = ""
                             if hexLabels {
