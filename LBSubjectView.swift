@@ -11,6 +11,9 @@
 import Cocoa
 import AppKit
 
+
+/// A class for displaying views to the experimental subject.
 public class LBSubjectView: NSView {
+    /// Determines whether the view draws its contents or not.
     public var blank = false
 }

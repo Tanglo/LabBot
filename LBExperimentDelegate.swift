@@ -8,6 +8,12 @@
 
 import Cocoa
 
+/**
+    A class to use as adelgate for experiment applciations.
+
+    Currently its main role is to override applicationShouldTerminate so that the applcation is not closed before all documents (which might contain unsaved experimental data) are closed.
+
+*/
 @objc public class LBExperimentDelegate: NSObject, NSApplicationDelegate {
     
     public func applicationDidFinishLaunching(aNotification: NSNotification) {

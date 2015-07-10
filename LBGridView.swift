@@ -11,10 +11,10 @@
 import Cocoa
 import AppKit
 
-/*!
-@brief A view class for displaying grids with coordinate systems.
+/**
+    A view class for displaying grids with coordinate systems.
 
-* This class is a subclass of NSView and is used to display grids that have coordinate systems.  The coordinate system is similar to a chess board where rows are labelled with a number and columns are labelled with a letter.  The grid size and cell size are set by the appropriate class properties, as is the starting values of the coordinate system.
+    This class is a subclass of NSView and is used to display grids that have coordinate systems.  The coordinate system is similar to a chess board where rows are labelled with a number and columns are labelled with a letter.  The grid size and cell size are set by the appropriate class properties, as is the starting values of the coordinate system.
 */
 public class LBGridView: LBSubjectView {
     public var gridRect = NSRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
@@ -160,6 +160,12 @@ public class LBGridView: LBSubjectView {
         }
     }
     
+    /**
+        Retrieves the cartesian grid reference (row,column) of the specified label within the drawn grid.
+
+        :param: label The label to retrieve the grid refference for.
+        :returns: A tuple containing the cartesian coordinate (row,column) of the specified lab in the drawn grid, or a tuple containing (nil,nil) if the label is not in the current grid.
+    */
     public func gridReferenceOfLabel(label: String) -> (Int?, Int?){
         if cellLabelRows.count > 0 && cellLabelColumns.count > 0 {
             var labelInt: UInt?
