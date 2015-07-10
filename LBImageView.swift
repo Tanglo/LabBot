@@ -8,10 +8,17 @@
 
 import Cocoa
 
+/// An NSView subclass that displays and image and places a marker on the clicked location.
 public class LBImageView: NSView {
+    /// The image to be displayed by the receiver.
     public var image: NSImage?
+    
+    /// Determines if the marker feature is enabled.
     public var allowMarker = false
+    
     private(set) public var markerLocation = LBPoint(x: -1.0, y: -1.0)
+    
+    /// The size of the marker when drawn on the image.
     public var markerSize = 20.0
 
     public override func drawRect(dirtyRect: NSRect) {
@@ -42,6 +49,8 @@ public class LBImageView: NSView {
         self.needsDisplay = true
     }
     
+    
+    /// Delete the marker from the view.
     public func clearMarker(){
         markerLocation = LBPoint(x: -1.0, y: -1.0)
     }
