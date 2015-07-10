@@ -9,6 +9,15 @@
 import Foundation
 
 extension String {
+    
+    /**
+        Increments the string by the specificed amount.
+
+        :param: increment How much to incrememt the string by.
+        :param: floor The value to start from when a character overflows (the equivalent to zero in numbers).
+        :param: ceiling The overflow value.  When a character gets to this value it resets to the floor and the next more significnat character increments by one.
+        :returns: The incrememted String.
+    */
     public func incrementBy(increment: Int, floor: Character, ceiling: Character) -> String {
         let lastChar = self.substringFromIndex(self.endIndex.predecessor())
         var remString = self.substringToIndex(self.endIndex.predecessor())
@@ -33,6 +42,12 @@ extension String {
 }
 
 extension Array {
+    
+    /**
+    Shuffles the array using the modern Fisher-Yates algorithm.
+    
+    :returns: The shuffled array.
+    */
     func shuffle() -> Array<T> {
         var shuffledArray = self
         let count = shuffledArray.count
@@ -46,6 +61,13 @@ extension Array {
 }
 
 extension UInt {
+    
+    /**
+    Initialises a UInt by with the value decoded from a String using a specified numberical base.
+    
+    :param: string The string to be decoded.
+    :param: radix The numberical base to use to decode the string, e.g. 10 for decimal, 16 for hexidecimal.
+    */
     init?(_ string: String, radix: UInt) {
         let digits = "0123456789abcdefghijklmnopqrstuvwxyz"
         var result = UInt(0)

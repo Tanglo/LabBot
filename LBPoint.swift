@@ -8,8 +8,11 @@
 
 import Foundation
 
+/// A class that stores a 2D catesian point.
 public class LBPoint: NSObject, NSCoding {
+    /// The hozizontal coordinate.
     public var x = 0.0
+    /// The vertical coordinate.
     public var y = 0.0
     
     override init(){

@@ -8,13 +8,11 @@
 
 import Foundation
 
-/*!
-@brief A class that defines a size as a width and height.
-
-* This class defines a size as a width and a height.  It is analogous to the @c NSSize structure of the Cocoa framework, but it works natively with @c Double types.
-*/
+/// A class that stores a 2D size.
 public class LBSize {
+    /// The width.
     public var width = 0.0
+    /// The height.
     public var height = 0.0
     
     init(){

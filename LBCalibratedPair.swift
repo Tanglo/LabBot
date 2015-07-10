@@ -8,8 +8,11 @@
 
 import Foundation
 
+/// A class that stores a pair of objects where one represents the calibrated version of the other.
 public class LBCalibratedPair: NSObject, NSCoding {
+    /// The uncalibrated object.
     public var raw: AnyObject = 0.0
+    /// An object that represents the calibrated version of raw.
     public var calibrated: AnyObject = 0.0
     
     public init(raw: AnyObject, calibrated: AnyObject){
