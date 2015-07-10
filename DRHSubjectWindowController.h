@@ -10,6 +10,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+/*!
+ @brief A class for controlling the window that is shown to the experiemntal subject.
+ 
+ A @c DRHSubjectWindowController is intended to be used to control a window to presents visual stimulii to the experimental subject.  The subject window will often need to be placed on a secondary display so this class has methods to faciliate that situation.
+ */
 @interface DRHSubjectWindowController : NSWindowController
 
 ///@brief The screen number on which to display this window. Default is @c 0.
