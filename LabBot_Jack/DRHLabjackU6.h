@@ -120,6 +120,11 @@ extern NSString * const DRHLabJackU6ConfigSamplesPerPacketKey;
 -(NSArray *)readStreamData;
 
 /*!
+ * Closes the connection to the LabJack device, typically by a call to closeUSBConnection.  Because this class is a subclass of @c DRHLabJack this method is required.
+ */
+-(void)closeConnection;
+
+/*!
  * Closes the LabJack U6
  */
 -(void)close;

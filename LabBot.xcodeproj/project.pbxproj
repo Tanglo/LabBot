@@ -18,21 +18,26 @@
 		E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */; };
 		E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E524F2B5197657E10001BBE9 /* DRHChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E524F2B6197657E10001BBE9 /* DRHChartView.m */; };
-		E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E5311A429B5700F43B81 /* DRHLabJack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E5321A429B5700F43B81 /* DRHLabJack.m */; };
-		E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E5351A429B7000F43B81 /* DRHLabjackU6.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E5361A429B7000F43B81 /* DRHLabjackU6.m */; };
 		E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = E525E5391A429C8600F43B81 /* DRHDaqDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */; };
 		E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */; };
-		E540991E18FE416E001CBB30 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E540991918FE407A001CBB30 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */ = {isa = PBXBuildFile; fileRef = E541FC7719A5BA3600FD9252 /* DRHFileDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E541FC7A19A5BA3600FD9252 /* DRHFileDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E541FC7819A5BA3600FD9252 /* DRHFileDate.m */; };
 		E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */; };
 		E55AE27418F7C65700FDD48E /* DRHInstructionView.h in Headers */ = {isa = PBXBuildFile; fileRef = E55AE27218F7C65700FDD48E /* DRHInstructionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E55AE27318F7C65700FDD48E /* DRHInstructionView.m */; };
+		E56727CA1B5DD89D00EC7BA8 /* DRHFileDate.h in Headers */ = {isa = PBXBuildFile; fileRef = E541FC7719A5BA3600FD9252 /* DRHFileDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56727CF1B5DDD5C00EC7BA8 /* LabBot.h in Headers */ = {isa = PBXBuildFile; fileRef = E56727CE1B5DDD5C00EC7BA8 /* LabBot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56727DA1B5DE24300EC7BA8 /* LabBot_Jack.h in Headers */ = {isa = PBXBuildFile; fileRef = E56727D91B5DE24300EC7BA8 /* LabBot_Jack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56727F41B5DE27200EC7BA8 /* DRHLabJack.h in Headers */ = {isa = PBXBuildFile; fileRef = E56727EE1B5DE27200EC7BA8 /* DRHLabJack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56727F51B5DE27200EC7BA8 /* DRHLabJack.m in Sources */ = {isa = PBXBuildFile; fileRef = E56727EF1B5DE27200EC7BA8 /* DRHLabJack.m */; };
+		E56727F61B5DE27200EC7BA8 /* DRHLabjackU6.h in Headers */ = {isa = PBXBuildFile; fileRef = E56727F01B5DE27200EC7BA8 /* DRHLabjackU6.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56727F71B5DE27200EC7BA8 /* DRHLabjackU6.m in Sources */ = {isa = PBXBuildFile; fileRef = E56727F11B5DE27200EC7BA8 /* DRHLabjackU6.m */; };
+		E56727F81B5DE27200EC7BA8 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E56727F21B5DE27200EC7BA8 /* u6.c */; };
+		E56727F91B5DE27200EC7BA8 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E56727F31B5DE27200EC7BA8 /* u6.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E56727FB1B5DE2BF00EC7BA8 /* LabBot_Jack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E56727D51B5DE24300EC7BA8 /* LabBot_Jack.framework */; };
+		E56727FD1B5DE3A000EC7BA8 /* LabBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5776B881925E41700F1A064 /* DRHBlankImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5776B891925E41700F1A064 /* DRHBlankImage.m */; };
 		E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A5C41998554100D6B190 /* DRHDataMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,12 +67,20 @@
 		E5E64E251B1457B000898564 /* LBCalibratedPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E64E241B1457B000898564 /* LBCalibratedPair.swift */; };
 		E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */; };
 		E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F856911AD6465700A2A384 /* LBDataMatrix.swift */; };
-		E5FA88B21A4797D40067A0C0 /* u6.c in Sources */ = {isa = PBXBuildFile; fileRef = E5FA88B01A4797D40067A0C0 /* u6.c */; };
-		E5FA88B31A4797D40067A0C0 /* u6.h in Headers */ = {isa = PBXBuildFile; fileRef = E5FA88B11A4797D40067A0C0 /* u6.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E5FA88B61A479A6D0067A0C0 /* Doxyfile in Resources */ = {isa = PBXBuildFile; fileRef = E5FA88B51A479A6D0067A0C0 /* Doxyfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E56727FA1B5DE2AE00EC7BA8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/Frameworks";
+			dstSubfolderSpec = 0;
+			files = (
+				E56727FB1B5DE2BF00EC7BA8 /* LabBot_Jack.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C897BC18F52A6A00335057 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,21 +105,27 @@
 		E524F2B2197629B80001BBE9 /* DRHVerticalSpacingChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHVerticalSpacingChartView.m; sourceTree = "<group>"; };
 		E524F2B5197657E10001BBE9 /* DRHChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHChartView.h; sourceTree = "<group>"; };
 		E524F2B6197657E10001BBE9 /* DRHChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHChartView.m; sourceTree = "<group>"; };
-		E525E5311A429B5700F43B81 /* DRHLabJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLabJack.h; sourceTree = "<group>"; };
-		E525E5321A429B5700F43B81 /* DRHLabJack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLabJack.m; sourceTree = "<group>"; };
-		E525E5351A429B7000F43B81 /* DRHLabjackU6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLabjackU6.h; sourceTree = "<group>"; };
-		E525E5361A429B7000F43B81 /* DRHLabjackU6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLabjackU6.m; sourceTree = "<group>"; };
 		E525E5391A429C8600F43B81 /* DRHDaqDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDaqDevice.h; sourceTree = "<group>"; };
 		E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDaqDevice.m; sourceTree = "<group>"; };
 		E534BAF7196BBD2800BB9C8A /* DRHRulerChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHRulerChartView.h; sourceTree = "<group>"; };
 		E534BAF8196BBD2800BB9C8A /* DRHRulerChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHRulerChartView.m; sourceTree = "<group>"; };
-		E540991918FE407A001CBB30 /* LabBot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot.h; sourceTree = "<group>"; };
 		E541FC7719A5BA3600FD9252 /* DRHFileDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHFileDate.h; sourceTree = "<group>"; };
 		E541FC7819A5BA3600FD9252 /* DRHFileDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHFileDate.m; sourceTree = "<group>"; };
 		E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHSamplingOperation.h; sourceTree = "<group>"; };
 		E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHSamplingOperation.m; sourceTree = "<group>"; };
 		E55AE27218F7C65700FDD48E /* DRHInstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHInstructionView.h; sourceTree = "<group>"; };
 		E55AE27318F7C65700FDD48E /* DRHInstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHInstructionView.m; sourceTree = "<group>"; };
+		E56727C81B5DD7E300EC7BA8 /* LabBot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LabBot.framework; path = ../../../Library/Frameworks/LabBot.framework; sourceTree = "<group>"; };
+		E56727CE1B5DDD5C00EC7BA8 /* LabBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabBot.h; path = LabBot/LabBot.h; sourceTree = SOURCE_ROOT; };
+		E56727D51B5DE24300EC7BA8 /* LabBot_Jack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LabBot_Jack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56727D81B5DE24300EC7BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56727D91B5DE24300EC7BA8 /* LabBot_Jack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabBot_Jack.h; sourceTree = "<group>"; };
+		E56727EE1B5DE27200EC7BA8 /* DRHLabJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLabJack.h; sourceTree = "<group>"; };
+		E56727EF1B5DE27200EC7BA8 /* DRHLabJack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLabJack.m; sourceTree = "<group>"; };
+		E56727F01B5DE27200EC7BA8 /* DRHLabjackU6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHLabjackU6.h; sourceTree = "<group>"; };
+		E56727F11B5DE27200EC7BA8 /* DRHLabjackU6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHLabjackU6.m; sourceTree = "<group>"; };
+		E56727F21B5DE27200EC7BA8 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
+		E56727F31B5DE27200EC7BA8 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
 		E5776B881925E41700F1A064 /* DRHBlankImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHBlankImage.h; sourceTree = "<group>"; };
 		E5776B891925E41700F1A064 /* DRHBlankImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHBlankImage.m; sourceTree = "<group>"; };
 		E578A5C41998554100D6B190 /* DRHDataMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataMatrix.h; sourceTree = "<group>"; };
@@ -133,23 +152,26 @@
 		E5C8977718F52A4300335057 /* LabBot-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBot-Info.plist"; sourceTree = "<group>"; };
 		E5C8977918F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E5C8977B18F52A4300335057 /* LabBot-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LabBot-Prefix.pch"; sourceTree = "<group>"; };
-		E5C8978C18F52A4300335057 /* LabBotTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LabBotTests-Info.plist"; sourceTree = "<group>"; };
-		E5C8978E18F52A4300335057 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E5C8979018F52A4300335057 /* LabBotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabBotTests.m; sourceTree = "<group>"; };
 		E5CDB2261B280C1A0099D385 /* LBSubjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBSubjectView.swift; sourceTree = "<group>"; };
-		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "To do.rtf"; sourceTree = "<group>"; };
+		E5D4F0B219063A440091B4AE /* To do.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = "To do.rtf"; path = "../To do.rtf"; sourceTree = "<group>"; };
 		E5DA8B571B0415D200D50848 /* LBSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBSize.swift; sourceTree = "<group>"; };
 		E5DA8B591B0415F900D50848 /* LBPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBPoint.swift; sourceTree = "<group>"; };
 		E5DA8B5B1B04164500D50848 /* LBExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExtensions.swift; sourceTree = "<group>"; };
 		E5E64E241B1457B000898564 /* LBCalibratedPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBCalibratedPair.swift; sourceTree = "<group>"; };
 		E5EA15761B0079AD00DD7BB4 /* LBExperimentDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBExperimentDelegate.swift; sourceTree = "<group>"; };
 		E5F856911AD6465700A2A384 /* LBDataMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBDataMatrix.swift; sourceTree = "<group>"; };
-		E5FA88B01A4797D40067A0C0 /* u6.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = u6.c; sourceTree = "<group>"; };
-		E5FA88B11A4797D40067A0C0 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
 		E5FA88B51A479A6D0067A0C0 /* Doxyfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E56727D11B5DE24300EC7BA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56727FD1B5DE3A000EC7BA8 /* LabBot.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C8976818F52A4300335057 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,20 +186,80 @@
 		E55D2F631999940E006EF3D4 /* Deprecated */ = {
 			isa = PBXGroup;
 			children = (
-				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
-				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
-				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
-				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
 			);
 			name = Deprecated;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E56727D61B5DE24300EC7BA8 /* LabBot_Jack */ = {
+			isa = PBXGroup;
+			children = (
+				E56727D91B5DE24300EC7BA8 /* LabBot_Jack.h */,
+				E56727EE1B5DE27200EC7BA8 /* DRHLabJack.h */,
+				E56727EF1B5DE27200EC7BA8 /* DRHLabJack.m */,
+				E56727F01B5DE27200EC7BA8 /* DRHLabjackU6.h */,
+				E56727F11B5DE27200EC7BA8 /* DRHLabjackU6.m */,
+				E56727F21B5DE27200EC7BA8 /* u6.c */,
+				E56727F31B5DE27200EC7BA8 /* u6.h */,
+				E56727D71B5DE24300EC7BA8 /* Supporting Files */,
+			);
+			path = LabBot_Jack;
+			sourceTree = "<group>";
+		};
+		E56727D71B5DE24300EC7BA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E56727D81B5DE24300EC7BA8 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E5C8976218F52A4300335057 = {
 			isa = PBXGroup;
 			children = (
-				E5D4F0B219063A440091B4AE /* To do.rtf */,
 				E5FA88B51A479A6D0067A0C0 /* Doxyfile */,
-				E540991918FE407A001CBB30 /* LabBot.h */,
+				E5C8977518F52A4300335057 /* LabBot */,
+				E56727D61B5DE24300EC7BA8 /* LabBot_Jack */,
+				E5C8976E18F52A4300335057 /* Frameworks */,
+				E5C8976D18F52A4300335057 /* Products */,
+				E58A65E819DD309B00948D42 /* Documentation */,
+			);
+			sourceTree = "<group>";
+		};
+		E5C8976D18F52A4300335057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5C8976C18F52A4300335057 /* LabBot.framework */,
+				E56727D51B5DE24300EC7BA8 /* LabBot_Jack.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5C8976E18F52A4300335057 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E56727C81B5DD7E300EC7BA8 /* LabBot.framework */,
+				E5C8976F18F52A4300335057 /* Cocoa.framework */,
+				E5C8977118F52A4300335057 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5C8977118F52A4300335057 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5C8977218F52A4300335057 /* Foundation.framework */,
+				E5C8977318F52A4300335057 /* CoreData.framework */,
+				E5C8977418F52A4300335057 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E5C8977518F52A4300335057 /* LabBot */ = {
+			isa = PBXGroup;
+			children = (
+				E5D4F0B219063A440091B4AE /* To do.rtf */,
+				E56727CE1B5DDD5C00EC7BA8 /* LabBot.h */,
 				E5DA8B5B1B04164500D50848 /* LBExtensions.swift */,
 				E5DA8B591B0415F900D50848 /* LBPoint.swift */,
 				E5DA8B571B0415D200D50848 /* LBSize.swift */,
@@ -217,53 +299,13 @@
 				E541FC7819A5BA3600FD9252 /* DRHFileDate.m */,
 				E525E5391A429C8600F43B81 /* DRHDaqDevice.h */,
 				E525E53A1A429C8600F43B81 /* DRHDaqDevice.m */,
-				E525E5311A429B5700F43B81 /* DRHLabJack.h */,
-				E525E5321A429B5700F43B81 /* DRHLabJack.m */,
-				E5FA88B11A4797D40067A0C0 /* u6.h */,
-				E5FA88B01A4797D40067A0C0 /* u6.c */,
-				E525E5351A429B7000F43B81 /* DRHLabjackU6.h */,
-				E525E5361A429B7000F43B81 /* DRHLabjackU6.m */,
 				E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */,
 				E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */,
 				E55D2F631999940E006EF3D4 /* Deprecated */,
-				E5C8977518F52A4300335057 /* LabBot */,
-				E5C8978A18F52A4300335057 /* LabBotTests */,
-				E5C8976E18F52A4300335057 /* Frameworks */,
-				E5C8976D18F52A4300335057 /* Products */,
-				E58A65E819DD309B00948D42 /* Documentation */,
-			);
-			sourceTree = "<group>";
-		};
-		E5C8976D18F52A4300335057 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E5C8976C18F52A4300335057 /* LabBot.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E5C8976E18F52A4300335057 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E5C8976F18F52A4300335057 /* Cocoa.framework */,
-				E5C8977118F52A4300335057 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E5C8977118F52A4300335057 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E5C8977218F52A4300335057 /* Foundation.framework */,
-				E5C8977318F52A4300335057 /* CoreData.framework */,
-				E5C8977418F52A4300335057 /* AppKit.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		E5C8977518F52A4300335057 /* LabBot */ = {
-			isa = PBXGroup;
-			children = (
+				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
+				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
+				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
+				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
 				E5C8977618F52A4300335057 /* Supporting Files */,
 			);
 			path = LabBot;
@@ -279,32 +321,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E5C8978A18F52A4300335057 /* LabBotTests */ = {
-			isa = PBXGroup;
-			children = (
-				E5C8979018F52A4300335057 /* LabBotTests.m */,
-				E5C8978B18F52A4300335057 /* Supporting Files */,
-			);
-			path = LabBotTests;
-			sourceTree = "<group>";
-		};
-		E5C8978B18F52A4300335057 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E5C8978C18F52A4300335057 /* LabBotTests-Info.plist */,
-				E5C8978D18F52A4300335057 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		E56727D21B5DE24300EC7BA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56727F41B5DE27200EC7BA8 /* DRHLabJack.h in Headers */,
+				E56727F61B5DE27200EC7BA8 /* DRHLabjackU6.h in Headers */,
+				E56727F91B5DE27200EC7BA8 /* u6.h in Headers */,
+				E56727DA1B5DE24300EC7BA8 /* LabBot_Jack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C8976918F52A4300335057 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E540991E18FE416E001CBB30 /* LabBot.h in Headers */,
+				E56727CF1B5DDD5C00EC7BA8 /* LabBot.h in Headers */,
 				E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */,
 				E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */,
 				E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */,
@@ -320,18 +355,35 @@
 				E524F2B7197657E10001BBE9 /* DRHChartView.h in Headers */,
 				E534BAF9196BBD2800BB9C8A /* DRHRulerChartView.h in Headers */,
 				E524F2B3197629B80001BBE9 /* DRHVerticalSpacingChartView.h in Headers */,
-				E525E5331A429B5700F43B81 /* DRHLabJack.h in Headers */,
-				E541FC7919A5BA3600FD9252 /* DRHFileDate.h in Headers */,
+				E56727CA1B5DD89D00EC7BA8 /* DRHFileDate.h in Headers */,
 				E525E53B1A429C8600F43B81 /* DRHDaqDevice.h in Headers */,
 				E550E1941A64A78600831CC5 /* DRHSamplingOperation.h in Headers */,
-				E525E5371A429B7000F43B81 /* DRHLabjackU6.h in Headers */,
-				E5FA88B31A4797D40067A0C0 /* u6.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E56727D41B5DE24300EC7BA8 /* LabBot_Jack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56727E81B5DE24400EC7BA8 /* Build configuration list for PBXNativeTarget "LabBot_Jack" */;
+			buildPhases = (
+				E56727D01B5DE24300EC7BA8 /* Sources */,
+				E56727FC1B5DE2C700EC7BA8 /* ShellScript */,
+				E56727D11B5DE24300EC7BA8 /* Frameworks */,
+				E56727D21B5DE24300EC7BA8 /* Headers */,
+				E56727D31B5DE24300EC7BA8 /* Resources */,
+				E56727FA1B5DE2AE00EC7BA8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LabBot_Jack;
+			productName = LabBot_Jack;
+			productReference = E56727D51B5DE24300EC7BA8 /* LabBot_Jack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		E5C8976B18F52A4300335057 /* LabBot */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5C8979418F52A4300335057 /* Build configuration list for PBXNativeTarget "LabBot" */;
@@ -362,6 +414,11 @@
 				CLASSPREFIX = LB;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Lee David Walsh";
+				TargetAttributes = {
+					E56727D41B5DE24300EC7BA8 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
 			};
 			buildConfigurationList = E5C8976618F52A4300335057 /* Build configuration list for PBXProject "LabBot" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -376,11 +433,19 @@
 			projectRoot = "";
 			targets = (
 				E5C8976B18F52A4300335057 /* LabBot */,
+				E56727D41B5DE24300EC7BA8 /* LabBot_Jack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E56727D31B5DE24300EC7BA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C8976A18F52A4300335057 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,7 +472,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PROJECT_DIR}/tools/incBuildNum.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}\"";
+			shellScript = "${PROJECT_DIR}/tools/incBuildNum.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}/LabBot\"";
+		};
+		E56727FC1B5DE2C700EC7BA8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/tools/incBuildNum.sh \"${PROJECT_DIR}/${INFOPLIST_FILE}\" \"${PROJECT_DIR}/LabBot_Jack\"";
 		};
 		E5746D1A19DD277900F72CDD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -425,6 +503,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E56727D01B5DE24300EC7BA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56727F71B5DE27200EC7BA8 /* DRHLabjackU6.m in Sources */,
+				E56727F81B5DE27200EC7BA8 /* u6.c in Sources */,
+				E56727F51B5DE27200EC7BA8 /* DRHLabJack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E5C8976718F52A4300335057 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,10 +523,8 @@
 				E524F2B4197629B80001BBE9 /* DRHVerticalSpacingChartView.m in Sources */,
 				E579302218F7A32800F012B7 /* DRHStillCamera.m in Sources */,
 				E5CDB2271B280C1A0099D385 /* LBSubjectView.swift in Sources */,
-				E5FA88B21A4797D40067A0C0 /* u6.c in Sources */,
 				E579301A18F7A32800F012B7 /* DRHExperimentDocument.m in Sources */,
 				E55AE27518F7C65700FDD48E /* DRHInstructionView.m in Sources */,
-				E525E5381A429B7000F43B81 /* DRHLabjackU6.m in Sources */,
 				E5DA8B581B0415D200D50848 /* LBSize.swift in Sources */,
 				E50E6F6C1A5E420B00110C70 /* DRHDataOutputView.m in Sources */,
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
@@ -453,7 +539,6 @@
 				E534BAFA196BBD2800BB9C8A /* DRHRulerChartView.m in Sources */,
 				E5EA15771B0079AD00DD7BB4 /* LBExperimentDelegate.swift in Sources */,
 				E524F2B8197657E10001BBE9 /* DRHChartView.m in Sources */,
-				E525E5341A429B5700F43B81 /* DRHLabJack.m in Sources */,
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 				E5A958D61AB2AC9C00B8A764 /* LBGridView.swift in Sources */,
 				E5DA8B5A1B0415F900D50848 /* LBPoint.swift in Sources */,
@@ -473,17 +558,68 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		E5C8978D18F52A4300335057 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E5C8978E18F52A4300335057 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E56727E91B5DE24400EC7BA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LabBot_Jack/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E56727EA1B5DE24400EC7BA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = LabBot_Jack/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E5C8979218F52A4300335057 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,8 +706,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.3;
-				DYLIB_CURRENT_VERSION = 0.3;
+				DYLIB_COMPATIBILITY_VERSION = 0.4;
+				DYLIB_CURRENT_VERSION = 0.4;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -579,6 +715,7 @@
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -595,8 +732,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 0.3;
-				DYLIB_CURRENT_VERSION = 0.3;
+				DYLIB_COMPATIBILITY_VERSION = 0.4;
+				DYLIB_CURRENT_VERSION = 0.4;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = B;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -604,6 +741,7 @@
 				INFOPLIST_FILE = "LabBot/LabBot-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -614,6 +752,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E56727E81B5DE24400EC7BA8 /* Build configuration list for PBXNativeTarget "LabBot_Jack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56727E91B5DE24400EC7BA8 /* Debug */,
+				E56727EA1B5DE24400EC7BA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E5C8976618F52A4300335057 /* Build configuration list for PBXProject "LabBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

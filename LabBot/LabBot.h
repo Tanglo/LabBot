@@ -29,8 +29,8 @@
 #import "DRHDataOutputBarView.h"
 #import "DRHFileDate.h"
 #import "DRHDaqDevice.h"
-#import "DRHLabJack.h"
-#import "DRHLabJackU6.h"
+//#import "DRHLabJack.h"
+//#import "DRHLabJackU6.h"
 #import "DRHSamplingOperation.h"
 
 #endif

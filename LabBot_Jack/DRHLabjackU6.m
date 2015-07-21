@@ -43,10 +43,6 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
 
 -(DRHLabjackU6 *)initForStreamingWithSerialNum:(int)serialNum AndSettings:(NSDictionary *)settings{
     if (self = [self initWithSerialNum:serialNum]) {
-/*        handle = newHandle;
-        if (getCalibrationInfo(handle, &caliInfo) < 0)
-            return nil;*/
-        
         numAnalogueChan = [[settings objectForKey:DRHLabJackU6ConfigNumAnalogueChanKey] integerValue]; //5;
         samplesPerPacket = [[settings objectForKey:DRHLabJackU6ConfigSamplesPerPacketKey] integerValue]; //25;
         scanRate = [[settings objectForKey:DRHLabJackU6ConfigScanRateKey] integerValue];
@@ -358,7 +354,6 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     int recBuffSize;
     recBuffSize = 14 + (int)samplesPerPacket*2;
     uint16 voltageBytes, checksumTotal;
-//    long startTime, endTime;
     NSInteger numScans = samplesPerPacket / numAnalogueChan;
     double voltages[numScans][numAnalogueChan];
     uint8 recBuff[recBuffSize];
@@ -366,9 +361,6 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     unsigned long recChars = 0, backLog = 0;
     BOOL autoRecoveryOn = NO;
     
-//    printf("Reading Samples...\n");
-    
-//    startTime = getTickCount();
     //Reading stream response from U6
     recChars = LJUSB_Stream(handle, recBuff, recBuffSize);
     if( recChars < recBuffSize )
@@ -426,12 +418,6 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
         printf("Errorcode # %d from StreamData read.\n", (unsigned int)recBuff[11]);
         return nil;
     }
-
-/*    if( packetCounter != (int)recBuff[10] )
-    {
-        printf("PacketCounter (%d) does not match with with current packet count (%d)(StreamData).\n", recBuff[10], packetCounter);
-        return -1;
-    }*/
     
     backLog = (int)recBuff[12 + samplesPerPacket*2];
     
@@ -449,8 +435,6 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
         }
     }
     
-//    endTime = getTickCount();
-    
     NSMutableArray *dataArray = [NSMutableArray array];
     for(NSInteger k = 0; k < numScans; k++ ){
         NSMutableArray *channelArray = [NSMutableArray array];
@@ -461,6 +445,10 @@ NSString * const DRHLabJackU6ConfigSamplesPerPacketKey = @"DRHLJU6SamplesPerPack
     }
     
     return [NSArray arrayWithArray:dataArray];
+}
+
+-(void)closeConnection{
+    [self close];
 }
 
 -(void)close{

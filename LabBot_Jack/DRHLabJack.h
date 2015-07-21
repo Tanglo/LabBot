@@ -9,7 +9,6 @@
 //
 
 #import "DRHDaqDevice.h"
-//#import "/usr/local/include/labjackusb.h"
 
 extern NSString * const DRHLabJackU3DeviceKey;
 extern NSString * const DRHLabJackU6DeviceKey;
@@ -24,6 +23,7 @@ extern NSString * const DRHLabJackStreamBacklogKey;
  This parent class implmements properties and methods that are common to LabJack hardware.  It is then subclassed for each specific devices.  Most of the time you should not be using an instance of this class but a subclass of it specific to your LabJack hardware.
  */
 @interface DRHLabJack : DRHDaqDevice
+//cat
 
 /*!
  * Checks how many LabJack devices are connected and returns the number of devices and their type.  The number of devices are stored as @c NSNumber objects keyed to the @c DRHLabJackProductIDX where @c X is the device type.  Valid value for @c X are @c U3, @c U6 and @c UE9.
@@ -54,5 +54,12 @@ extern NSString * const DRHLabJackStreamBacklogKey;
  * @return An array of the data collected from the LabJack buffer.
  */
 -(NSArray *)readStreamData;
+
+/*!
+ * As a subclass of @c DRHDaqDevice, it is compulsory for subclasses to override this method so that all @c DRHDaqDevice classes are compatible with @c DRHSamplingOperation.
+ 
+ * Closes the connection to the LabJack device, typically by a call to closeUSBConnection
+ */
+-(void)closeConnection;
 
 @end
