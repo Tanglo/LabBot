@@ -40,10 +40,6 @@
 		E56727FD1B5DE3A000EC7BA8 /* LabBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C8976C18F52A4300335057 /* LabBot.framework */; };
 		E5776B8A1925E41700F1A064 /* DRHBlankImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5776B881925E41700F1A064 /* DRHBlankImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5776B891925E41700F1A064 /* DRHBlankImage.m */; };
-		E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A5C41998554100D6B190 /* DRHDataMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A5C51998554100D6B190 /* DRHDataMatrix.m */; };
-		E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A60B199867D200D6B190 /* DRHDataColumn.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A60C199867D200D6B190 /* DRHDataColumn.m */; };
 		E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */ = {isa = PBXBuildFile; fileRef = E578A6141998753D00D6B190 /* DRHExperimentData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */ = {isa = PBXBuildFile; fileRef = E578A6151998753D00D6B190 /* DRHExperimentData.m */; };
 		E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = E579300818F7A32800F012B7 /* DRHExperimentDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -128,10 +124,6 @@
 		E56727F31B5DE27200EC7BA8 /* u6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u6.h; sourceTree = "<group>"; };
 		E5776B881925E41700F1A064 /* DRHBlankImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHBlankImage.h; sourceTree = "<group>"; };
 		E5776B891925E41700F1A064 /* DRHBlankImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHBlankImage.m; sourceTree = "<group>"; };
-		E578A5C41998554100D6B190 /* DRHDataMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataMatrix.h; sourceTree = "<group>"; };
-		E578A5C51998554100D6B190 /* DRHDataMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataMatrix.m; sourceTree = "<group>"; };
-		E578A60B199867D200D6B190 /* DRHDataColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHDataColumn.h; sourceTree = "<group>"; };
-		E578A60C199867D200D6B190 /* DRHDataColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHDataColumn.m; sourceTree = "<group>"; };
 		E578A6141998753D00D6B190 /* DRHExperimentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentData.h; sourceTree = "<group>"; };
 		E578A6151998753D00D6B190 /* DRHExperimentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRHExperimentData.m; sourceTree = "<group>"; };
 		E579300818F7A32800F012B7 /* DRHExperimentDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRHExperimentDocument.h; sourceTree = "<group>"; };
@@ -302,10 +294,6 @@
 				E550E1921A64A78600831CC5 /* DRHSamplingOperation.h */,
 				E550E1931A64A78600831CC5 /* DRHSamplingOperation.m */,
 				E55D2F631999940E006EF3D4 /* Deprecated */,
-				E578A60B199867D200D6B190 /* DRHDataColumn.h */,
-				E578A60C199867D200D6B190 /* DRHDataColumn.m */,
-				E578A5C41998554100D6B190 /* DRHDataMatrix.h */,
-				E578A5C51998554100D6B190 /* DRHDataMatrix.m */,
 				E5C8977618F52A4300335057 /* Supporting Files */,
 			);
 			path = LabBot;
@@ -340,8 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56727CF1B5DDD5C00EC7BA8 /* LabBot.h in Headers */,
-				E578A60D199867D200D6B190 /* DRHDataColumn.h in Headers */,
-				E578A5C61998554100D6B190 /* DRHDataMatrix.h in Headers */,
 				E578A6161998753D00D6B190 /* DRHExperimentData.h in Headers */,
 				E579301918F7A32800F012B7 /* DRHExperimentDocument.h in Headers */,
 				E579301C18F7A32800F012B7 /* DRHExperimenterWindowController.h in Headers */,
@@ -530,7 +516,6 @@
 				E578A6171998753D00D6B190 /* DRHExperimentData.m in Sources */,
 				E5776B8B1925E41700F1A064 /* DRHBlankImage.m in Sources */,
 				E5F856921AD6465700A2A384 /* LBDataMatrix.swift in Sources */,
-				E578A5C71998554100D6B190 /* DRHDataMatrix.m in Sources */,
 				E50E6F701A5E42AC00110C70 /* DRHDataOutputBarView.m in Sources */,
 				E525E53C1A429C8600F43B81 /* DRHDaqDevice.m in Sources */,
 				E5E64E251B1457B000898564 /* LBCalibratedPair.swift in Sources */,
@@ -542,7 +527,6 @@
 				E579302518F7A32800F012B7 /* DRHSubjectWindowController.m in Sources */,
 				E5A958D61AB2AC9C00B8A764 /* LBGridView.swift in Sources */,
 				E5DA8B5A1B0415F900D50848 /* LBPoint.swift in Sources */,
-				E578A60E199867D200D6B190 /* DRHDataColumn.m in Sources */,
 				E550E1951A64A78600831CC5 /* DRHSamplingOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
