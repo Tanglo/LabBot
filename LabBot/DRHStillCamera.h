@@ -105,4 +105,17 @@
  */
 -(BOOL)isRunning;
 
+/*!
+ * Returns the current focusMode of the receiver.
+ * @return The current @c AVCaptureFocusMode of the camera.
+ */
+-(AVCaptureFocusMode)focusMode;
+
+/*!
+ * Sets the focusMode of the receiver if it is available.
+ * @param focusMode The focusMode to set on the receiver.
+ * @return @c YES if the new focusMode was sucessfully set, otherwise @c NO.
+ */
+-(BOOL)setFocusMode:(AVCaptureFocusMode)focusMode;
+
 @end

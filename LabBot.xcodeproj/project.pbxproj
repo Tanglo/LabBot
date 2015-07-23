@@ -743,6 +743,7 @@
 				E56727EA1B5DE24400EC7BA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C8976618F52A4300335057 /* Build configuration list for PBXProject "LabBot" */ = {
 			isa = XCConfigurationList;

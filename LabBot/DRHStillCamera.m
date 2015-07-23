@@ -54,8 +54,16 @@
         [theAlert runModal];
         return NO;
     }
-    if ([device isFocusModeSupported:AVCaptureFocusModeAutoFocus])
-        [device setFocusMode:AVCaptureFocusModeAutoFocus];
+    if ([device isFocusModeSupported:AVCaptureFocusModeAutoFocus]){
+        NSError *error;
+        if ([device lockForConfiguration:&error]) {
+            [device setFocusMode:AVCaptureFocusModeAutoFocus];
+            [device unlockForConfiguration];
+        } else {
+            NSAlert *errorAlert = [NSAlert alertWithError:error];
+            [errorAlert runModal];
+        }
+    }
     
     AVCaptureDeviceInput *cameraInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:&anError];
     if (!cameraInput) {
@@ -84,6 +92,26 @@
 -(BOOL)isRunning{
     if ([cameraSession isRunning]) {
         return YES;
+    }
+    return NO;
+}
+
+-(AVCaptureFocusMode)focusMode{
+    return [device focusMode];
+}
+
+-(BOOL)setFocusMode:(AVCaptureFocusMode)focusMode{
+    if ([device isFocusModeSupported:focusMode]){
+        NSError *error;
+        if ([device lockForConfiguration:&error]){
+            [device setFocusMode:focusMode];
+            [device unlockForConfiguration];
+            return YES;
+        } else {
+            NSAlert *errorAlert = [NSAlert alertWithError:error];
+            [errorAlert runModal];
+            return NO;
+        }
     }
     return NO;
 }
