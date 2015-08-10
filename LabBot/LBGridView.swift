@@ -74,8 +74,6 @@ public class LBGridView: LBSubjectView {
                 let maxWidth = Double(numCols) * cellSize.width     //+ xPadding
                 let maxHeight = Double(numRows) * cellSize.height   //+ yPadding
                 var gridPath = NSBezierPath()
-    //            var gridRect = frame
-    //            var gridOrigin = LBPoint(point: frame.origin)
                 if centreHorizontally {
                     gridRect.origin.x = (frame.size.width - CGFloat(maxWidth)) / 2.0
                 }
@@ -112,9 +110,6 @@ public class LBGridView: LBSubjectView {
                         rowLabel = "\(firstRowLabel+i)"
                         labelRect = NSRect(origin: NSPoint(x: 0.0, y: currentHeight), size: rowLabel.sizeWithAttributes(labelAttr))
                         labelRect = NSOffsetRect(labelRect, 0.0, 0.5*(CGFloat(cellSize.height) - labelRect.size.height))
-    //                    if CGFloat(0.9*gridOrigin.x) > labelRect.size.width {
-    //                        labelRect.origin.x += CGFloat(0.9*gridOrigin.x) - labelRect.size.width
-    //                    }
                         rowLabel.drawInRect(labelRect, withAttributes: labelAttr)
                     }
                     currentHeight += cellSize.height
