@@ -40,7 +40,7 @@ public class LBPoint: NSObject, NSCoding {
         self.y = Double(point.y)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         self.x = aDecoder.decodeDoubleForKey("x")
         self.y = aDecoder.decodeDoubleForKey("y")
     }

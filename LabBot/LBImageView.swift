@@ -34,7 +34,7 @@ public class LBImageView: NSView {
         }
         
         if markerLocation.x >= 0 && markerLocation.y >= 0 {
-            var markerPath = NSBezierPath()
+            let markerPath = NSBezierPath()
             markerPath.moveToPoint(NSPoint(x: markerLocation.x-markerSize, y: markerLocation.y-markerSize))
             markerPath.lineToPoint(NSPoint(x: markerLocation.x+markerSize, y: markerLocation.y+markerSize))
             markerPath.moveToPoint(NSPoint(x: markerLocation.x-markerSize, y: markerLocation.y+markerSize))

@@ -53,27 +53,27 @@ public class LBGridView: LBSubjectView {
             bgPath.fill()
             
             if flipVertically {
-                var flipTransform = NSAffineTransform()
+                let flipTransform = NSAffineTransform()
                 flipTransform.scaleXBy(1.0, yBy: -1.0)
                 flipTransform.translateXBy(0.0, yBy: -frame.size.height)
                 flipTransform.concat()
             }
             if flipHorizontally {
-                var flipTransform = NSAffineTransform()
+                let flipTransform = NSAffineTransform()
                 flipTransform.scaleXBy(-1.0, yBy: 1.0)
                 flipTransform.translateXBy(-frame.size.width, yBy: 0.0)
                 flipTransform.concat()
             }
             
             //Calculate the number of whole cells that will fit in the padded space
-            var numCols = Int(Double(gridRect.size.width) / cellSize.width)
-            var numRows = Int(Double(gridRect.size.height) / cellSize.height)
+            let numCols = Int(Double(gridRect.size.width) / cellSize.width)
+            let numRows = Int(Double(gridRect.size.height) / cellSize.height)
             
             //Draw grid and coordinate labels
             if numCols>0 && numRows>0{
                 let maxWidth = Double(numCols) * cellSize.width     //+ xPadding
                 let maxHeight = Double(numRows) * cellSize.height   //+ yPadding
-                var gridPath = NSBezierPath()
+                let gridPath = NSBezierPath()
                 if centreHorizontally {
                     gridRect.origin.x = (frame.size.width - CGFloat(maxWidth)) / 2.0
                 }
@@ -84,7 +84,7 @@ public class LBGridView: LBSubjectView {
                 var currentWidth = Double(gridRect.origin.x)
                 var colLabel: NSString
                 var labelRect: NSRect
-                var currentColumnLabel = firstColumnLabel
+//                var currentColumnLabel = firstColumnLabel
                 let labelFont = NSFont(name: "Helvetica", size: CGFloat(labelSize))
                 let labelAttr = [
                     NSFontAttributeName: labelFont!,
@@ -124,8 +124,8 @@ public class LBGridView: LBSubjectView {
                     cellLabelColumns = [Int](count: numRows*numCols+1, repeatedValue: Int())
                     var newLabels = [Int]()
                     var count = 1
-                    for i in 0..<numRows {
-                        for j in 0..<numCols {
+                    for _ in 0..<numRows {
+                        for _ in 0..<numCols {
                             newLabels.append(count++)
                         }
                     }
@@ -144,8 +144,8 @@ public class LBGridView: LBSubjectView {
                             } else {
                                 cellLabel = "\(cellLabels[i][j])"
                             }
-                            var xLabelPos = CGFloat(cellSize.width*Double(j)) + gridRect.origin.x + (CGFloat(cellSize.width) - cellLabel.sizeWithAttributes(labelAttr).width)/2.0
-                            var yLabelPos = CGFloat(cellSize.height*Double(i)) + gridRect.origin.y + (CGFloat(cellSize.height) - cellLabel.sizeWithAttributes(labelAttr).height)/2.0
+                            let xLabelPos = CGFloat(cellSize.width*Double(j)) + gridRect.origin.x + (CGFloat(cellSize.width) - cellLabel.sizeWithAttributes(labelAttr).width)/2.0
+                            let yLabelPos = CGFloat(cellSize.height*Double(i)) + gridRect.origin.y + (CGFloat(cellSize.height) - cellLabel.sizeWithAttributes(labelAttr).height)/2.0
                             labelRect = NSRect(origin: NSPoint(x: xLabelPos, y: yLabelPos), size: cellLabel.sizeWithAttributes(labelAttr))
                             cellLabel.drawInRect(labelRect, withAttributes: labelAttr)
                         }
@@ -158,8 +158,8 @@ public class LBGridView: LBSubjectView {
     /**
         Retrieves the cartesian grid reference (row,column) of the specified label within the drawn grid.
 
-        :param: label The label to retrieve the grid refference for.
-        :returns: A tuple containing the cartesian coordinate (row,column) of the specified lab in the drawn grid, or a tuple containing (nil,nil) if the label is not in the current grid.
+        - parameter label: The label to retrieve the grid refference for.
+        - returns: A tuple containing the cartesian coordinate (row,column) of the specified lab in the drawn grid, or a tuple containing (nil,nil) if the label is not in the current grid.
     */
     public func gridReferenceOfLabel(label: String) -> (Int?, Int?){
         if cellLabelRows.count > 0 && cellLabelColumns.count > 0 {

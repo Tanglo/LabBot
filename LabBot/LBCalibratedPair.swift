@@ -20,7 +20,7 @@ public class LBCalibratedPair: NSObject, NSCoding {
         self.calibrated = calibrated
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         self.raw = aDecoder.decodeObjectForKey("raw")!
         self.calibrated = aDecoder.decodeObjectForKey("calibrated")!
     }

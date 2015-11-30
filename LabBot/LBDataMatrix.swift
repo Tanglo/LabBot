@@ -28,7 +28,7 @@ import Cocoa
         self.init()
         let numVars = variableNames.count
         for obsArray in observations {
-            var mutObsArray = changeArrayLength(obsArray, newLength: numVars)
+            let mutObsArray = changeArrayLength(obsArray, newLength: numVars)
             data.append(mutObsArray)
         }
         variables = variableNames
@@ -37,14 +37,14 @@ import Cocoa
     /** 
         Creates and returns an empty dataMatrix
     
-        :returns: A newly created and empty dataMatrix object.
+        - returns: A newly created and empty dataMatrix object.
     */
     public class func dataMatrix() ->LBDataMatrix{
         return LBDataMatrix()
     }
     
     // MARK: NSCoding
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         self.variables = aDecoder.decodeObjectForKey("variables") as! [String]
         self.data = aDecoder.decodeObjectForKey("data") as! [[AnyObject]]
     }
@@ -60,9 +60,9 @@ import Cocoa
     
         Contents outside the new size are discarded.
     
-        :param: array The array that needs to change size.
-        :param: newLength The length of the new array.
-        :returns: A new array of the specified length that contains the contents of the sepcified array.
+        - parameter array: The array that needs to change size.
+        - parameter newLength: The length of the new array.
+        - returns: A new array of the specified length that contains the contents of the sepcified array.
     */
     private func changeArrayLength(array:[AnyObject], newLength: Int)->[AnyObject] {
         var mutArray = array
@@ -79,7 +79,7 @@ import Cocoa
     /**
         The number of observations (rows) in the receiver.
     
-        :returns: The number of data rows, or observations, in the receiver.
+        - returns: The number of data rows, or observations, in the receiver.
     */
     public func numberOfObservations()->Int{
         return data.count
@@ -88,7 +88,7 @@ import Cocoa
     /**
         The number of variables (columns) in the receiver.
     
-        :returns: The number of variables, or columns, in the receiver.
+        - returns: The number of variables, or columns, in the receiver.
     */
     public func numberOfVariables()->Int{
         return variables.count
@@ -97,18 +97,18 @@ import Cocoa
     /**
         Gets the index of a nameed variable.
     
-        :param: variable The name of the variable you want the index of.
-        :returns: The index of the variable (column) within the receiver, or nil if no variable with that name exisits.
+        - parameter variable: The name of the variable you want the index of.
+        - returns: The index of the variable (column) within the receiver, or nil if no variable with that name exisits.
     */
     public func indexOfVariable(variable: String)->Int?{
-        return find(self.variables, variable)
+        return self.variables.indexOf(variable)
     }
     
     /**
         Gets the observation at a specified index.
     
-        :param: index The index (row number) of the observation you want retrieved.
-        :returns: Any array of the data points in the specified row of the receiver.
+        - parameter index: The index (row number) of the observation you want retrieved.
+        - returns: Any array of the data points in the specified row of the receiver.
     */
     public func observationAtIndex(index: Int)->[AnyObject]{
         return data[index]
@@ -117,8 +117,8 @@ import Cocoa
     /**
         Gets the variable at a specified index.
     
-        :param: index The index (column number) of the variable you want retrieved.
-        :returns: Any array of the data points in the variable located at the specifed index of the receiver, or nil if there is no variable at the specified index.
+        - parameter index: The index (column number) of the variable you want retrieved.
+        - returns: Any array of the data points in the variable located at the specifed index of the receiver, or nil if there is no variable at the specified index.
     */
     public func variableAtIndex(index: Int)->[AnyObject]?{
         if index < variables.count {
@@ -134,8 +134,8 @@ import Cocoa
     /**
         Gets the variable with the specified name.
     
-        :param: name The name of the variable you want retrieved.
-        :returns: Any array of the data points in the variable with the specified name, or nil uif the receiver does not contain a variable with that name.
+        - parameter name: The name of the variable you want retrieved.
+        - returns: Any array of the data points in the variable with the specified name, or nil uif the receiver does not contain a variable with that name.
     */
     public func variableWithName(name: String)->[AnyObject]?{
         let variableIndex = indexOfVariable(name)
@@ -149,7 +149,7 @@ import Cocoa
     /**
         Appends an observation to the receivers.  The observation is padded or cropped to the width of the receiver.
     
-        :param: newObs An array of the observation's data points.
+        - parameter newObs: An array of the observation's data points.
     */
     public func appendObservation(newObs:[AnyObject]){
         data.append(self.changeArrayLength(newObs, newLength: self.variables.count))
@@ -158,8 +158,8 @@ import Cocoa
     /**
         Appends the variable to the receiver.  The variable is padded or cropped to the length of the receiver.
     
-        :param: newVariable The name of the variable being appended.
-        :param: values An array of the values in the new variable.
+        - parameter newVariable: The name of the variable being appended.
+        - parameter values: An array of the values in the new variable.
     */
     public func appendVariable(newVariable:String, values:[AnyObject]){
         self.variables.append(newVariable)
@@ -174,9 +174,9 @@ import Cocoa
     /**
         Changes a single existing data point within the receiver.
     
-        :param: variable The name of the variable (column) containing the data point to be changed.
-        :param: observation The index of the observation (row) containing the data point to be changed.
-        :param: newValue The new value of the data point to be changed.
+        - parameter variable: The name of the variable (column) containing the data point to be changed.
+        - parameter observation: The index of the observation (row) containing the data point to be changed.
+        - parameter newValue: The new value of the data point to be changed.
     */
     public func changeDataPoint(variable: String, observation: Int, newValue: AnyObject){
         let varIndex = indexOfVariable(variable)
@@ -192,7 +192,7 @@ import Cocoa
     public func shuffleObservations(){
         var shuffledData = self.data
         let numObs = shuffledData.count
-        for i in stride(from: numObs, through: 1, by: -1) {
+        for i in numObs.stride(through: 1, by: -1) {
             let j = Int(arc4random_uniform(UInt32(i)))
             let movedObs = shuffledData.removeAtIndex(j)
    //         println("--\(movedObs)")
@@ -212,13 +212,13 @@ import Cocoa
         for varName in variables {
             outStr = outStr + "\(varName)\t"
         }
-        println(outStr)
+        print(outStr)
         for obsArray in data {
             outStr = ""
             for dataPt in obsArray {
                 outStr += "\(dataPt)\t"
             }
-            println(outStr)
+            print(outStr)
         }
     }
 }
