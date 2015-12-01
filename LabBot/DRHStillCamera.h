@@ -1,6 +1,6 @@
 //
 //  DRHStillCamera.h
-//  LandmarkContraction
+//  LabBot
 //
 //  Created by Lee Walsh on 9/04/2014.
 //  Copyright (c) 2014 Lee David Walsh. All rights reserved.

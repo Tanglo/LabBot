@@ -1,6 +1,6 @@
 //
 //  DRHLabjackU6.h
-//  LabBot
+//  LabBot_Jack
 //
 //  Created by Lee Walsh on 18/12/2014.
 //  Copyright (c) 2014 Lee David Walsh. All rights reserved.

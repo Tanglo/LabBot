@@ -1,6 +1,6 @@
 //
 //  DRHLabjackU6.m
-//  LabBot
+//  LabBot_Jack
 //
 //  Copyright (c) 2014 Lee David Walsh. All rights reserved.
 //  This sofware is licensed under the The MIT License (MIT)
