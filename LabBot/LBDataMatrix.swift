@@ -46,7 +46,7 @@ import Cocoa
     /**
      Initialises a dataMatrix from a specified comma separated value (.csv) file using the specified string encoding.
      
-     The number of variables in set by the widest row in the .csv file.  If there are not enough variables names extras are set to VcolumnNumber.  Observation rows are padded with Double.NaN.
+     The number of variables in set by the widest row in the .csv file.  If there are not enough variables names extras are set to VcolumnNumber.  Observation rows are padded with "" to maintaing the whole data set as Strings.
      If loading of the .csv file fails an error will be thrown.
      
      - parameter csvURL: A file URL that points to the csv file that will be loaded and used for initialisation.
@@ -74,9 +74,24 @@ import Cocoa
         }
         
         //find the longest observation row
+        var columnCount = newVariables.count
+        for row in newData{
+            if row.count > columnCount{
+                columnCount = row.count
+            }
+        }
         
         //pad variableNames and other observation rows out to that size
-        
+        while newVariables.count < columnCount {
+            newVariables.append("V\(newVariables.count-1)")
+        }
+        for var row in newData{
+            while row.count < columnCount{
+                row.append("")
+            }
+        }
+        variables = newVariables
+        data = newData
     }
     
     /** 
