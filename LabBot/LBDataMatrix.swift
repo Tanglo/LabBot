@@ -46,15 +46,37 @@ import Cocoa
     /**
      Initialises a dataMatrix from a specified comma separated value (.csv) file using the specified string encoding.
      
+     The number of variables in set by the widest row in the .csv file.  If there are not enough variables names extras are set to VcolumnNumber.  Observation rows are padded with Double.NaN.
      If loading of the .csv file fails an error will be thrown.
      
      - parameter csvURL: A file URL that points to the csv file that will be loaded and used for initialisation.
-     - parameter encoding: The string encoding to use to decode the file specified by csvURL.  See xcdoc://?url=developer.apple.com/library/prerelease/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/doc/constant_group/String_Encodings for possible values.
+     - parameter titles: Indicates if the first line of the .csv file should be used as variable names.  If not variableNames will be set to V0, V1, V2, etc
      - returns: A dataMatrix object initialised from the specified .csv file.  If an error is thrown an empty dataMatrix is returned.
      */
-    public convenience init(csvURL: NSURL, encoding: NSStringEncoding) throws{
-        
+    public convenience init(csvURL: NSURL, titles: Bool) throws{
+        var csvString: String
+        do{
+            csvString = try String(contentsOfURL: csvURL)
+        } catch {
+            throw error
+        }
         self.init()
+        var csvLines = csvString.componentsSeparatedByString("\n")
+        var newVariables = Array<String>()
+        var newData = Array<Array<AnyObject>>()
+        if titles{
+            newVariables = csvLines[0].componentsSeparatedByString(",")
+            csvLines.removeFirst()
+        }
+        for line in csvLines {
+            let observations = line.componentsSeparatedByString(",")
+            newData.append(observations)
+        }
+        
+        //find the longest observation row
+        
+        //pad variableNames and other observation rows out to that size
+        
     }
     
     /** 
