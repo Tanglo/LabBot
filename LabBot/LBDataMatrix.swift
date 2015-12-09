@@ -24,6 +24,15 @@ import Cocoa
         data = Array<Array<AnyObject>>()
     }
     
+    /**
+     Initialises an LBDataMatric object with an array of variable names and an array of observations arrays.
+     
+     The variableNames array sets the number of columns in the dataMatrix object.  So if observation rows are wider, they will be prined and if they are are narrow they will be padded.
+     
+     - parameter variableNames: An array of String that specifies the variable names for the LBDataMatrix.
+     - parameter observations: An array of observations arrays, each of which is an array of AnyObject.  These observation arrays form the rows of the dataMatrix.
+     - returns: A dataMatrix object initialised with the sepcified variable names and observation rows.
+     */
     public convenience init(variableNames:[String], observations: [[AnyObject]]){
         self.init()
         let numVars = variableNames.count
@@ -32,6 +41,20 @@ import Cocoa
             data.append(mutObsArray)
         }
         variables = variableNames
+    }
+    
+    /**
+     Initialises a dataMatrix from a specified comma separated value (.csv) file using the specified string encoding.
+     
+     If loading of the .csv file fails an error will be thrown.
+     
+     - parameter csvURL: A file URL that points to the csv file that will be loaded and used for initialisation.
+     - parameter encoding: The string encoding to use to decode the file specified by csvURL.  See xcdoc://?url=developer.apple.com/library/prerelease/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/doc/constant_group/String_Encodings for possible values.
+     - returns: A dataMatrix object initialised from the specified .csv file.  If an error is thrown an empty dataMatrix is returned.
+     */
+    public convenience init(csvURL: NSURL, encoding: NSStringEncoding) throws{
+        
+        self.init()
     }
     
     /** 
