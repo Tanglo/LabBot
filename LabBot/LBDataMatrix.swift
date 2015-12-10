@@ -25,6 +25,21 @@ import Cocoa
     }
     
     /**
+     Initialises an empty LBDataMatric object with the specified number of observations.
+     
+     This method is intended to be used when variables, rather than observations, will be added to an empty dataMatrix.
+     
+     - parameter numberOfObservations: The number of observations to initialise.
+     - returns: An empty dataMatrix object initialised with the specified number of observation rows.
+     */
+    public convenience init(numberOfObservations: Int){
+        self.init()
+        for _ in 0..<numberOfObservations {
+            data.append([AnyObject]())
+        }
+    }
+    
+    /**
      Initialises an LBDataMatric object with an array of variable names and an array of observations arrays.
      
      The variableNames array sets the number of columns in the dataMatrix object.  So if observation rows are wider, they will be prined and if they are are narrow they will be padded.
