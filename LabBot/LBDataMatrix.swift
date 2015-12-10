@@ -85,9 +85,10 @@ import Cocoa
         while newVariables.count < columnCount {
             newVariables.append("V\(newVariables.count-1)")
         }
-        for var row in newData{
-            while row.count < columnCount{
-                row.append("")
+        let numObservations = newData.count
+        for i in 0..<numObservations{
+            while newData[i].count < columnCount{
+                newData[i].append("")
             }
         }
         variables = newVariables
