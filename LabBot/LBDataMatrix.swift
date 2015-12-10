@@ -192,6 +192,19 @@ import Cocoa
     }
     
     /**
+    Gets the name of the variable at a specified index.
+    
+    - parameter index: The index (column number) of the variable name you want retrieved.
+    - returns: The name of the variable located at the specifed index of the receiver.
+    */
+    public func nameOfVariableAtIndex(index: Int)->String?{
+        if index < variables.count {
+            return variables[index]
+        }
+        return nil
+    }
+    
+    /**
         Gets the variable with the specified name.
     
         - parameter name: The name of the variable you want retrieved.
