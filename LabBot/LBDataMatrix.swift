@@ -80,7 +80,18 @@ import Cocoa
         var newVariables = Array<String>()
         var newData = Array<Array<AnyObject>>()
         if titles{
-            newVariables = csvLines[0].componentsSeparatedByString(",")
+            let newNames = csvLines[0].componentsSeparatedByString(",")
+            for name in newNames{
+                var newName = name
+                if newVariables.contains(newName){
+                    var count = 1
+                    while newVariables.contains(newName + "\(count)"){
+                        count++
+                    }
+                    newName += "_\(count)"
+                }
+                newVariables.append(newName)
+            }
             csvLines.removeFirst()
         }
         for line in csvLines {
@@ -272,6 +283,66 @@ import Cocoa
         if varIndex != nil {
             data[observation][varIndex!] = newValue
         }
+    }
+    
+    /**
+        Changes the type of the specified String variable to Int.
+     
+        - parameter variable: The name of the variable that will have its type changed from String to Int.
+        - returns: @c true if successful, else @c false
+    */
+    public func changeStringVariableToInt(variable: String) -> Bool{
+        let index = self.indexOfVariable(variable)
+        if index != nil {
+            let variableData = self.variableAtIndex(index!) as! [String]
+            var integerData = [Int]()
+            for observation in variableData{
+                let intObservation = Int(observation)
+                if intObservation != nil {
+                    integerData.append(intObservation!)
+                } else {
+                    return false
+                }
+            }
+            //if we get to here they should all have converted
+            let numObs = self.numberOfObservations()
+            for i in 0..<numObs{
+                self.changeDataPoint(variable, observation: i, newValue: integerData[i])
+//                print(integerData[i])
+            }
+            return true
+        }
+        return false
+    }
+    
+    /**
+     Changes the type of the specified String variable to Double.
+     
+     - parameter variable: The name of the variable to change its type from String to Double.
+     - returns: @c true if successful, else @c false
+     */
+    public func changeStringVariableToDouble(variable:String) -> Bool{
+        let index = self.indexOfVariable(variable)
+        if index != nil {
+            let variableData = self.variableAtIndex(index!) as! [String]
+            var doubleData = [Double]()
+            for observation in variableData{
+                let doubleObservation = Double(observation)
+                if doubleObservation != nil {
+                    doubleData.append(doubleObservation!)
+                } else {
+                    return false
+                }
+            }
+            //if we get to here they should all have converted
+            let numObs = self.numberOfObservations()
+            for i in 0..<numObs{
+                self.changeDataPoint(variable, observation: i, newValue: doubleData[i])
+//                print(doubleData[i])
+            }
+            return true
+        }
+        return false
     }
     
     // MARK: Organising data
