@@ -11,11 +11,11 @@
 import Foundation
 
 /// A class that stores a pair of objects where one represents the calibrated version of the other.
-public class LBCalibratedPair: NSObject, NSCoding {
+open class LBCalibratedPair: NSObject, NSCoding {
     /// The uncalibrated object.
-    public var raw: AnyObject = 0.0
+    open var raw: AnyObject = 0.0 as AnyObject
     /// An object that represents the calibrated version of raw.
-    public var calibrated: AnyObject = 0.0
+    open var calibrated: AnyObject = 0.0 as AnyObject
     
     public init(raw: AnyObject, calibrated: AnyObject){
         self.raw = raw
@@ -23,13 +23,13 @@ public class LBCalibratedPair: NSObject, NSCoding {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        self.raw = aDecoder.decodeObjectForKey("raw")!
-        self.calibrated = aDecoder.decodeObjectForKey("calibrated")!
+        self.raw = aDecoder.decodeObject(forKey: "raw")! as AnyObject
+        self.calibrated = aDecoder.decodeObject(forKey: "calibrated")! as AnyObject
     }
     
-    public func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(raw, forKey: "raw")
-        aCoder.encodeObject(calibrated, forKey: "calibrated")
+    open func encode(with aCoder: NSCoder) {
+        aCoder.encode(raw, forKey: "raw")
+        aCoder.encode(calibrated, forKey: "calibrated")
     }
     
 }

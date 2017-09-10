@@ -11,11 +11,11 @@
 import Foundation
 
 /// A class that stores a 2D size.
-public class LBSize {
+open class LBSize {
     /// The width.
-    public var width = 0.0
+    open var width = 0.0
     /// The height.
-    public var height = 0.0
+    open var height = 0.0
     
     init(){
         width = 0.0

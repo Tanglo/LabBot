@@ -11,11 +11,11 @@
 import Foundation
 
 /// A class that stores a 2D catesian point.
-public class LBPoint: NSObject, NSCoding {
+open class LBPoint: NSObject, NSCoding {
     /// The hozizontal coordinate.
-    public var x = 0.0
+    open var x = 0.0
     /// The vertical coordinate.
-    public var y = 0.0
+    open var y = 0.0
     
     override init(){
         x = 0.0
@@ -43,13 +43,13 @@ public class LBPoint: NSObject, NSCoding {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        self.x = aDecoder.decodeDoubleForKey("x")
-        self.y = aDecoder.decodeDoubleForKey("y")
+        self.x = aDecoder.decodeDouble(forKey: "x")
+        self.y = aDecoder.decodeDouble(forKey: "y")
     }
     
-    public func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeDouble(self.x, forKey: "x")
-        aCoder.encodeDouble(self.y, forKey: "y")
+    open func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.x, forKey: "x")
+        aCoder.encode(self.y, forKey: "y")
     }
     
 }

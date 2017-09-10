@@ -16,24 +16,24 @@ import Cocoa
     Currently its main role is to override applicationShouldTerminate so that the applcation is not closed before all documents (which might contain unsaved experimental data) are closed.
 
 */
-@objc public class LBExperimentDelegate: NSObject, NSApplicationDelegate {
+@objc open class LBExperimentDelegate: NSObject, NSApplicationDelegate {
     
-    public func applicationDidFinishLaunching(aNotification: NSNotification) {
+    open func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
     
-    public func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
-        if NSDocumentController.sharedDocumentController().documents.count > 0 {
+    open func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
+        if NSDocumentController.shared().documents.count > 0 {
             let alert = NSAlert()
             alert.messageText = "Close documents before quitting."
-            alert.addButtonWithTitle("Ok")
+            alert.addButton(withTitle: "Ok")
             alert.runModal()
-            return NSApplicationTerminateReply.TerminateCancel
+            return NSApplicationTerminateReply.terminateCancel
         }
-        return NSApplicationTerminateReply.TerminateNow
+        return NSApplicationTerminateReply.terminateNow
     }
     
-    public func applicationWillTerminate(aNotification: NSNotification) {
+    open func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     

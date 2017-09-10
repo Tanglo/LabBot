@@ -12,12 +12,12 @@
 
 import Cocoa
 /// An object to store a matrix of experimental variables.
-@objc public class LBDataMatrix: NSObject, NSCoding {
+@objc open class LBDataMatrix: NSObject, NSCoding {
     /// An array of the names of the experimental variables.
-    private var variables: Array<String>
+    fileprivate var variables: Array<String>
     
     /// A array of variables, each of which is an array of data points.  Each variable should be the same length.
-    private var data: Array<Array<AnyObject>>
+    fileprivate var data: Array<Array<AnyObject>>
     
     public override init(){
         variables = Array<String>()
@@ -39,19 +39,19 @@ import Cocoa
     
         - returns: A newly created and empty dataMatrix object.
     */
-    public class func dataMatrix() ->LBDataMatrix{
+    open class func dataMatrix() ->LBDataMatrix{
         return LBDataMatrix()
     }
     
     // MARK: NSCoding
     required public init?(coder aDecoder: NSCoder) {
-        self.variables = aDecoder.decodeObjectForKey("variables") as! [String]
-        self.data = aDecoder.decodeObjectForKey("data") as! [[AnyObject]]
+        self.variables = aDecoder.decodeObject(forKey: "variables") as! [String]
+        self.data = aDecoder.decodeObject(forKey: "data") as! [[AnyObject]]
     }
     
-    public func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(variables, forKey: "variables")
-        aCoder.encodeObject(data, forKey: "data")
+    open func encode(with aCoder: NSCoder) {
+        aCoder.encode(variables, forKey: "variables")
+        aCoder.encode(data, forKey: "data")
     }
     
     // MARK: Enforcing a rectangular matrix
@@ -64,13 +64,13 @@ import Cocoa
         - parameter newLength: The length of the new array.
         - returns: A new array of the specified length that contains the contents of the sepcified array.
     */
-    private func changeArrayLength(array:[AnyObject], newLength: Int)->[AnyObject] {
+    fileprivate func changeArrayLength(_ array:[AnyObject], newLength: Int)->[AnyObject] {
         var mutArray = array
         while mutArray.count > newLength {
             mutArray.removeLast()
         }
         while mutArray.count < newLength {
-            mutArray.append(Double.NaN)
+            mutArray.append(Double.nan as AnyObject)
         }
         return mutArray
     }
@@ -81,7 +81,7 @@ import Cocoa
     
         - returns: The number of data rows, or observations, in the receiver.
     */
-    public func numberOfObservations()->Int{
+    open func numberOfObservations()->Int{
         return data.count
     }
     
@@ -90,7 +90,7 @@ import Cocoa
     
         - returns: The number of variables, or columns, in the receiver.
     */
-    public func numberOfVariables()->Int{
+    open func numberOfVariables()->Int{
         return variables.count
     }
     
@@ -100,8 +100,8 @@ import Cocoa
         - parameter variable: The name of the variable you want the index of.
         - returns: The index of the variable (column) within the receiver, or nil if no variable with that name exisits.
     */
-    public func indexOfVariable(variable: String)->Int?{
-        return self.variables.indexOf(variable)
+    open func indexOfVariable(_ variable: String)->Int?{
+        return self.variables.index(of: variable)
     }
     
     /**
@@ -110,7 +110,7 @@ import Cocoa
         - parameter index: The index (row number) of the observation you want retrieved.
         - returns: Any array of the data points in the specified row of the receiver.
     */
-    public func observationAtIndex(index: Int)->[AnyObject]{
+    open func observationAtIndex(_ index: Int)->[AnyObject]{
         return data[index]
     }
     
@@ -120,7 +120,7 @@ import Cocoa
         - parameter index: The index (column number) of the variable you want retrieved.
         - returns: Any array of the data points in the variable located at the specifed index of the receiver, or nil if there is no variable at the specified index.
     */
-    public func variableAtIndex(index: Int)->[AnyObject]?{
+    open func variableAtIndex(_ index: Int)->[AnyObject]?{
         if index < variables.count {
             var varArray = Array<AnyObject>()
             for observation in data {
@@ -137,7 +137,7 @@ import Cocoa
         - parameter name: The name of the variable you want retrieved.
         - returns: Any array of the data points in the variable with the specified name, or nil uif the receiver does not contain a variable with that name.
     */
-    public func variableWithName(name: String)->[AnyObject]?{
+    open func variableWithName(_ name: String)->[AnyObject]?{
         let variableIndex = indexOfVariable(name)
         if variableIndex != nil {
             return variableAtIndex(variableIndex!)
@@ -151,7 +151,7 @@ import Cocoa
     
         - parameter newObs: An array of the observation's data points.
     */
-    public func appendObservation(newObs:[AnyObject]){
+    open func appendObservation(_ newObs:[AnyObject]){
         data.append(self.changeArrayLength(newObs, newLength: self.variables.count))
     }
     
@@ -161,7 +161,7 @@ import Cocoa
         - parameter newVariable: The name of the variable being appended.
         - parameter values: An array of the values in the new variable.
     */
-    public func appendVariable(newVariable:String, values:[AnyObject]){
+    open func appendVariable(_ newVariable:String, values:[AnyObject]){
         self.variables.append(newVariable)
         let numObs = data.count
         let newValues = changeArrayLength(values, newLength: numObs)
@@ -178,7 +178,7 @@ import Cocoa
         - parameter observation: The index of the observation (row) containing the data point to be changed.
         - parameter newValue: The new value of the data point to be changed.
     */
-    public func changeDataPoint(variable: String, observation: Int, newValue: AnyObject){
+    open func changeDataPoint(_ variable: String, observation: Int, newValue: AnyObject){
         let varIndex = indexOfVariable(variable)
         if varIndex != nil {
             data[observation][varIndex!] = newValue
@@ -189,14 +189,14 @@ import Cocoa
     /**
         Shuffles the observations (rows) of the receiver using the modern Fisher-Yates algorithm.
     */
-    public func shuffleObservations(){
+    open func shuffleObservations(){
         var shuffledData = self.data
         let numObs = shuffledData.count
-        for i in numObs.stride(through: 1, by: -1) {
+        for i in stride(from: numObs, through: 1, by: -1) {
             let j = Int(arc4random_uniform(UInt32(i)))
-            let movedObs = shuffledData.removeAtIndex(j)
+            let movedObs = shuffledData.remove(at: j)
    //         println("--\(movedObs)")
-            shuffledData.insert(movedObs, atIndex: i-1)
+            shuffledData.insert(movedObs, at: i-1)
         }
         data = shuffledData
     }
@@ -207,7 +207,7 @@ import Cocoa
     /**
         Prints the contents of the receiver to the debugging console.
     */
-    public func printDataMatrix(){
+    open func printDataMatrix(){
         var outStr = ""
         for varName in variables {
             outStr = outStr + "\(varName)\t"

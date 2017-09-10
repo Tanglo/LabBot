@@ -405,6 +405,9 @@
 					E56727D41B5DE24300EC7BA8 = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					E5C8976B18F52A4300335057 = {
+						LastSwiftMigration = 0830;
+					};
 				};
 			};
 			buildConfigurationList = E5C8976618F52A4300335057 /* Build configuration list for PBXProject "LabBot" */;
@@ -709,6 +712,7 @@
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -735,6 +739,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

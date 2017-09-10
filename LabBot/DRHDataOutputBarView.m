@@ -51,7 +51,8 @@ NSInteger const DRHDataOutputOrientationRight = 3;
     
     if (_target > 0) {
         NSBezierPath *targetPath = [NSBezierPath bezierPath];
-        NSPoint startPt, endPt;
+        NSPoint startPt = NSMakePoint(0.0, 0.0);
+        NSPoint endPt = NSMakePoint(0.0, 0.0);
         if (_orientation==DRHDataOutputOrientationUp || _orientation==DRHDataOutputOrientationDown){
             startPt.x = barViewBounds.origin.x;
             startPt.y = endPt.y = barViewBounds.size.height * _target;

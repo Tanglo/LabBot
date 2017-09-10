@@ -16,53 +16,53 @@ import AppKit
 
     This class is a subclass of NSView and is used to display grids that have coordinate systems.  The coordinate system is similar to a chess board where rows are labelled with a number and columns are labelled with a letter.  The grid size and cell size are set by the appropriate class properties, as is the starting values of the coordinate system.
 */
-public class LBGridView: LBSubjectView {
-    public var gridRect = NSRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
-    public var cellSize = LBSize(width: 100.0, height: 100.0)
-    public var firstRowLabel = 0
-    public var firstColumnLabel = "A"
-    public var viewSize: LBSize {
+open class LBGridView: LBSubjectView {
+    open var gridRect = NSRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
+    open var cellSize = LBSize(width: 100.0, height: 100.0)
+    open var firstRowLabel = 0
+    open var firstColumnLabel = "A"
+    open var viewSize: LBSize {
         get {
             return LBSize(width: Double(frame.size.width), height: Double(frame.size.height))
         }
     }
-    public var labelSize = 45.0
-    public var lineWidth = 1.0
-    public var flipVertically = false
-    public var flipHorizontally = false
-    public var centreVertically = true
-    public var centreHorizontally = true
-    public var labelCells = false
-    public var shuffleLabels = false
-    public var hexLabels = false
+    open var labelSize = 45.0
+    open var lineWidth = 1.0
+    open var flipVertically = false
+    open var flipHorizontally = false
+    open var centreVertically = true
+    open var centreHorizontally = true
+    open var labelCells = false
+    open var shuffleLabels = false
+    open var hexLabels = false
     var cellLabels = Array<Array<Int>>()
     var cellLabelRows = Array<Int>()
     var cellLabelColumns = Array<Int>()
 
-    override public func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override open func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
         
         if blank {
             let bgPath = NSBezierPath(rect: frame)
-            NSColor.blackColor().setFill()
+            NSColor.black.setFill()
             bgPath.fill()
         } else {
             // Draw background
             let bgPath = NSBezierPath(rect: frame)
-            NSColor.whiteColor().setFill()
+            NSColor.white.setFill()
             bgPath.fill()
             
             if flipVertically {
-                let flipTransform = NSAffineTransform()
-                flipTransform.scaleXBy(1.0, yBy: -1.0)
-                flipTransform.translateXBy(0.0, yBy: -frame.size.height)
-                flipTransform.concat()
+                var flipTransform = AffineTransform.identity
+                flipTransform.scale(x: 1.0, y: -1.0)
+                flipTransform.translate(x: 0.0, y: -frame.size.height)
+                (flipTransform as NSAffineTransform).concat()
             }
             if flipHorizontally {
-                let flipTransform = NSAffineTransform()
-                flipTransform.scaleXBy(-1.0, yBy: 1.0)
-                flipTransform.translateXBy(-frame.size.width, yBy: 0.0)
-                flipTransform.concat()
+                var flipTransform = AffineTransform.identity
+                flipTransform.scale(x: -1.0, y: 1.0)
+                flipTransform.translate(x: -frame.size.width, y: 0.0)
+                (flipTransform as NSAffineTransform).concat()
             }
             
             //Calculate the number of whole cells that will fit in the padded space
@@ -88,45 +88,46 @@ public class LBGridView: LBSubjectView {
                 let labelFont = NSFont(name: "Helvetica", size: CGFloat(labelSize))
                 let labelAttr = [
                     NSFontAttributeName: labelFont!,
-                    NSForegroundColorAttributeName: NSColor.blackColor()
+                    NSForegroundColorAttributeName: NSColor.black
                 ]
                 for i in 0...numCols {
-                    gridPath.moveToPoint(NSPoint(x: currentWidth, y: Double(gridRect.origin.y)))
-                    gridPath.lineToPoint(NSPoint(x: currentWidth, y: Double(gridRect.origin.y)+maxHeight))
+                    gridPath.move(to: NSPoint(x: currentWidth, y: Double(gridRect.origin.y)))
+                    gridPath.line(to: NSPoint(x: currentWidth, y: Double(gridRect.origin.y)+maxHeight))
                     if i < numCols && labelCells==false {
-                        colLabel = firstColumnLabel.incrementBy(i, floor: "A", ceiling: "Z")
-                        labelRect = NSRect(origin: NSPoint(x: currentWidth, y: 0.0), size: colLabel.sizeWithAttributes(labelAttr))
+                        colLabel = firstColumnLabel.incrementBy(i, floor: "A", ceiling: "Z") as NSString
+                        labelRect = NSRect(origin: NSPoint(x: currentWidth, y: 0.0), size: colLabel.size(withAttributes: labelAttr))
                         labelRect = NSOffsetRect(labelRect, 0.5*(CGFloat(cellSize.width) - labelRect.size.width), gridRect.origin.y - labelRect.size.height)
-                        colLabel.drawInRect(labelRect, withAttributes: labelAttr)
+                        colLabel.draw(in: labelRect, withAttributes: labelAttr)
                     }
                     currentWidth += cellSize.width
                 }
                 var currentHeight = Double(gridRect.origin.y)
                 var rowLabel: NSString
                 for i in 0...numRows {
-                    gridPath.moveToPoint(NSPoint(x: Double(gridRect.origin.x), y: currentHeight))
-                    gridPath.lineToPoint(NSPoint(x: Double(gridRect.origin.x)+maxWidth, y: currentHeight))
+                    gridPath.move(to: NSPoint(x: Double(gridRect.origin.x), y: currentHeight))
+                    gridPath.line(to: NSPoint(x: Double(gridRect.origin.x)+maxWidth, y: currentHeight))
                     if i < numRows  && labelCells==false {
-                        rowLabel = "\(firstRowLabel+i)"
-                        labelRect = NSRect(origin: NSPoint(x: 0.0, y: currentHeight), size: rowLabel.sizeWithAttributes(labelAttr))
+                        rowLabel = "\(firstRowLabel+i)" as NSString
+                        labelRect = NSRect(origin: NSPoint(x: 0.0, y: currentHeight), size: rowLabel.size(withAttributes: labelAttr))
                         labelRect = NSOffsetRect(labelRect, 0.0, 0.5*(CGFloat(cellSize.height) - labelRect.size.height))
-                        rowLabel.drawInRect(labelRect, withAttributes: labelAttr)
+                        rowLabel.draw(in: labelRect, withAttributes: labelAttr)
                     }
                     currentHeight += cellSize.height
                 }
-                NSColor.blackColor().setStroke()
+                NSColor.black.setStroke()
                 gridPath.lineWidth = CGFloat(self.lineWidth)
                 gridPath.stroke()
                 
                 if labelCells {
-                    cellLabels = [[Int]](count: numRows, repeatedValue: [Int](count: numCols, repeatedValue: Int()))
-                    cellLabelRows = [Int](count: numRows*numCols+1, repeatedValue: Int())
-                    cellLabelColumns = [Int](count: numRows*numCols+1, repeatedValue: Int())
+                    cellLabels = [[Int]](repeating: [Int](repeating: Int(), count: numCols), count: numRows)
+                    cellLabelRows = [Int](repeating: Int(), count: numRows*numCols+1)
+                    cellLabelColumns = [Int](repeating: Int(), count: numRows*numCols+1)
                     var newLabels = [Int]()
                     var count = 1
                     for _ in 0..<numRows {
                         for _ in 0..<numCols {
-                            newLabels.append(count++)
+                            newLabels.append(count)
+                            count += 1
                         }
                     }
                     if shuffleLabels {
@@ -140,14 +141,14 @@ public class LBGridView: LBSubjectView {
                             
                             var cellLabel = ""
                             if hexLabels {
-                                cellLabel = String(cellLabels[i][j], radix: 16).uppercaseString
+                                cellLabel = String(cellLabels[i][j], radix: 16).uppercased()
                             } else {
                                 cellLabel = "\(cellLabels[i][j])"
                             }
-                            let xLabelPos = CGFloat(cellSize.width*Double(j)) + gridRect.origin.x + (CGFloat(cellSize.width) - cellLabel.sizeWithAttributes(labelAttr).width)/2.0
-                            let yLabelPos = CGFloat(cellSize.height*Double(i)) + gridRect.origin.y + (CGFloat(cellSize.height) - cellLabel.sizeWithAttributes(labelAttr).height)/2.0
-                            labelRect = NSRect(origin: NSPoint(x: xLabelPos, y: yLabelPos), size: cellLabel.sizeWithAttributes(labelAttr))
-                            cellLabel.drawInRect(labelRect, withAttributes: labelAttr)
+                            let xLabelPos = CGFloat(cellSize.width*Double(j)) + gridRect.origin.x + (CGFloat(cellSize.width) - cellLabel.size(withAttributes: labelAttr).width)/2.0
+                            let yLabelPos = CGFloat(cellSize.height*Double(i)) + gridRect.origin.y + (CGFloat(cellSize.height) - cellLabel.size(withAttributes: labelAttr).height)/2.0
+                            labelRect = NSRect(origin: NSPoint(x: xLabelPos, y: yLabelPos), size: cellLabel.size(withAttributes: labelAttr))
+                            cellLabel.draw(in: labelRect, withAttributes: labelAttr)
                         }
                     }
                 }
@@ -161,7 +162,7 @@ public class LBGridView: LBSubjectView {
         - parameter label: The label to retrieve the grid refference for.
         - returns: A tuple containing the cartesian coordinate (row,column) of the specified lab in the drawn grid, or a tuple containing (nil,nil) if the label is not in the current grid.
     */
-    public func gridReferenceOfLabel(label: String) -> (Int?, Int?){
+    open func gridReferenceOfLabel(_ label: String) -> (Int?, Int?){
         if cellLabelRows.count > 0 && cellLabelColumns.count > 0 {
             var labelInt: UInt?
             if hexLabels {

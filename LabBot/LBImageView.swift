@@ -11,49 +11,49 @@
 import Cocoa
 
 /// An NSView subclass that displays and image and places a marker on the clicked location.
-public class LBImageView: NSView {
+open class LBImageView: NSView {
     /// The image to be displayed by the receiver.
-    public var image: NSImage?
+    open var image: NSImage?
     
     /// Determines if the marker feature is enabled.
-    public var allowMarker = false
+    open var allowMarker = false
     
-    private(set) public var markerLocation = LBPoint(x: -1.0, y: -1.0)
+    fileprivate(set) open var markerLocation = LBPoint(x: -1.0, y: -1.0)
     
     /// The size of the marker when drawn on the image.
-    public var markerSize = 20.0
+    open var markerSize = 20.0
 
-    public override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    open override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
 
         // Drawing code here.
         if image != nil {
             self.frame = NSRect(origin: NSPoint(x: 0.0, y: 0.0), size: image!.size)
-            image!.drawInRect(self.frame)
+            image!.draw(in: self.frame)
         } else {
             self.frame = NSRect(x: 0.0, y: 0.0, width: 1000.0, height: 1000.0)
-            DRHBlankImage.blankImageOfSize(frame.size).drawInRect(frame)
+            DRHBlankImage.blankImage(of: frame.size).draw(in: frame)
         }
         
         if markerLocation.x >= 0 && markerLocation.y >= 0 {
             let markerPath = NSBezierPath()
-            markerPath.moveToPoint(NSPoint(x: markerLocation.x-markerSize, y: markerLocation.y-markerSize))
-            markerPath.lineToPoint(NSPoint(x: markerLocation.x+markerSize, y: markerLocation.y+markerSize))
-            markerPath.moveToPoint(NSPoint(x: markerLocation.x-markerSize, y: markerLocation.y+markerSize))
-            markerPath.lineToPoint(NSPoint(x: markerLocation.x+markerSize, y: markerLocation.y-markerSize))
-            NSColor.redColor().setStroke()
+            markerPath.move(to: NSPoint(x: markerLocation.x-markerSize, y: markerLocation.y-markerSize))
+            markerPath.line(to: NSPoint(x: markerLocation.x+markerSize, y: markerLocation.y+markerSize))
+            markerPath.move(to: NSPoint(x: markerLocation.x-markerSize, y: markerLocation.y+markerSize))
+            markerPath.line(to: NSPoint(x: markerLocation.x+markerSize, y: markerLocation.y-markerSize))
+            NSColor.red.setStroke()
             markerPath.stroke()
         }
     }
     
-    public override func mouseDown(theEvent: NSEvent) {
-        markerLocation = LBPoint(point: self.convertPoint(theEvent.locationInWindow, fromView: nil))
+    open override func mouseDown(with theEvent: NSEvent) {
+        markerLocation = LBPoint(point: self.convert(theEvent.locationInWindow, from: nil))
         self.needsDisplay = true
     }
     
     
     /// Delete the marker from the view.
-    public func clearMarker(){
+    open func clearMarker(){
         markerLocation = LBPoint(x: -1.0, y: -1.0)
     }
     

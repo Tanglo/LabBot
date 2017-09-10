@@ -20,12 +20,12 @@ extension String {
         - parameter ceiling: The overflow value.  When a character gets to this value it resets to the floor and the next more significnat character increments by one.
         - returns: The incrememted String.
     */
-    public func incrementBy(increment: Int, floor: Character, ceiling: Character) -> String {
-        let lastChar = self.substringFromIndex(self.endIndex.predecessor())
-        var remString = self.substringToIndex(self.endIndex.predecessor())
+    public func incrementBy(_ increment: Int, floor: Character, ceiling: Character) -> String {
+        let lastChar = self.substring(from: self.characters.index(before: self.endIndex))
+        var remString = self.substring(to: self.characters.index(before: self.endIndex))
         let lastCharUnicode = lastChar.unicodeScalars[lastChar.unicodeScalars.startIndex].value
         let newUnicode = lastCharUnicode + UInt32(increment)
-        var newLastChar = Character(UnicodeScalar(newUnicode))
+        var newLastChar = Character(UnicodeScalar(newUnicode)!)
         let ceilingUnicode = String(ceiling).unicodeScalars[lastChar.unicodeScalars.startIndex].value
         if newUnicode > ceilingUnicode {
             var charOverflow = newUnicode-ceilingUnicode
@@ -33,10 +33,10 @@ extension String {
             let unicodeRange = (ceilingUnicode + 1) - floorUnicode
             var numOverflows = 1
             while charOverflow > unicodeRange {
-                numOverflows++
+                numOverflows += 1
                 charOverflow -= unicodeRange
             }
-            newLastChar = Character(UnicodeScalar(floorUnicode+charOverflow-1))
+            newLastChar = Character(UnicodeScalar(floorUnicode+charOverflow-1)!)
             remString = remString.incrementBy(numOverflows, floor: floor, ceiling: ceiling)
         }
         return remString+String(newLastChar)
@@ -53,10 +53,10 @@ extension Array {
     func shuffle() -> Array<Element> {
         var shuffledArray = self
         let count = shuffledArray.count
-        for i in count.stride(through: 1, by: -1) {
+        for i in stride(from: count, through: 1, by: -1) {
             let j = Int(arc4random_uniform(UInt32(i)))
-            let movedElement = shuffledArray.removeAtIndex(j)
-            shuffledArray.insert(movedElement, atIndex: i-1)
+            let movedElement = shuffledArray.remove(at: j)
+            shuffledArray.insert(movedElement, at: i-1)
         }
         return shuffledArray
     }
@@ -73,9 +73,9 @@ extension UInt {
     init?(_ string: String, radix: UInt) {
         let digits = "0123456789abcdefghijklmnopqrstuvwxyz"
         var result = UInt(0)
-        for digit in string.lowercaseString.characters {
-            if let range = digits.rangeOfString(String(digit)) {
-                let val = UInt(digits.startIndex.distanceTo(range.startIndex))
+        for digit in string.lowercased().characters {
+            if let range = digits.range(of: String(digit)) {
+                let val = UInt(digits.characters.distance(from: digits.startIndex, to: range.lowerBound))
                 if val >= radix {
                     return nil
                 }
